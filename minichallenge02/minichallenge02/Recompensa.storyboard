@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reward View Controller-->
         <scene sceneID="NXc-r6-Ydr">
             <objects>
-                <viewController id="cla-x8-gM3" sceneMemberID="viewController">
+                <viewController id="cla-x8-gM3" customClass="RewardViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9kB-Qo-C17">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,11 +20,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tirar foto"/>
                                 <connections>
-                                    <segue destination="v3V-jU-Ive" kind="show" id="j1t-wy-lD3"/>
+                                    <action selector="onPhotoButton:" destination="cla-x8-gM3" eventType="touchUpInside" id="ryQ-CN-VRK"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Kg-WSK">
-                                <rect key="frame" x="241" y="35" width="415" height="128"/>
+                                <rect key="frame" x="241" y="33" width="415" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -32,76 +32,50 @@
                         <viewLayoutGuide key="safeArea" id="BEm-e2-ew5"/>
                     </view>
                     <navigationItem key="navigationItem" id="bvw-cT-TrU"/>
+                    <connections>
+                        <segue destination="c0V-qA-Kwh" kind="presentation" identifier="photoSegue" id="cRb-Ie-Zd3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZp-Vd-gAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="694" y="10"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Vae-N1-p8C">
-            <objects>
-                <viewController id="v3V-jU-Ive" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kXE-IT-Xwr">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abrir câmera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eam-TH-OK5">
-                                <rect key="frame" x="399" y="172" width="99" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-HM-ezD">
-                                <rect key="frame" x="412" y="295" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prosseguir"/>
-                                <connections>
-                                    <segue destination="c0V-qA-Kwh" kind="show" id="eot-L7-bJ1"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="UbB-O3-IOP"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0sX-Vt-Z2i"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Uv-F6-b8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="694" y="823"/>
-        </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="7DE-Jc-9ZO">
             <objects>
-                <viewController id="c0V-qA-Kwh" sceneMemberID="viewController">
+                <viewController id="c0V-qA-Kwh" customClass="PhotoViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycL-jX-CGK">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8c-Dh-QEM">
-                                <rect key="frame" x="412" y="295" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prosseguir"/>
-                                <connections>
-                                    <segue destination="cla-x8-gM3" kind="show" id="Ywd-sa-LpR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aplicação do filtro na foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypP-Ih-c2h">
-                                <rect key="frame" x="350" y="168" width="196" height="21"/>
+                                <rect key="frame" x="350" y="0.0" width="196" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-Wg-hza">
+                                <rect key="frame" x="229" y="20" width="439" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNK-KL-NMX">
+                                <rect key="frame" x="690" y="192" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Salvar foto"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7Nk-Cu-6hr"/>
                     </view>
                     <navigationItem key="navigationItem" id="UoR-Io-Gc1"/>
+                    <connections>
+                        <outlet property="imageView" destination="Lp4-Wg-hza" id="BJ3-Do-iKN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJ6-7c-vgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="371"/>
+            <point key="canvasLocation" x="693.75" y="828.98550724637687"/>
         </scene>
     </scenes>
 </document>

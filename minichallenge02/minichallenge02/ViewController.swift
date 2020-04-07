@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var actionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func changeText(_ sender: Any) {
+        label.text = "Texto alterado!"
+    }
 }
 

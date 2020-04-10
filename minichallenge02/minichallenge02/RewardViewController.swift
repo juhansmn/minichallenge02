@@ -10,16 +10,14 @@ import UIKit
 
 /*
 // MARK: - Funcionamento
-O simulador não suporta a funcionalidade de câmera.
+O simulador não suporta a funcionalidade de câmera. Deve ser testado com um dispositivo.
 }
 */
 
-//Tirar foto
+//Tira a foto, salva na Galeria e aplica o filtro
 class RewardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var photo: UIImage!
-    
-    var imagePickerController: UIImagePickerController!
+    var imagePickerController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,39 +27,40 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //Abre a câmera para tirar uma foto.
     @IBAction func onPhotoButton(_ sender: Any) {
-        imagePickerController = UIImagePickerController()
         //Especifica o uso da câmera
         imagePickerController.sourceType = .camera
         imagePickerController.delegate = self
-        //Apresenta o objeto
+        //Mostra a câmera
         present(imagePickerController, animated: true, completion: nil)
-        //print("onPhotoButton")
     }
     
-    //Chamada depois de tirar a foto
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+    //Delegate. Chamado ao tirar a foto
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        //Fecha a câmera
+        imagePickerController.dismiss(animated: true, completion: nil)
         
-        picker.dismiss(animated: true, completion: nil)
-        guard let photoTaken = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
+        guard let photo = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as? UIImage
             else{
                 print("Nenhuma foto encontrada.")
             return
         }
         
-        photo = photoTaken
+        savePhoto(photo)
     }
-    //Salva a foto
-    func savePhoto(name: String){
-        //Recebe uma instância do FileManager
-        let fileManager = FileManager.default
-        
-        //Recebe o caminho da foto
-        let photoPath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(name)
-        
-        //Recebe o png da foto
-        let data = photo.pngData()
-        
-        //Armazena no diretório de documentos
-        fileManager.createFile(atPath: photoPath, contents: data, attributes: nil)
+    
+    //Salva a foto na Galeria
+    func savePhoto(_ photo: UIImage){
+        UIImageWriteToSavedPhotosAlbum(photo, self, #selector(photo(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    //Tratamento de erros ao salvar foto
+    @objc func photo(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            //Um erro aconteceu
+            let ac = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
 }

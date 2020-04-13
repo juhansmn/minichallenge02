@@ -19,6 +19,10 @@
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
+		85BF23A22444D78A001C7BFF /* GSAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23A12444D78A001C7BFF /* GSAudio.swift */; };
+		85BF23A42444D850001C7BFF /* falaDino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23A32444D850001C7BFF /* falaDino.swift */; };
+		85BF23A62444D8A2001C7BFF /* dino.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 85BF23A52444D8A2001C7BFF /* dino.atlas */; };
+		85BF23A82444D8C6001C7BFF /* Som in Resources */ = {isa = PBXBuildFile; fileRef = 85BF23A72444D8C6001C7BFF /* Som */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
+		85BF23A12444D78A001C7BFF /* GSAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSAudio.swift; sourceTree = "<group>"; };
+		85BF23A32444D850001C7BFF /* falaDino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = falaDino.swift; sourceTree = "<group>"; };
+		85BF23A52444D8A2001C7BFF /* dino.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dino.atlas; sourceTree = "<group>"; };
+		85BF23A72444D8C6001C7BFF /* Som */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Som; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		0A0473FB242D52D9000F2F7B /* minichallenge02 */ = {
 			isa = PBXGroup;
 			children = (
+				85BF23A52444D8A2001C7BFF /* dino.atlas */,
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
 				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
 				0A047400242D52D9000F2F7B /* ViewController.swift */,
@@ -116,8 +125,11 @@
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
+				85BF23A72444D8C6001C7BFF /* Som */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
+				85BF23A12444D78A001C7BFF /* GSAudio.swift */,
+				85BF23A32444D850001C7BFF /* falaDino.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -244,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BF23A82444D8C6001C7BFF /* Som in Resources */,
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
@@ -251,6 +264,7 @@
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
+				85BF23A62444D8A2001C7BFF /* dino.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BF23A22444D78A001C7BFF /* GSAudio.swift in Sources */,
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
+				85BF23A42444D850001C7BFF /* falaDino.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

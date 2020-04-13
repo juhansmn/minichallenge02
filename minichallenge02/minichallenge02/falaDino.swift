@@ -1,18 +1,16 @@
 //
 //  falaDino.swift
-//  testeSom
+//  minichallenge02
 //
-//  Created by Beatriz Sato on 09/04/20.
-//  Copyright © 2020 Beatriz Sato. All rights reserved.
+//  Created by Beatriz Sato on 13/04/20.
+//  Copyright © 2020 Juan Suman. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 import GameplayKit
 
-
 class falaDino: SKScene {
-    
     var dinoFrames:[SKTexture]?
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -45,6 +43,4 @@ class falaDino: SKScene {
         dino.run(SKAction.repeat(SKAction.animate(with: self.dinoFrames!, timePerFrame: 0.07, resize: false, restore: false), count: 7))
 
     }
-    
-    
 }

@@ -10,11 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    //configuração para a GameViewController
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //criando uma window programaticamente p/ GameViewController -> EscovaDente
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+
+        let gameViewController = GameViewController()
+        window?.rootViewController = gameViewController //conferir isso depois @juan, não sei o que eu to fazendo, mas faz parte
+        
         return true
     }
 

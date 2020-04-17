@@ -16,10 +16,13 @@ struct ColliderType{
 
 class EscovaDente: SKScene, SKPhysicsContactDelegate {
     
-    //declarando a variável da escova
-    var escova = SKSpriteNode()
-    //precisava declarar aqui a váriavel da array de tartaros também, pra poder acessar na parte de colisão. Ou acessar na colisão de outra forma...
+    //declaração da variável da escova e usando a Classe Escova
+    var toothbrush = Toothbrush()
+    //declarando array de tártaros
+    var tartarus:[Tartarus] = []
+    
     var imagensTartaros = ["tartaro1","tartaro2", "tartaro3"]
+    
     
     override func didMove(to view: SKView) {
         
@@ -29,35 +32,49 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
         
         addBackground()
         
-        addEscova()
-        
-        addTartaro()
+        addToothbrush()
+        addTartarus(count: 3)
+        //addTartaro(quantidade: 3)
     }
-    
-    //dúvidas: nao é ruim um monte de função vazia? que nao recebe parametro e nem retorna nada?
-    func addEscova(){
-        //escova de dente
-        escova = SKSpriteNode(imageNamed: "Escova")
-        escova.name = "Escova"
-        
-        positionEscova(sprite: escova)
-        escovaPhysics(sprite: escova)
-        
-        self.addChild(escova) //alguns usam o self.addChild
-    }
-    
-    
     
     func addBackground(){
         //imagem de fundo
-        let background = SKSpriteNode(imageNamed: "Background")
+        let background = SKSpriteNode(imageNamed: "dino")
         background.zPosition = 0 //colocando no fundo
         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height) //background ocupa tela inteira
         background.blendMode = .replace //relacionado com memória (renderizar sem alpha blending)
         addChild(background) //adiciona background na scene
     }
     
-    //adicionar vários tártaros de uma vez na array de sprites
+    func addToothbrush(){
+        //escova de dente
+        //escova.name = "Escova"
+//        escova.escovaPhysics(sprite: escova)
+//        escova.positionEscova(sprite: escova)
+        toothbrush.position = CGPoint(x:300, y:60) //tem que estar aqui, e não na classe
+        addChild(toothbrush) //alguns usam o self.addChild self = instancia atual da classe
+    }
+
+    func addTartarus(count: Int){
+        for _ in 0..<count{
+            let tartaroTemp:Tartarus = Tartarus()
+            tartarus.append(tartaroTemp)
+            
+            addChild(tartaroTemp)
+        }
+    }
+    
+    
+    func addTartaro(quantidade: Int){
+        let tartaros = tartaroCollection(count: quantidade) //count determina quantidade de tártaros
+        for tartaro in tartaros{
+            addChild(tartaro)
+        }
+    }
+    
+    
+    
+    //adicionar vários tártaros de uma vez na array de sprites -> nao vai ter isso com o a classe
     func tartaroCollection(count: Int) -> [SKSpriteNode]{
         var tartaros = [SKSpriteNode]() //precisava disso lá em cima e aqui só preencher
         
@@ -66,61 +83,34 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
             imagensTartaros = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: imagensTartaros) as! [String]
             
             let tartaro = SKSpriteNode(imageNamed: imagensTartaros[0])
-            tartaro.name = "Tartaro"
-            positionTartaros(sprite: tartaro)
-            tartaroPhysics(sprite: tartaro)
+            tartaro.name = "Tartarus"
+//            positionTartaros(sprite: tartaro)
+//            tartaroPhysics(sprite: tartaro)
 
             tartaros.append(tartaro)
         }
+        
         return tartaros
     }
     
-    
-    
-    func addTartaro(){
-        let tartaros = tartaroCollection(count: 5) //count determina quantidade de tártaros
-        for tartaro in tartaros{
-            addChild(tartaro)
-        }
-    }
-    
-    func positionTartaros(sprite: SKSpriteNode){
-        sprite.zPosition = 1 //deixa acima do background
-        
-        //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
-        let randomPosition = GKRandomDistribution(lowestValue: -200, highestValue: 200)
-        let position = CGFloat(randomPosition.nextInt())
-        sprite.position = CGPoint(x: position, y: 0)
-    }
-    
-    func positionEscova(sprite: SKSpriteNode){
-        sprite.zPosition = 1
-        sprite.position = CGPoint(x:-100, y:0)
-        //para diminuir o tamanho da escova
-        sprite.xScale = 0.5
-        sprite.yScale = 0.5
-    }
-    
-    func escovaPhysics(sprite: SKSpriteNode){
-        //parte física
-        sprite.physicsBody = SKPhysicsBody(rectangleOf: escova.size)
-        sprite.physicsBody?.affectedByGravity = false
-        sprite.physicsBody?.isDynamic = true //permite que a escova interaja com o tartaro
-        sprite.physicsBody?.allowsRotation = false //nao deixa ficar girando enquanto mexe
-        
-        //colisão
-        sprite.physicsBody?.categoryBitMask = ColliderType.Escova
-        sprite.physicsBody?.collisionBitMask = ColliderType.Tartaro
-        sprite.physicsBody?.contactTestBitMask = ColliderType.Tartaro
-    }
-    
-    func tartaroPhysics(sprite: SKSpriteNode){
-        //colisão
-        sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
-        sprite.physicsBody?.affectedByGravity = false
-        sprite.physicsBody?.isDynamic = false //outro sprite nao vai poder mexer nele
-        sprite.physicsBody?.categoryBitMask = ColliderType.Tartaro
-    }
+//    func tartaroPhysics(sprite: SKSpriteNode){
+//        //colisão
+//        sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
+//        sprite.physicsBody?.affectedByGravity = false
+//        sprite.physicsBody?.isDynamic = false //outro sprite nao vai poder mexer nele
+//        sprite.physicsBody?.categoryBitMask = ColliderType.Tartaro
+//    }
+//
+//    func positionTartaros(sprite: SKSpriteNode){
+//        sprite.zPosition = 1 //deixa acima do background
+//
+//        //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
+//        let randomPosition = GKRandomDistribution(lowestValue: -200, highestValue: 200)
+//        let position = CGFloat(randomPosition.nextInt())
+//        sprite.position = CGPoint(x: position, y: 0)
+//    }
+
+
     
     
     //permite mover a escova para onde o dedo arrastar
@@ -128,8 +118,8 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
         //faz a escova ir para onde o dedo for
         for touch in touches{
             let location = touch.location(in: self)
-            escova.position.x = location.x
-            escova.position.y = location.y
+            toothbrush.position.x = location.x
+            toothbrush.position.y = location.y
         }
         
     }
@@ -139,7 +129,7 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
         var firstBody = SKPhysicsBody()
         var secondBody = SKPhysicsBody()
         
-        if contact.bodyA.node?.name == "Escova"{
+        if contact.bodyA.node?.name == "Toothbrush"{
             firstBody = contact.bodyA
             secondBody = contact.bodyB
         } else{
@@ -147,14 +137,21 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-        if firstBody.node?.name == "Escova" && secondBody.node?.name == "Tartaro"{
+        if firstBody.node?.name == "Toothbrush" && secondBody.node?.name == "Tartarus"{
             // tartaro.alpha para diminuir a opacidade, 0.0 = transparente
             print("contato feito")
             //uma bela gambiarra, precisava tirar mas o collisionTartaro nao funcionou
-            secondBody.node?.alpha -= 0.22
+            secondBody.node?.alpha -= 0.25
             if secondBody.node!.alpha <= 0.0 {
                 secondBody.node?.removeFromParent()
+                Tartarus.cont -= 1
+                if Tartarus.cont == 0 {
+                    print("removeu tudo")
+                }
             }
+            
+            //storyboard reference pra chamar a recompensa quando todos os nodes forem removidos
+            
  
         }
         
@@ -181,5 +178,7 @@ class EscovaDente: SKScene, SKPhysicsContactDelegate {
 //            }
 //        }
 //    }
+    
+    //passar para a tela de recompensa
     
 }

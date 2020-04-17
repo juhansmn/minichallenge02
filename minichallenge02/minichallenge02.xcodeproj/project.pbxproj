@@ -19,6 +19,8 @@
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
+		853453FD244A19DB00D3E244 /* Toothbrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853453FC244A19DB00D3E244 /* Toothbrush.swift */; };
+		853453FF244A1D5200D3E244 /* Tartarus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853453FE244A1D5200D3E244 /* Tartarus.swift */; };
 		85BF23AA2444EB23001C7BFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23A92444EB23001C7BFF /* GameViewController.swift */; };
 		85BF23AC2444EDC5001C7BFF /* EscovaDente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
+		853453FC244A19DB00D3E244 /* Toothbrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toothbrush.swift; sourceTree = "<group>"; };
+		853453FE244A1D5200D3E244 /* Tartarus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tartarus.swift; sourceTree = "<group>"; };
 		85BF23A92444EB23001C7BFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscovaDente.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +128,8 @@
 				0A04740A242D52DE000F2F7B /* Info.plist */,
 				85BF23A92444EB23001C7BFF /* GameViewController.swift */,
 				85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */,
+				853453FC244A19DB00D3E244 /* Toothbrush.swift */,
+				853453FE244A1D5200D3E244 /* Tartarus.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -284,7 +290,9 @@
 				85BF23AA2444EB23001C7BFF /* GameViewController.swift in Sources */,
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
+				853453FF244A1D5200D3E244 /* Tartarus.swift in Sources */,
 				85BF23AC2444EDC5001C7BFF /* EscovaDente.swift in Sources */,
+				853453FD244A19DB00D3E244 /* Toothbrush.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

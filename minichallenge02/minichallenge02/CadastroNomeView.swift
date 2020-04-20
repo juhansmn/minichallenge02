@@ -22,7 +22,6 @@ class CadastroNomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 

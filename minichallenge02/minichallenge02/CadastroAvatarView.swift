@@ -8,23 +8,30 @@
 
 import UIKit
 
+//Array de imagens inseridas em assets
+let avatars = [#imageLiteral(resourceName: "cat"), #imageLiteral(resourceName: "grey-cat")] //#imageLiteral(resourceName: "name")
+
 class CadastroAvatarView: UIViewController {
+    
+    @IBAction func catAvatarButton(_ sender: UIButton) {
+        let avatar = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        UserDefaults.standard.set(avatar, forKey: "avatar")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func greyCatAvatarButton(_ sender: UIButton) {
+        let avatar = 1
+        
+        UserDefaults.standard.set(avatar, forKey: "avatar")
     }
-    */
+    
+    @IBAction func avancarAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "deCadastroPraSelecaoUsuario", sender: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 
 }

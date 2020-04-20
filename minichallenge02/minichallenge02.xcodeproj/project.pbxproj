@@ -19,6 +19,8 @@
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
+		E14571752447B19100E06079 /* MostraUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14571742447B19100E06079 /* MostraUsuarioView.swift */; };
+		E14571772448DB5A00E06079 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14571762448DB5A00E06079 /* Usuario.swift */; };
 		E1DD1A72243BB3F500C15355 /* CadastroNomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */; };
 		E1DD1A74243BCC9500C15355 /* CadastroAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
+		E14571742447B19100E06079 /* MostraUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostraUsuarioView.swift; sourceTree = "<group>"; };
+		E14571762448DB5A00E06079 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroNomeView.swift; sourceTree = "<group>"; };
 		E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroAvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +118,7 @@
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
 				E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */,
 				E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */,
+				E14571742447B19100E06079 /* MostraUsuarioView.swift */,
 				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
 				0A047400242D52D9000F2F7B /* ViewController.swift */,
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
@@ -124,6 +129,7 @@
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
+				E14571762448DB5A00E06079 /* Usuario.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -283,7 +289,9 @@
 			files = (
 				E1DD1A72243BB3F500C15355 /* CadastroNomeView.swift in Sources */,
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
+				E14571772448DB5A00E06079 /* Usuario.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
+				E14571752447B19100E06079 /* MostraUsuarioView.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 				E1DD1A74243BCC9500C15355 /* CadastroAvatarView.swift in Sources */,
 			);

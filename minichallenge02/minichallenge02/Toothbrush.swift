@@ -34,15 +34,20 @@ class Toothbrush: SKSpriteNode {
         sprite.physicsBody?.allowsRotation = false //nao deixa ficar girando enquanto mexe
         
         //colisão
-        sprite.physicsBody?.categoryBitMask = ColliderType.Escova
-        sprite.physicsBody?.collisionBitMask = ColliderType.Tartaro
-        sprite.physicsBody?.contactTestBitMask = ColliderType.Tartaro
+        sprite.physicsBody?.categoryBitMask = ColliderType.Toothbrush
+        sprite.physicsBody?.collisionBitMask = ColliderType.Tartarus
+        sprite.physicsBody?.contactTestBitMask = ColliderType.Tartarus
     }
-    
+
     func addToothbrushPosition(sprite: SKSpriteNode){
         sprite.zPosition = 1 //coloca a escova em cima do background
         //para diminuir o tamanho da escova
         sprite.xScale = 0.3
         sprite.yScale = 0.3
     }
+
+    
 }
+
+
+

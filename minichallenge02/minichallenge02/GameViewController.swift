@@ -21,15 +21,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // adicionando a view criada lá em cima
+        // adicionando a view criada acima na tela
         view.addSubview(skView)
         skView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         skView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         skView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
     
-        //adicionando SKScene (EscovaDente) à view
-        let scene = EscovaDente(size: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)) //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
+        //adicionando SKScene (ActivityScene) à view
+        
+        let scene = ActivityScene(size: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)

@@ -22,7 +22,7 @@
 		853453FD244A19DB00D3E244 /* Toothbrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853453FC244A19DB00D3E244 /* Toothbrush.swift */; };
 		853453FF244A1D5200D3E244 /* Tartarus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853453FE244A1D5200D3E244 /* Tartarus.swift */; };
 		85BF23AA2444EB23001C7BFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23A92444EB23001C7BFF /* GameViewController.swift */; };
-		85BF23AC2444EDC5001C7BFF /* EscovaDente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */; };
+		85BF23AC2444EDC5001C7BFF /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF23AB2444EDC5001C7BFF /* ActivityScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		853453FC244A19DB00D3E244 /* Toothbrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toothbrush.swift; sourceTree = "<group>"; };
 		853453FE244A1D5200D3E244 /* Tartarus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tartarus.swift; sourceTree = "<group>"; };
 		85BF23A92444EB23001C7BFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscovaDente.swift; sourceTree = "<group>"; };
+		85BF23AB2444EDC5001C7BFF /* ActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
 				85BF23A92444EB23001C7BFF /* GameViewController.swift */,
-				85BF23AB2444EDC5001C7BFF /* EscovaDente.swift */,
+				85BF23AB2444EDC5001C7BFF /* ActivityScene.swift */,
 				853453FC244A19DB00D3E244 /* Toothbrush.swift */,
 				853453FE244A1D5200D3E244 /* Tartarus.swift */,
 			);
@@ -291,7 +291,7 @@
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
 				853453FF244A1D5200D3E244 /* Tartarus.swift in Sources */,
-				85BF23AC2444EDC5001C7BFF /* EscovaDente.swift in Sources */,
+				85BF23AC2444EDC5001C7BFF /* ActivityScene.swift in Sources */,
 				853453FD244A19DB00D3E244 /* Toothbrush.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 			);

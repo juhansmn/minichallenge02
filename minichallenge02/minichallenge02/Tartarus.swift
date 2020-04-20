@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class Tartarus: SKSpriteNode {
-    static var cont = 0
+    static var tartarusCount = 0
     
     init(){
         let texture = SKTexture(imageNamed: "tartaro")
@@ -20,7 +20,7 @@ class Tartarus: SKSpriteNode {
         
         addTartarusPhysics(sprite: self)
         addTartarusPosition(sprite: self)
-        Tartarus.cont += 1
+        Tartarus.tartarusCount += 1
         
     }
     
@@ -33,7 +33,7 @@ class Tartarus: SKSpriteNode {
         sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
         sprite.physicsBody?.affectedByGravity = false
         sprite.physicsBody?.isDynamic = false //outro sprite nao vai poder mexer nele
-        sprite.physicsBody?.categoryBitMask = ColliderType.Tartaro
+        sprite.physicsBody?.categoryBitMask = ColliderType.Tartarus
     }
     
     func addTartarusPosition(sprite: SKSpriteNode){
@@ -47,4 +47,15 @@ class Tartarus: SKSpriteNode {
         sprite.size = CGSize(width: 50, height: 50)
         sprite.position = CGPoint(x: position, y: -60)
     }
+    
+    //checar se todos os tártaros foram removidos
+    func checkAllTartarusRemoved(){
+        
+    }
+    
+    //retirar os tártaros da scene
+    func killTartarus(node: SKSpriteNode){
+        
+    }
+    
 }

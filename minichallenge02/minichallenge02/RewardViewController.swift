@@ -33,7 +33,7 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
                 openCamera()
             case .notDetermined: // The user has not yet been asked for camera access.
                 AVCaptureDevice.requestAccess(for: .video) { granted in
-                    //Chama a main thread, pois transições são feitas apenas na main thread
+                    //Chama a main thread. Transições de tela são feitas apenas na main thread.
                     DispatchQueue.main.async(){
                         if granted {
                             self.openCamera()
@@ -43,11 +43,12 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
                         }
                     }
                 }
-            //show Você não deu permissão!
             case .denied: // The user has previously denied access.
+                print("O usuário não deu permissão")
                 goToHome()
             case .restricted: // The user can't grant access due to restrictions.
                 print("O usuário tem restrições")
+                goToHome()
             @unknown default:
                 fatalError()
         }
@@ -60,7 +61,7 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     
     func openCamera(){
         self.imagePickerController = UIImagePickerController()
-        //Especifica o uso da câmera
+        //Especifica o uso da câmera.
         self.imagePickerController.sourceType = .camera
         self.imagePickerController.delegate = self
         //Mostra a câmera
@@ -70,7 +71,7 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     //Delegate. Chamado ao tirar a foto.
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        //Fecha a câmera
+        //Fecha a câmera.
         imagePickerController.dismiss(animated: true, completion: nil)
         
         guard let photoTaken = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as? UIImage
@@ -79,15 +80,15 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
                 return
         }
         
-        //Aplicar o filtro
+        //Aplicar o filtro.
         photo = applyFilter(photoTaken)
-        //Salva a foto na Galeria
+        //Salva a foto na Galeria.
         savePhoto(photo)
         //Executa Segue para tela de Foto:
         performSegue(withIdentifier: "photoSegue", sender: self)
     }
     
-    //Aplica o filtro do Dino na foto tirada. Retorna a foto com filtro
+    //Aplica o filtro do Dino na foto tirada. Retorna a foto com filtro.
     func applyFilter(_ photo: UIImage) -> UIImage{
         print("Filtro aplicado!")
         
@@ -111,7 +112,7 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
         UIImageWriteToSavedPhotosAlbum(photo, self, nil, nil)
     }
     
-    //Chamada à execução de uma segue
+    //Chamada à execução de uma segue.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PhotoViewController{
             print("Destino: \(destination)")

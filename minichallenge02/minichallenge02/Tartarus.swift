@@ -49,5 +49,5 @@ class Tartarus: SKSpriteNode {
         sprite.size = CGSize(width: 45, height: 45)
         sprite.position = CGPoint(x: position, y: -65)
     }
-    
+
 }

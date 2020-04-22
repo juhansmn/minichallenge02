@@ -72,18 +72,19 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
             toothbrush.position.x = location.x
             toothbrush.position.y = location.y
         }
-        
     }
     
     
     //detectando contato
     func didBegin(_ contact: SKPhysicsContact) {
+        
         guard let nodeA = contact.bodyA.node else {return}
         guard let nodeB = contact.bodyB.node else {return}
         
         if nodeA == toothbrush {
             playerCollided(with: nodeB as! SKSpriteNode)
             //nodeB é uma instancia da Classe Tartarus dentro do array tartarus
+            //qual é o id do nodeB
             
         } else if nodeB == toothbrush {
             playerCollided(with: nodeA as! SKSpriteNode)
@@ -98,6 +99,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         if isActivityOver() {
             print("hora da recompensa")
             //passar para a tela de recompensa
+            
         }
     }
     
@@ -112,6 +114,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
           node.removeFromParent()
           print("Tartarus removed")
           Tartarus.tartarusCount -= 1
+
       }
     }
 

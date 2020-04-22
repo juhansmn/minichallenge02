@@ -33,6 +33,7 @@ class GameViewController: UIViewController {
         //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
+        skView.showsPhysics = true
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)
     }
     

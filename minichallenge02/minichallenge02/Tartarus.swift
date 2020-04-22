@@ -31,7 +31,7 @@ class Tartarus: SKSpriteNode {
     
     func addTartarusPhysics(sprite: SKSpriteNode){
         //colisão
-        sprite.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 3)
+        sprite.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 4)
         sprite.physicsBody?.affectedByGravity = false
         sprite.physicsBody?.isDynamic = false //outro sprite nao vai poder mexer nele
         sprite.physicsBody?.categoryBitMask = ColliderType.Tartarus

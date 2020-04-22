@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 /*
 // MARK: - Funcionamento
@@ -22,63 +23,99 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     //Abre a câmera para tirar uma foto.
     @IBAction func onPhotoButton(_ sender: Any) {
-        imagePickerController = UIImagePickerController()
-        //Especifica o uso da câmera
-        imagePickerController.sourceType = .camera
-        imagePickerController.delegate = self
-        //Mostra a câmera
-        present(imagePickerController, animated: true, completion: nil)
+        //Verifica o estado atual de autorização para tirar foto
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+            case .authorized: // The user has previously granted access to the camera.
+                openCamera()
+            case .notDetermined: // The user has not yet been asked for camera access.
+                AVCaptureDevice.requestAccess(for: .video) { granted in
+                    //Chama a main thread, pois transições são feitas apenas na main thread
+                    DispatchQueue.main.async(){
+                        if granted {
+                            self.openCamera()
+                        }
+                        else{
+                            self.goToHome()
+                        }
+                    }
+                }
+            //show Você não deu permissão!
+            case .denied: // The user has previously denied access.
+                goToHome()
+            case .restricted: // The user can't grant access due to restrictions.
+                print("O usuário tem restrições")
+            @unknown default:
+                fatalError()
+        }
     }
     
-    //Delegate. Chamado ao tirar a foto
+    func goToHome(){
+        print("Vai para a Home")
+        performSegue(withIdentifier: "homeSegue", sender: self)
+    }
+    
+    func openCamera(){
+        self.imagePickerController = UIImagePickerController()
+        //Especifica o uso da câmera
+        self.imagePickerController.sourceType = .camera
+        self.imagePickerController.delegate = self
+        //Mostra a câmera
+        self.present(self.imagePickerController, animated: true, completion: nil)
+    }
+    
+    //Delegate. Chamado ao tirar a foto.
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         //Fecha a câmera
         imagePickerController.dismiss(animated: true, completion: nil)
         
         guard let photoTaken = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as? UIImage
-            else{
+        else {
                 print("Nenhuma foto encontrada.")
-            return
+                return
         }
-        
-        photo = photoTaken
         
         //Aplicar o filtro
-        //applyFilter(photo)
+        photo = applyFilter(photoTaken)
         //Salva a foto na Galeria
         savePhoto(photo)
+        //Executa Segue para tela de Foto:
+        performSegue(withIdentifier: "photoSegue", sender: self)
     }
     
-    func applyFilter(_ photo: UIImage){
+    //Aplica o filtro do Dino na foto tirada. Retorna a foto com filtro
+    func applyFilter(_ photo: UIImage) -> UIImage{
+        print("Filtro aplicado!")
         
-    }
-    
-    //Salva a foto na Galeria
-    func savePhoto(_ photo: UIImage){
-        UIImageWriteToSavedPhotosAlbum(photo, self, #selector(photo(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
-    
-    //Tratamento de erros ao salvar foto
-    @objc func photo(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            //Um erro aconteceu
-            let ac = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
+        //Se existir o filtro, aplica na foto.
+        if let filter = UIImage(named: "filtro"){
+            UIGraphicsBeginImageContextWithOptions(photo.size, false, 0.0)
+            
+            //Desenha as imagens no Contexto atual
+            photo.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: photo.size))
+            filter.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: filter.size))
         }
+        //Recebe as imagens desenhadas no Context atual, se não houver, retorna a foto sem filtro.
+        let photoWithFilter = UIGraphicsGetImageFromCurrentImageContext() ?? photo
+        UIGraphicsEndImageContext()
+        return photoWithFilter
+    }
+    
+    //Salva a foto na Galeria.
+    func savePhoto(_ photo: UIImage){
+        print("Foto salva!")
+        UIImageWriteToSavedPhotosAlbum(photo, self, nil, nil)
     }
     
     //Chamada à execução de uma segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PhotoViewController{
-            destination.imageView.image = photo
+            print("Destino: \(destination)")
+            destination.photo = self.photo
         }
     }
 }

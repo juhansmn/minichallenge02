@@ -11,10 +11,14 @@ import UIKit
 //Aplicar filtro e revelar foto
 class PhotoViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var imageView: UIImageView!
+    var photo: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Recebe a foto passada da outra tela.
+        imageView.image = photo
 
         // Do any additional setup after loading the view.
     }

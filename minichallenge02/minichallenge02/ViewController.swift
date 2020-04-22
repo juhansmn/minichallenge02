@@ -21,5 +21,11 @@ class ViewController: UIViewController {
     @IBAction func changeText(_ sender: Any) {
         label.text = "Texto alterado!"
     }
+    
+    //botao para entrar na gameViewController e cenário de escovar o dente
+    @IBAction func escovaDente(_ sender: Any) {
+        let firstVC = self.storyboard?.instantiateViewController(withIdentifier: "escovarDente") as! GameViewController
+        self.navigationController?.pushViewController(firstVC, animated: true)
+    }
 }
 

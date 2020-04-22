@@ -28,7 +28,7 @@ class Toothbrush: SKSpriteNode {
     //eu devia inicializar com isso ou é ok chamar a função lá na EscovaDente?
     func addToothbrushPhysics(sprite: SKSpriteNode){
         //parte física
-        sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
+        sprite.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 4)
         sprite.physicsBody?.affectedByGravity = false
         sprite.physicsBody?.isDynamic = true //permite que a escova interaja com o tartaro
         sprite.physicsBody?.allowsRotation = false //nao deixa ficar girando enquanto mexe
@@ -40,7 +40,7 @@ class Toothbrush: SKSpriteNode {
     }
 
     func addToothbrushPosition(sprite: SKSpriteNode){
-        sprite.zPosition = 1 //coloca a escova em cima do background
+        sprite.zPosition = 3 //coloca a escova em cima do background
         //para diminuir o tamanho da escova
         sprite.xScale = 0.3
         sprite.yScale = 0.3

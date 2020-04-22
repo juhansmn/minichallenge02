@@ -19,6 +19,8 @@
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
+		0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07DF243CFB6500D81772 /* RewardViewController.swift */; };
+		0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
+		0AFA07DF243CFB6500D81772 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
+		0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
 				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
 				0A047400242D52D9000F2F7B /* ViewController.swift */,
+				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
+				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
@@ -276,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
+				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
+				0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +459,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JG99T8FZ63;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JG99T8FZ63;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

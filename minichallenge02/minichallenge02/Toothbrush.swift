@@ -46,7 +46,6 @@ class Toothbrush: SKSpriteNode {
         sprite.yScale = 0.3
     }
 
-    
 }
 
 

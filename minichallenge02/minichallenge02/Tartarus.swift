@@ -11,10 +11,11 @@ import GameplayKit
 
 class Tartarus: SKSpriteNode {
     static var tartarusCount = 0
+    let id:Int //para verificar qual tártaro está sendo tocado dentro do array e modificar ele
     
-    init(){
+    init(id: Int){
         let texture = SKTexture(imageNamed: "tartaro")
-        
+        self.id = id
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         self.name = "Tartarus"
         
@@ -40,22 +41,13 @@ class Tartarus: SKSpriteNode {
         sprite.zPosition = 1 //deixa acima do background
         
         //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
-        let randomPosition = GKRandomDistribution(lowestValue: -70, highestValue: 70)
-        let position = CGFloat(randomPosition.nextInt())
+        let randomPositionX = GKRandomDistribution(lowestValue: -70, highestValue: 70)
+        let position = CGFloat(randomPositionX.nextInt())
+
         sprite.xScale = 0.2
         sprite.yScale = 0.2
-        sprite.size = CGSize(width: 50, height: 50)
-        sprite.position = CGPoint(x: position, y: -60)
-    }
-    
-    //checar se todos os tártaros foram removidos
-    func checkAllTartarusRemoved(){
-        
-    }
-    
-    //retirar os tártaros da scene
-    func killTartarus(node: SKSpriteNode){
-        
+        sprite.size = CGSize(width: 45, height: 45)
+        sprite.position = CGPoint(x: position, y: -65)
     }
     
 }

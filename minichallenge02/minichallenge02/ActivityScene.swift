@@ -32,7 +32,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         //adicionando elementos à SKView
         addBackground()
         addToothbrush()
-        addTartarus(count: 3)
+        addTartarus(count: 6)
     }
     
     //configurações do background
@@ -56,10 +56,10 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
 
     //adicionando as instâncias da Classe Tartarus em um array de SKSpriteNode e à tela
     func addTartarus(count: Int){
-        for _ in 0..<count{
-            let tartaroTemp:Tartarus = Tartarus()
+        for i in 0..<count{
+            let tartaroTemp:Tartarus = Tartarus(id: i)
             tartarus.append(tartaroTemp)
-            
+            print("Id do tártaro: \(tartaroTemp.id)"  )
             addChild(tartaroTemp)
         }
     }
@@ -75,6 +75,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    
     //detectando contato
     func didBegin(_ contact: SKPhysicsContact) {
         guard let nodeA = contact.bodyA.node else {return}
@@ -82,41 +83,44 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         
         if nodeA == toothbrush {
             playerCollided(with: nodeB as! SKSpriteNode)
+            //nodeB é uma instancia da Classe Tartarus dentro do array tartarus
+            
         } else if nodeB == toothbrush {
             playerCollided(with: nodeA as! SKSpriteNode)
+            //nodeA é uma instancia da Classe Tartarus dentro do array tartarus
         }
     }
     
     //ação do contato
     func playerCollided(with node: SKSpriteNode){
-        if node.name == "Tartarus" {
-            cleanTartarus(node: node)
-            killTartarus(node: node)
-            if isActivityOver() {
-                print("hora da recompensa")
-            }
+        cleanTartarus(node: node)
+        killTartarus(node: node)
+        if isActivityOver() {
+            print("hora da recompensa")
+            //passar para a tela de recompensa
         }
     }
     
-    //não consegui colocar na Classe Tartarus e chamar aqui
+    //não consegui colocar na Classe Tartarus e chamar aqui, preciso saber qual instancia está sendo tocada dentro do array e acessar as propriedades do elemento
     func cleanTartarus(node: SKSpriteNode){
-        node.alpha -= 0.25
+        node.alpha -= 0.17
     }
     
+    //se o tártaro estiver transparente, retirar ele da tela
     func killTartarus(node: SKSpriteNode){
-        if node.alpha <= 0.0{
-            node.removeFromParent()
-            print("Tartarus removed")
-            Tartarus.tartarusCount -= 1
-        }
+      if node.alpha <= 0.0{
+          node.removeFromParent()
+          print("Tartarus removed")
+          Tartarus.tartarusCount -= 1
+      }
     }
-    
+
+    //checar se ainda existem tártaros na tela. Se não existir, hora da recompensa
     func isActivityOver() -> Bool{
-        if Tartarus.tartarusCount == 0 {
-            activityOver = true
-        }
-        return activityOver
+      if Tartarus.tartarusCount == 0 {
+          activityOver = true
+      }
+      return activityOver
     }
-    
-    
+
 }

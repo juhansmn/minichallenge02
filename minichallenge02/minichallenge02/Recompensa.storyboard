@@ -1,7 +1,104 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cla-x8-gM3">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Reward View Controller-->
+        <scene sceneID="NXc-r6-Ydr">
+            <objects>
+                <viewController id="cla-x8-gM3" customClass="RewardViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kB-Qo-C17">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K54-2T-Frg">
+                                <rect key="frame" x="396" y="265" width="104" height="84"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Tirar foto"/>
+                                <connections>
+                                    <action selector="onPhotoButton:" destination="cla-x8-gM3" eventType="touchUpInside" id="ryQ-CN-VRK"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Kg-WSK">
+                                <rect key="frame" x="261" y="20" width="374" height="104"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BEm-e2-ew5" firstAttribute="bottom" secondItem="K54-2T-Frg" secondAttribute="bottom" constant="44" id="1UM-14-Qri"/>
+                            <constraint firstItem="K54-2T-Frg" firstAttribute="height" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="0.202899" id="8ll-ic-pdf"/>
+                            <constraint firstItem="K54-2T-Frg" firstAttribute="width" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="52:207" id="O8t-HO-LyP"/>
+                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="height" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="0.248792" constant="1" id="THw-1f-RaD"/>
+                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="width" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="187:207" id="X26-aU-1V8"/>
+                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="top" secondItem="BEm-e2-ew5" secondAttribute="top" constant="20" id="aAw-nD-930"/>
+                            <constraint firstItem="K54-2T-Frg" firstAttribute="centerX" secondItem="BEm-e2-ew5" secondAttribute="centerX" id="fPY-BZ-biZ"/>
+                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="centerX" secondItem="BEm-e2-ew5" secondAttribute="centerX" id="uXj-jU-Fkv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BEm-e2-ew5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bvw-cT-TrU"/>
+                    <connections>
+                        <segue destination="c0V-qA-Kwh" kind="presentation" identifier="photoSegue" id="MCE-gG-4hw"/>
+                        <segue destination="fUd-ry-YuT" kind="presentation" identifier="homeSegue" id="RGC-QJ-vVj"/>
+                        <segue destination="Hq8-Ob-OOp" kind="presentation" identifier="nomeStoryboardSegue" id="bKX-5S-nBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZp-Vd-gAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.41071428571422" y="7.2463768115942031"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="7DE-Jc-9ZO">
+            <objects>
+                <viewController id="c0V-qA-Kwh" customClass="PhotoViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ycL-jX-CGK">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-Wg-hza">
+                                <rect key="frame" x="118.66666666666669" y="49" width="659" height="316"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="EDh-DM-2Xa"/>
+                                    <constraint firstAttribute="width" secondItem="Lp4-Wg-hza" secondAttribute="height" multiplier="659:316" id="gYE-9S-F3B"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lp4-Wg-hza" firstAttribute="centerY" secondItem="ycL-jX-CGK" secondAttribute="centerY" id="2hG-52-q3C"/>
+                            <constraint firstItem="Lp4-Wg-hza" firstAttribute="centerX" secondItem="ycL-jX-CGK" secondAttribute="centerX" id="Ggr-QU-7vC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Nk-Cu-6hr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UoR-Io-Gc1"/>
+                    <connections>
+                        <outlet property="imageView" destination="Lp4-Wg-hza" id="Oci-Xa-SoR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJ6-7c-vgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691.74107142857144" y="847.82608695652175"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="S9J-Wy-STe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="fUd-ry-YuT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzg-2C-val" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="7"/>
+        </scene>
+        <!--Recompensa-->
+        <scene sceneID="XRB-sc-qoM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recompensa" id="Hq8-Ob-OOp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzM-43-qJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="116"/>
+        </scene>
+    </scenes>
 </document>

@@ -15,6 +15,10 @@
 		0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */; };
 		0A047414242D52DF000F2F7B /* minichallenge02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A047413242D52DF000F2F7B /* minichallenge02Tests.swift */; };
 		0A04741F242D52DF000F2F7B /* minichallenge02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04741E242D52DF000F2F7B /* minichallenge02UITests.swift */; };
+		0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523902450C12500CF7053 /* ActivityScene.swift */; };
+		0A3523952450C12600CF7053 /* Tartarus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523912450C12500CF7053 /* Tartarus.swift */; };
+		0A3523962450C12600CF7053 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523922450C12500CF7053 /* GameViewController.swift */; };
+		0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523932450C12600CF7053 /* Toothbrush.swift */; };
 		0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */; };
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
@@ -55,6 +59,10 @@
 		0A04741A242D52DF000F2F7B /* minichallenge02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = minichallenge02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A04741E242D52DF000F2F7B /* minichallenge02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minichallenge02UITests.swift; sourceTree = "<group>"; };
 		0A047420242D52DF000F2F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A3523902450C12500CF7053 /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
+		0A3523912450C12500CF7053 /* Tartarus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tartarus.swift; sourceTree = "<group>"; };
+		0A3523922450C12500CF7053 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0A3523932450C12600CF7053 /* Toothbrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toothbrush.swift; sourceTree = "<group>"; };
 		0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
@@ -120,6 +128,10 @@
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
+				0A3523902450C12500CF7053 /* ActivityScene.swift */,
+				0A3523922450C12500CF7053 /* GameViewController.swift */,
+				0A3523912450C12500CF7053 /* Tartarus.swift */,
+				0A3523932450C12600CF7053 /* Toothbrush.swift */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
@@ -282,9 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
+				0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */,
 				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
+				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
+				0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */,
+				0A3523952450C12600CF7053 /* Tartarus.swift in Sources */,
 				0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

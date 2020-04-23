@@ -14,7 +14,7 @@ class Tartarus: SKSpriteNode {
     let id:Int //para verificar qual tártaro está sendo tocado dentro do array e modificar ele
     
     init(id: Int){
-        let texture = SKTexture(imageNamed: "tartaro")
+        let texture = SKTexture(imageNamed: "tartarusImage")
         self.id = id
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         self.name = "Tartarus"
@@ -31,10 +31,11 @@ class Tartarus: SKSpriteNode {
     
     func addTartarusPhysics(sprite: SKSpriteNode){
         //colisão
-        sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
+        sprite.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 4)
         sprite.physicsBody?.affectedByGravity = false
         sprite.physicsBody?.isDynamic = false //outro sprite nao vai poder mexer nele
         sprite.physicsBody?.categoryBitMask = ColliderType.Tartarus
+        sprite.physicsBody?.contactTestBitMask = ColliderType.Toothbrush
     }
     
     func addTartarusPosition(sprite: SKSpriteNode){

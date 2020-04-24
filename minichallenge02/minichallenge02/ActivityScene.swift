@@ -74,7 +74,6 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    
     //detectando contato
     func didBegin(_ contact: SKPhysicsContact) {
 //        let contactA:SKPhysicsBody = contact.bodyA
@@ -113,6 +112,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         if isActivityOver() {
             print("hora da recompensa")
             //passar para a tela de recompensa
+        
         }
     }
     

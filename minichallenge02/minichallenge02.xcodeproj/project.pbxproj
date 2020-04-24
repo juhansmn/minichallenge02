@@ -25,6 +25,12 @@
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
 		0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07DF243CFB6500D81772 /* RewardViewController.swift */; };
 		0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */; };
+		854523222453557200458A7D /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523212453557200458A7D /* IntroductionViewController.swift */; };
+		854523282453782800458A7D /* TapBrushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523272453782800458A7D /* TapBrushViewController.swift */; };
+		8545232A24537AC700458A7D /* apresentacao.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 8545232924537AC700458A7D /* apresentacao.MOV */; };
+		8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232B24538C0200458A7D /* TrainAnimationViewController.swift */; };
+		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
+		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
 		0AFA07DF243CFB6500D81772 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		854523212453557200458A7D /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		854523272453782800458A7D /* TapBrushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBrushViewController.swift; sourceTree = "<group>"; };
+		8545232924537AC700458A7D /* apresentacao.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = apresentacao.MOV; path = ../../../../Dentinho/apresentacao.MOV; sourceTree = "<group>"; };
+		8545232B24538C0200458A7D /* TrainAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainAnimationViewController.swift; sourceTree = "<group>"; };
+		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 				0A047400242D52D9000F2F7B /* ViewController.swift */,
 				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
 				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
+				854523212453557200458A7D /* IntroductionViewController.swift */,
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
@@ -133,9 +146,14 @@
 				0A3523912450C12500CF7053 /* Tartarus.swift */,
 				0A3523932450C12600CF7053 /* Toothbrush.swift */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
+				8545232924537AC700458A7D /* apresentacao.MOV */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
+				854523272453782800458A7D /* TapBrushViewController.swift */,
+				8545232B24538C0200458A7D /* TrainAnimationViewController.swift */,
+				8545232D24538E8F00458A7D /* TutorialViewController.swift */,
+				8545232F24538FCC00458A7D /* TutorialScene.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -268,6 +286,7 @@
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
+				8545232A24537AC700458A7D /* apresentacao.MOV in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,10 +314,15 @@
 			files = (
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
 				0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */,
+				854523282453782800458A7D /* TapBrushViewController.swift in Sources */,
+				854523222453557200458A7D /* IntroductionViewController.swift in Sources */,
 				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
+				8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */,
+				8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */,
 				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
+				8545233024538FCC00458A7D /* TutorialScene.swift in Sources */,
 				0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */,
 				0A3523952450C12600CF7053 /* Tartarus.swift in Sources */,
 				0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */,
@@ -475,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JG99T8FZ63;
+				DEVELOPMENT_TEAM = MAGNLW64BR;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -494,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JG99T8FZ63;
+				DEVELOPMENT_TEAM = MAGNLW64BR;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (

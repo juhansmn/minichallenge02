@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7G-3a-CYM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="reS-j4-B7y">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -20,7 +20,151 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyx-gR-gUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-116"/>
+            <point key="canvasLocation" x="132" y="-135"/>
+        </scene>
+        <!--Introduction View Controller-->
+        <scene sceneID="9QX-6H-DIB">
+            <objects>
+                <viewController id="reS-j4-B7y" customClass="IntroductionViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6z-LM-Wj6">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scE-nX-O9u">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gr-zO-7ZK">
+                                        <rect key="frame" x="754" y="355" width="90" height="30"/>
+                                        <state key="normal" title="Pular Tutorial"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="6gr-zO-7ZK" firstAttribute="bottom" secondItem="scE-nX-O9u" secondAttribute="bottomMargin" id="740-1g-QrZ"/>
+                                    <constraint firstItem="6gr-zO-7ZK" firstAttribute="trailing" secondItem="scE-nX-O9u" secondAttribute="trailingMargin" id="tad-SA-xMf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="scE-nX-O9u" firstAttribute="top" secondItem="tZN-aX-Nox" secondAttribute="top" id="8mL-aT-HUh"/>
+                            <constraint firstAttribute="bottom" secondItem="scE-nX-O9u" secondAttribute="bottom" id="CkR-1U-P9U"/>
+                            <constraint firstItem="scE-nX-O9u" firstAttribute="leading" secondItem="d6z-LM-Wj6" secondAttribute="leading" id="RZI-9X-0OL"/>
+                            <constraint firstAttribute="trailing" secondItem="scE-nX-O9u" secondAttribute="trailing" id="ib7-hE-o9a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tZN-aX-Nox"/>
+                    </view>
+                    <connections>
+                        <outlet property="introVideoView" destination="scE-nX-O9u" id="PHj-3S-TIc"/>
+                        <segue destination="L2Y-rI-CrF" kind="presentation" identifier="tapBrushSegue" id="6HD-vv-nRQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybh-tn-tqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.91964285714286" y="644.92753623188412"/>
+        </scene>
+        <!--Tap Brush View Controller-->
+        <scene sceneID="AZG-uG-0GB">
+            <objects>
+                <viewController id="L2Y-rI-CrF" customClass="TapBrushViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uD-fU-bsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapBrush" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
+                                <rect key="frame" x="742" y="363" width="90" height="30"/>
+                                <state key="normal" title="Pular Tutorial"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-iX-pJU">
+                                <rect key="frame" x="592" y="143" width="54" height="30"/>
+                                <state key="normal" title="Escovar"/>
+                                <connections>
+                                    <action selector="tapToBrush:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="hFQ-bp-aUZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tMs-iX-pJU" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" constant="143" id="0HM-zz-EeX"/>
+                            <constraint firstItem="m8t-hW-mPS" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" id="64M-D8-EPi"/>
+                            <constraint firstAttribute="bottom" secondItem="m8t-hW-mPS" secondAttribute="bottom" id="O4S-p9-YtC"/>
+                            <constraint firstItem="bPs-St-aQ7" firstAttribute="bottom" secondItem="htA-13-VJB" secondAttribute="bottom" id="Psj-sy-9eT"/>
+                            <constraint firstAttribute="trailing" secondItem="m8t-hW-mPS" secondAttribute="trailing" id="aIf-PO-Qcu"/>
+                            <constraint firstItem="bPs-St-aQ7" firstAttribute="trailing" secondItem="6uD-fU-bsQ" secondAttribute="trailingMargin" id="eic-rH-eg4"/>
+                            <constraint firstItem="tMs-iX-pJU" firstAttribute="leading" secondItem="htA-13-VJB" secondAttribute="leading" constant="548" id="g1v-bE-tDP"/>
+                            <constraint firstItem="m8t-hW-mPS" firstAttribute="leading" secondItem="6uD-fU-bsQ" secondAttribute="leading" id="seI-Xp-R8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="htA-13-VJB"/>
+                    </view>
+                    <connections>
+                        <segue destination="IdJ-ct-bFO" kind="presentation" identifier="trainSegue" id="IBt-D0-oVl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-t8-KgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827.67857142857144" y="644.92753623188412"/>
+        </scene>
+        <!--Train Animation View Controller-->
+        <scene sceneID="6b6-na-Moq">
+            <objects>
+                <viewController id="IdJ-ct-bFO" customClass="TrainAnimationViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Er-qb-AB4">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-HI-Yei">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjj-Ss-d2r">
+                                        <rect key="frame" x="754" y="355" width="90" height="30"/>
+                                        <state key="normal" title="Pular Tutorial"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Rjj-Ss-d2r" firstAttribute="bottom" secondItem="x8z-HI-Yei" secondAttribute="bottomMargin" id="8vy-G0-X1K"/>
+                                    <constraint firstItem="Rjj-Ss-d2r" firstAttribute="trailing" secondItem="x8z-HI-Yei" secondAttribute="trailingMargin" id="Bsj-9i-Ti7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x8z-HI-Yei" secondAttribute="trailing" id="DTV-b3-E4J"/>
+                            <constraint firstItem="x8z-HI-Yei" firstAttribute="leading" secondItem="3Er-qb-AB4" secondAttribute="leading" id="M4I-76-rcV"/>
+                            <constraint firstItem="x8z-HI-Yei" firstAttribute="top" secondItem="xkg-H3-Io2" secondAttribute="top" id="g8t-3j-Xho"/>
+                            <constraint firstAttribute="bottom" secondItem="x8z-HI-Yei" secondAttribute="bottom" id="y0Z-0K-SqA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xkg-H3-Io2"/>
+                    </view>
+                    <connections>
+                        <outlet property="trainVideoView" destination="x8z-HI-Yei" id="TfU-Sb-I6w"/>
+                        <segue destination="K4G-XD-GCn" kind="presentation" identifier="tutorialSegue" id="Tbz-Cc-bxY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cm6-gE-WVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549.5535714285713" y="644.92753623188412"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="HG9-n3-8BE">
+            <objects>
+                <viewController id="K4G-XD-GCn" customClass="TutorialViewController" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ES-IJ-ULA">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wUi-gE-SaD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zch-9A-fZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="1546"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tapBrush" width="1344" height="621"/>
+    </resources>
 </document>

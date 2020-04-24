@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Usuario {
-    var name: String = ""
-    //var avatar:
+class Usuario: Codable {
+    var nome: String = ""
+    var avatar: Int = 0
 }
 

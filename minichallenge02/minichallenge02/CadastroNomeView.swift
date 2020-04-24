@@ -7,22 +7,23 @@
 //
 
 import UIKit
+var usuario = Usuario()
 
 class CadastroNomeView: UIViewController {
     
     @IBOutlet weak var nomeDaCriancaTextField: UITextField!
 
     @IBAction func avancarAction(_ sender: Any) {
-        let nome = nomeDaCriancaTextField.text
-
-        UserDefaults.standard.set(nome, forKey: "nome")
-
+        guard let nome = nomeDaCriancaTextField.text , !nome.isEmpty else {return}
+        
+        usuario.nome = nome
+        
         performSegue(withIdentifier: "deNomePraAvatar", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
 
 }

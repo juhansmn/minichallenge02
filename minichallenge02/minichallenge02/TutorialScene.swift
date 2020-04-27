@@ -13,8 +13,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     //criando uma instância da classe Toothbrush
     var toothbrush = Toothbrush()
     //declarando array de tártaros do tipo igual a da Classe Tartarus
-    var tartarus1 = Tartarus(id: 0)
-    var tartarus2 = Tartarus(id: 1)
+    var tartarus:[Tartarus] = []
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
     
@@ -25,10 +24,12 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         //adicionando elementos à SKView
+        
         addDino()
         addBackground()
-        addToothbrush()
-        addTartarus()
+        addDinoTalking()
+        self.run(SKAction.playSoundFileNamed("2.1 Tenta.m4a", waitForCompletion: true), completion: addToothbrush)
+        addTartarus(count: 1)
     }
     
     //configurações do background
@@ -45,15 +46,18 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addDino(){
+        //com o balãozinho?
         let dino = SKSpriteNode(imageNamed: "dino-tutorial")
         //posiciona o dino ao fundo
         dino.zPosition = 1
         dino.xScale = 0.5
         dino.yScale = 0.5
-        //posiciona o dino na esquerda
-        dino.position = CGPoint(x:-110, y:-45)
+        //dino estava flutuando com a posição "normal"
         if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
             dino.position = CGPoint(x: -140, y: -55)
+        } else{
+            //posiciona o dino na esquerda
+            dino.position = CGPoint(x:-110, y:-45)
         }
         self.addChild(dino)
     }
@@ -61,15 +65,35 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     func addToothbrush(){
         //posição inicial que aparecerá na tela
         toothbrush.zPosition = 2
-        toothbrush.position = CGPoint(x:220, y:60)
+        toothbrush.position = CGPoint(x:220, y:80)
         self.addChild(toothbrush)
     }
 
-    //adicionando as instâncias da Classe Tartarus em um array de SKSpriteNode e à tela
-    func addTartarus(){
-        tartarus1.zPosition = 2
-        tartarus1.addTutorialPosition(sprite: tartarus1)
-        self.addChild(tartarus1)
+    func addTartarus(count: Int){
+        for i in 0..<count{
+            let tartaroTemp:Tartarus = Tartarus(id: i)
+            tartaroTemp.addTutorialPosition(sprite: tartaroTemp)
+            tartaroTemp.zPosition = 2
+            tartarus.append(tartaroTemp)
+            print("Id do tártaro: \(tartaroTemp.id)"  )
+            self.addChild(tartaroTemp)
+        }
+    }
+    
+    func addDinoTalking(){
+        let dinoTalking = SKSpriteNode(imageNamed: "dino-fala1")
+        dinoTalking.zPosition = 1
+        dinoTalking.xScale = 0.15
+        dinoTalking.yScale = 0.15
+        if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
+            dinoTalking.position = CGPoint(x: 170, y: -55)
+        } else{
+            //posiciona o dino na direita
+            dinoTalking.position = CGPoint(x:155, y:-45)
+        }
+        
+        //só falta falar
+        addChild(dinoTalking)
     }
     
     //permite mover a escova para onde o dedo arrastar
@@ -98,14 +122,19 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func checkAudioFinished(){
+        run(SKAction.playSoundFileNamed("4.1 Vou ficar quietinho.m4a", waitForCompletion: true))
+    }
+    
     //ação do contato
     func playerCollided(with node: SKSpriteNode){
         cleanTartarus(node: node)
         killTartarus(node: node)
-        if isActivityOver() {
-            print("hora da recompensa")
-            //passar para a tela de recompensa
         
+        if isActivityOver() {
+            //toca 4 e 4.1 e passa para atividade
+            run(SKAction.playSoundFileNamed("4. Muito bom!.m4a", waitForCompletion: true), completion: checkAudioFinished)
+            print("hora de escovar de verdade")
         }
     }
     
@@ -121,6 +150,11 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.run(tartarusDeath)
           print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
+        if Tartarus.tartarusCount == 1 {
+            print("É isso mesmo")
+            //adiciona audio 3 - Tutorial
+            run(SKAction.playSoundFileNamed("3. É isso mesmo.m4a", waitForCompletion: false))
+        }
       }
     }
 
@@ -128,9 +162,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     func isActivityOver() -> Bool{
         if Tartarus.tartarusCount == 0 {
             activityOver = true
-            //retirar todas as instancias da classe do array
-//            tartarus.removeAll()
-//            print("Quantidade de tártaro no array: \(tartarus.count)")
         }
       return activityOver
     }

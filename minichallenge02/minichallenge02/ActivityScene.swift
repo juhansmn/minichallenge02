@@ -121,7 +121,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
     
     //não consegui colocar na Classe Tartarus e chamar aqui, preciso saber qual instancia está sendo tocada dentro do array e acessar as propriedades do elemento
     func cleanTartarus(node: SKSpriteNode){
-        node.alpha -= 0.25
+        node.alpha -= 0.17
     }
     
     //se o tártaro estiver transparente, retirar ele da tela

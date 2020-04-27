@@ -52,13 +52,18 @@ class Tartarus: SKSpriteNode {
         sprite.zPosition = 2 //deixa acima do background e do dino
         
         //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
-        let randomPositionX = GKRandomDistribution(lowestValue: -130, highestValue: -105)
+        let randomPositionX = GKRandomDistribution(lowestValue: -150, highestValue: -80)
         let position = CGFloat(randomPositionX.nextInt())
 
-        sprite.xScale = 0.3
-        sprite.yScale = 0.3
+        sprite.xScale = 0.2
+        sprite.yScale = 0.2
         sprite.size = CGSize(width: 45, height: 45)
-        sprite.position = CGPoint(x: position, y: -85)
+        if DeviceType.isiPhone8plus || DeviceType.isiPhone11orProMax{
+            sprite.position = CGPoint(x: position, y: -100)
+        }else{
+            sprite.position = CGPoint(x: position, y: -90)
+        }
+        
     }
 
 }

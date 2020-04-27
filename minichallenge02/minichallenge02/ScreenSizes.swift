@@ -8,6 +8,7 @@
 
 import UIKit
 
+//para ser usado com o SpriteKit, que não funciona como o storyboard e autolayout
 struct ScreenSize{
     static let width = UIScreen.main.bounds.size.width
     static let height = UIScreen.main.bounds.size.height

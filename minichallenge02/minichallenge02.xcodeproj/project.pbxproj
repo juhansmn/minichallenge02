@@ -32,6 +32,10 @@
 		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
 		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
 		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
+		85BE9DD9245772F20095A3BF /* 3. É isso mesmo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */; };
+		85BE9DDA245772F20095A3BF /* 4. Muito bom!.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */; };
+		85BE9DDB245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */; };
+		85BE9DE024577C220095A3BF /* 2.1 Tenta.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
 		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
+		85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3. É isso mesmo.m4a"; sourceTree = "<group>"; };
+		85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4. Muito bom!.m4a"; sourceTree = "<group>"; };
+		85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4.1 Vou ficar quietinho.m4a"; sourceTree = "<group>"; };
+		85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2.1 Tenta.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,7 @@
 		0A0473FB242D52D9000F2F7B /* minichallenge02 */ = {
 			isa = PBXGroup;
 			children = (
+				85BE9DD4245771D40095A3BF /* Sounds */,
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
 				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
 				0A047400242D52D9000F2F7B /* ViewController.swift */,
@@ -177,6 +186,17 @@
 				0A047420242D52DF000F2F7B /* Info.plist */,
 			);
 			path = minichallenge02UITests;
+			sourceTree = "<group>";
+		};
+		85BE9DD4245771D40095A3BF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */,
+				85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */,
+				85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */,
+				85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,13 +303,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BE9DDB245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a in Resources */,
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
+				85BE9DD9245772F20095A3BF /* 3. É isso mesmo.m4a in Resources */,
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
+				85BE9DDA245772F20095A3BF /* 4. Muito bom!.m4a in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				8545232A24537AC700458A7D /* apresentacao.MOV in Resources */,
+				85BE9DE024577C220095A3BF /* 2.1 Tenta.m4a in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

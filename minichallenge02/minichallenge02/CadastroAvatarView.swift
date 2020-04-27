@@ -12,7 +12,7 @@ import UIKit
 let avatars = [#imageLiteral(resourceName: "cat"), #imageLiteral(resourceName: "grey-cat")] //#imageLiteral(resourceName: "name")
 
 class CadastroAvatarView: UIViewController {
-    
+    // Cada botão referencia um avatar do array de imagens criado
     @IBAction func catAvatarButton(_ sender: UIButton) {
         usuario.avatar = 0
     }
@@ -34,19 +34,24 @@ class CadastroAvatarView: UIViewController {
     }
 
     @IBAction func avancarAction(_ sender: UIButton) {
-        // Cria um array de objetos Usuario
-        var usuarios = [Usuario]()
-        // Testa se ja existe um array com a forkey "usuarios" em UserDefaults
-        if let novoArray = UserDefaults.standard.array(forKey: "usuarios") {
-            //Caso exista copia os dados já existentes pro array usuarios
-            usuarios = novoArray as! [Usuario]
+        // Cria um array vazio de objetos Usuario
+        var usuarios : [Usuario] = []
+
+        /* ------------------------ */
+        // Testa se
+        if UserProvider.shared.usuarios.count > 0{
+            usuarios = UserProvider.shared.usuarios
         }
-        
         // Adiciona o novo usuario ao array de usuarios
         usuarios.append(usuario)
-        // Salva o array de usuarios em UserDefaults
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(usuarios), forKey: "usuarios")
         
+        // Transforma o array de usuários em JSON e salva em UserDefaults
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(usuarios){
+            UserDefaults.standard.set(encoded, forKey: "usuarios")
+        }
+        
+        // Vai pra tela de seleção de usuário
         performSegue(withIdentifier: "deCadastroPraSelecaoUsuario", sender: self)
     }
     

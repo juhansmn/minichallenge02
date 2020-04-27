@@ -31,6 +31,7 @@
 		8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232B24538C0200458A7D /* TrainAnimationViewController.swift */; };
 		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
 		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
+		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		8545232B24538C0200458A7D /* TrainAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainAnimationViewController.swift; sourceTree = "<group>"; };
 		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
+		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				8545232B24538C0200458A7D /* TrainAnimationViewController.swift */,
 				8545232D24538E8F00458A7D /* TutorialViewController.swift */,
 				8545232F24538FCC00458A7D /* TutorialScene.swift */,
+				85BE9DD124575C910095A3BF /* ScreenSizes.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
 				8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */,
+				85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */,
 				8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */,
 				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,

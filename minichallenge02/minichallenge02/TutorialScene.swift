@@ -13,7 +13,8 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     //criando uma instância da classe Toothbrush
     var toothbrush = Toothbrush()
     //declarando array de tártaros do tipo igual a da Classe Tartarus
-    var tartarus:[Tartarus] = []
+    var tartarus1 = Tartarus(id: 0)
+    var tartarus2 = Tartarus(id: 1)
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
     
@@ -24,14 +25,15 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         //adicionando elementos à SKView
+        addDino()
         addBackground()
         addToothbrush()
-        addTartarus(count: 2)
+        addTartarus()
     }
     
     //configurações do background
     func addBackground(){
-        let background = SKSpriteNode(imageNamed: "dino")
+        let background = SKSpriteNode(imageNamed: "fundo-tutorial")
         //posiciona o background ao fundo
         background.zPosition = 0
         //configurando o background para ocupar a tela inteira
@@ -42,20 +44,32 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
     }
     
+    func addDino(){
+        let dino = SKSpriteNode(imageNamed: "dino-tutorial")
+        //posiciona o dino ao fundo
+        dino.zPosition = 1
+        dino.xScale = 0.5
+        dino.yScale = 0.5
+        //posiciona o dino na esquerda
+        dino.position = CGPoint(x:-110, y:-45)
+        if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
+            dino.position = CGPoint(x: -140, y: -55)
+        }
+        self.addChild(dino)
+    }
+    
     func addToothbrush(){
         //posição inicial que aparecerá na tela
-        toothbrush.position = CGPoint(x:300, y:60)
+        toothbrush.zPosition = 2
+        toothbrush.position = CGPoint(x:220, y:60)
         self.addChild(toothbrush)
     }
 
     //adicionando as instâncias da Classe Tartarus em um array de SKSpriteNode e à tela
-    func addTartarus(count: Int){
-        for i in 0..<count{
-            let tartaroTemp:Tartarus = Tartarus(id: i)
-            tartarus.append(tartaroTemp)
-            print("Id do tártaro: \(tartaroTemp.id)"  )
-            self.addChild(tartaroTemp)
-        }
+    func addTartarus(){
+        tartarus1.zPosition = 2
+        tartarus1.addTutorialPosition(sprite: tartarus1)
+        self.addChild(tartarus1)
     }
     
     //permite mover a escova para onde o dedo arrastar
@@ -70,21 +84,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     
     //detectando contato
     func didBegin(_ contact: SKPhysicsContact) {
-//        let contactA:SKPhysicsBody = contact.bodyA
-//        let contactB:SKPhysicsBody = contact.bodyB
-//
-//        let nodeA = contactA.node as! SKSpriteNode
-//        let nodeB = contactB.node as! SKSpriteNode
-//
-//        if contactA.categoryBitMask == 2{
-//            playerCollided(with: nodeA)
-//        } else if contactB.categoryBitMask == 2{
-//            playerCollided(with: nodeB)
-//        }
-        
-        
-        
-        //outro jeito
         guard let nodeA = contact.bodyA.node else {return}
         guard let nodeB = contact.bodyB.node else {return}
         
@@ -130,8 +129,8 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         if Tartarus.tartarusCount == 0 {
             activityOver = true
             //retirar todas as instancias da classe do array
-            tartarus.removeAll()
-            print("Quantidade de tártaro no array: \(tartarus.count)")
+//            tartarus.removeAll()
+//            print("Quantidade de tártaro no array: \(tartarus.count)")
         }
       return activityOver
     }

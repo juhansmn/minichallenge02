@@ -20,7 +20,6 @@ class Tartarus: SKSpriteNode {
         self.name = "Tartarus"
         
         addTartarusPhysics(sprite: self)
-        addTartarusPosition(sprite: self)
         Tartarus.tartarusCount += 1
         
     }
@@ -39,8 +38,6 @@ class Tartarus: SKSpriteNode {
     }
     
     func addTartarusPosition(sprite: SKSpriteNode){
-        sprite.zPosition = 1 //deixa acima do background
-        
         //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
         let randomPositionX = GKRandomDistribution(lowestValue: -70, highestValue: 70)
         let position = CGFloat(randomPositionX.nextInt())
@@ -49,6 +46,19 @@ class Tartarus: SKSpriteNode {
         sprite.yScale = 0.2
         sprite.size = CGSize(width: 45, height: 45)
         sprite.position = CGPoint(x: position, y: -65)
+    }
+    
+    func addTutorialPosition(sprite: SKSpriteNode){
+        sprite.zPosition = 2 //deixa acima do background e do dino
+        
+        //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
+        let randomPositionX = GKRandomDistribution(lowestValue: -130, highestValue: -105)
+        let position = CGFloat(randomPositionX.nextInt())
+
+        sprite.xScale = 0.3
+        sprite.yScale = 0.3
+        sprite.size = CGSize(width: 45, height: 45)
+        sprite.position = CGPoint(x: position, y: -85)
     }
 
 }

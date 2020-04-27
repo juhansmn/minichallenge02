@@ -42,7 +42,6 @@ class Toothbrush: SKSpriteNode {
     }
 
     func addToothbrushPosition(sprite: SKSpriteNode){
-        sprite.zPosition = 1 //coloca a escova em cima do background
         //para diminuir o tamanho da escova
         sprite.xScale = 0.3
         sprite.yScale = 0.3

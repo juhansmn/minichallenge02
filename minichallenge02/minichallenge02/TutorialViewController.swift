@@ -29,9 +29,10 @@ class TutorialViewController: UIViewController {
         skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
     
         //adicionando SKScene (ActivityScene) à view
-        let scene = TutorialScene(size: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
-        //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
+        let scene = TutorialScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
+
         scene.scaleMode = .aspectFill
+
         skView.presentScene(scene)
         skView.showsPhysics = true
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)

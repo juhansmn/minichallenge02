@@ -50,6 +50,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
     
     func addToothbrush(){
         //posição inicial que aparecerá na tela
+        toothbrush.zPosition = 1
         toothbrush.position = CGPoint(x:300, y:60)
         self.addChild(toothbrush)
     }
@@ -58,6 +59,8 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
     func addTartarus(count: Int){
         for i in 0..<count{
             let tartaroTemp:Tartarus = Tartarus(id: i)
+            tartaroTemp.addTartarusPosition(sprite: tartaroTemp)
+            tartaroTemp.zPosition = 1
             tartarus.append(tartaroTemp)
             print("Id do tártaro: \(tartaroTemp.id)"  )
             self.addChild(tartaroTemp)

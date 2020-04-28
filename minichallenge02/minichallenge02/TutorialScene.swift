@@ -28,7 +28,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addDino()
         addBackground()
         addDinoTalking()
-        self.run(SKAction.playSoundFileNamed("2.1 Tenta.m4a", waitForCompletion: true), completion: addToothbrush)
+        self.run(SKAction.playSoundFileNamed("2 trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
         addTartarus(count: 1)
     }
     
@@ -122,8 +122,10 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func checkAudioFinished(){
-        run(SKAction.playSoundFileNamed("4.1 Vou ficar quietinho.m4a", waitForCompletion: true))
+    
+    func goToActivityScreen(){
+        //depois dá pra chamar a mudança de tela, quando os dois áudios estiverem juntos
+        print("tela de atividade")
     }
     
     //ação do contato
@@ -133,7 +135,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         
         if isActivityOver() {
             //toca 4 e 4.1 e passa para atividade
-            run(SKAction.playSoundFileNamed("4. Muito bom!.m4a", waitForCompletion: true), completion: checkAudioFinished)
+            run(SKAction.playSoundFileNamed("3 conclusao tutorial .m4a", waitForCompletion: true), completion: goToActivityScreen)
             print("hora de escovar de verdade")
         }
     }

@@ -10,11 +10,18 @@ import Foundation
 import UIKit
 
 class TapBrushViewController: UIViewController{
-    
-    @IBAction func tapToBrush(_ sender: Any) {
+
+    @IBAction func brushTeeth(_ sender: Any) {
         performSegue(withIdentifier: "trainSegue", sender: self)
     }
     
-    //button image
+    override func viewDidLoad() {
+        
+    }
     
+    @IBAction func skipTutorial(_ sender: Any) {
+        performSegue(withIdentifier: "trainSegue", sender: self)
+    //home
+    }
+
 }

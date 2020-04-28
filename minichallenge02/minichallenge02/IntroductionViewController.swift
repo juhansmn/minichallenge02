@@ -12,6 +12,10 @@ import AVFoundation
 //apresenta vídeo de introdução da história do jogo
 class IntroductionViewController: UIViewController{
     
+    @IBAction func skipTutorial(_ sender: Any) {
+        performSegue(withIdentifier: "tapBrushSegue", sender: self)
+        player.pause()
+    }
     @IBOutlet weak var introVideoView: UIView!
     var player:AVPlayer!
     var playerLayer:AVPlayerLayer!
@@ -33,7 +37,7 @@ class IntroductionViewController: UIViewController{
     }
     
     func setupPlayer(){
-        guard let path = Bundle.main.path(forResource: "apresentacao", ofType: "MOV")else{return}
+        guard let path = Bundle.main.path(forResource: "Animacao trem", ofType: "mp4")else{return}
         let videoURL = URL(fileURLWithPath: path)
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)

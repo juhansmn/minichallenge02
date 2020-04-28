@@ -12,6 +12,10 @@ import UIKit
 
 class TrainAnimationViewController: UIViewController{
     
+    @IBAction func skipTutorial(_ sender: Any) {
+        performSegue(withIdentifier: "tutorialSegue", sender: self)
+        player.pause() //nao sei se é o mais adequado, vamo ver depois
+    }
     @IBOutlet weak var trainVideoView: UIView!
     
     var player:AVPlayer!
@@ -34,7 +38,7 @@ class TrainAnimationViewController: UIViewController{
     }
     
     func setupPlayer(){
-        guard let path = Bundle.main.path(forResource: "apresentacao", ofType: "MOV")else{return}
+        guard let path = Bundle.main.path(forResource: "Animacao trem", ofType: "mp4")else{return}
         let videoURL = URL(fileURLWithPath: path)
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)

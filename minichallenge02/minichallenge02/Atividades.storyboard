@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4G-XD-GCn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="reS-j4-B7y">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -36,6 +36,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gr-zO-7ZK">
                                         <rect key="frame" x="754" y="355" width="90" height="30"/>
                                         <state key="normal" title="Pular Tutorial"/>
+                                        <connections>
+                                            <action selector="skipTutorial:" destination="reS-j4-B7y" eventType="touchUpInside" id="Zis-yn-K0h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -73,29 +76,38 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapBrush" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
                                 <rect key="frame" x="742" y="363" width="90" height="30"/>
                                 <state key="normal" title="Pular Tutorial"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-iX-pJU">
-                                <rect key="frame" x="592" y="143" width="54" height="30"/>
-                                <state key="normal" title="Escovar"/>
                                 <connections>
-                                    <action selector="tapToBrush:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="hFQ-bp-aUZ"/>
+                                    <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="b6e-uY-6V9"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYL-F5-B7d">
+                                <rect key="frame" x="570" y="127" width="183" height="51"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="VgP-ax-qZf"/>
+                                    <constraint firstAttribute="height" constant="51" id="fp4-da-g7t"/>
+                                    <constraint firstAttribute="width" secondItem="iYL-F5-B7d" secondAttribute="height" multiplier="104:35" constant="31.457142857142856" id="xfe-IC-kln"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8T8-Gr-9kr" appends="YES" id="3Z4-fc-I0A"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tMs-iX-pJU" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" constant="143" id="0HM-zz-EeX"/>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" id="64M-D8-EPi"/>
                             <constraint firstAttribute="bottom" secondItem="m8t-hW-mPS" secondAttribute="bottom" id="O4S-p9-YtC"/>
                             <constraint firstItem="bPs-St-aQ7" firstAttribute="bottom" secondItem="htA-13-VJB" secondAttribute="bottom" id="Psj-sy-9eT"/>
                             <constraint firstAttribute="trailing" secondItem="m8t-hW-mPS" secondAttribute="trailing" id="aIf-PO-Qcu"/>
                             <constraint firstItem="bPs-St-aQ7" firstAttribute="trailing" secondItem="6uD-fU-bsQ" secondAttribute="trailingMargin" id="eic-rH-eg4"/>
-                            <constraint firstItem="tMs-iX-pJU" firstAttribute="leading" secondItem="htA-13-VJB" secondAttribute="leading" constant="548" id="g1v-bE-tDP"/>
+                            <constraint firstItem="htA-13-VJB" firstAttribute="trailing" secondItem="iYL-F5-B7d" secondAttribute="trailing" constant="99" id="hOL-Sq-Va5"/>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="leading" secondItem="6uD-fU-bsQ" secondAttribute="leading" id="seI-Xp-R8e"/>
+                            <constraint firstItem="iYL-F5-B7d" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" constant="127" id="x1Y-bq-uun"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="htA-13-VJB"/>
                     </view>
@@ -104,6 +116,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-t8-KgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8T8-Gr-9kr">
+                    <connections>
+                        <action selector="brushTeeth:" destination="L2Y-rI-CrF" id="EVy-BG-h0E"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="827.67857142857144" y="644.92753623188412"/>
         </scene>
@@ -121,6 +138,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjj-Ss-d2r">
                                         <rect key="frame" x="754" y="355" width="90" height="30"/>
                                         <state key="normal" title="Pular Tutorial"/>
+                                        <connections>
+                                            <action selector="skipTutorial:" destination="IdJ-ct-bFO" eventType="touchUpInside" id="4Jc-7R-BFq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

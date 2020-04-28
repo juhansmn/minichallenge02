@@ -27,15 +27,16 @@
 		0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */; };
 		854523222453557200458A7D /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523212453557200458A7D /* IntroductionViewController.swift */; };
 		854523282453782800458A7D /* TapBrushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523272453782800458A7D /* TapBrushViewController.swift */; };
-		8545232A24537AC700458A7D /* apresentacao.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 8545232924537AC700458A7D /* apresentacao.MOV */; };
 		8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232B24538C0200458A7D /* TrainAnimationViewController.swift */; };
 		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
 		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
+		85961FD424589AD400305C06 /* 4 conclusao atividade .m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FCF24589AD300305C06 /* 4 conclusao atividade .m4a */; };
+		85961FD524589AD400305C06 /* 1.1 Não pegou escova.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */; };
+		85961FD624589AD400305C06 /* 1 pega escova.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD124589AD400305C06 /* 1 pega escova.m4a */; };
+		85961FD724589AD400305C06 /* 3 conclusao tutorial .m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD224589AD400305C06 /* 3 conclusao tutorial .m4a */; };
+		85961FD824589AD400305C06 /* 2 trenzinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD324589AD400305C06 /* 2 trenzinho.m4a */; };
+		85961FDA24589AE600305C06 /* Animacao trem.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD924589AE600305C06 /* Animacao trem.mp4 */; };
 		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
-		85BE9DD9245772F20095A3BF /* 3. É isso mesmo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */; };
-		85BE9DDA245772F20095A3BF /* 4. Muito bom!.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */; };
-		85BE9DDB245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */; };
-		85BE9DE024577C220095A3BF /* 2.1 Tenta.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,15 +83,16 @@
 		0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		854523212453557200458A7D /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		854523272453782800458A7D /* TapBrushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBrushViewController.swift; sourceTree = "<group>"; };
-		8545232924537AC700458A7D /* apresentacao.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = apresentacao.MOV; path = ../../../../Dentinho/apresentacao.MOV; sourceTree = "<group>"; };
 		8545232B24538C0200458A7D /* TrainAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainAnimationViewController.swift; sourceTree = "<group>"; };
 		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
+		85961FCF24589AD300305C06 /* 4 conclusao atividade .m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4 conclusao atividade .m4a"; sourceTree = "<group>"; };
+		85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1.1 Não pegou escova.m4a"; sourceTree = "<group>"; };
+		85961FD124589AD400305C06 /* 1 pega escova.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1 pega escova.m4a"; sourceTree = "<group>"; };
+		85961FD224589AD400305C06 /* 3 conclusao tutorial .m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3 conclusao tutorial .m4a"; sourceTree = "<group>"; };
+		85961FD324589AD400305C06 /* 2 trenzinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2 trenzinho.m4a"; sourceTree = "<group>"; };
+		85961FD924589AE600305C06 /* Animacao trem.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animacao trem.mp4"; sourceTree = "<group>"; };
 		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
-		85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3. É isso mesmo.m4a"; sourceTree = "<group>"; };
-		85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4. Muito bom!.m4a"; sourceTree = "<group>"; };
-		85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4.1 Vou ficar quietinho.m4a"; sourceTree = "<group>"; };
-		85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2.1 Tenta.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +159,8 @@
 				0A3523912450C12500CF7053 /* Tartarus.swift */,
 				0A3523932450C12600CF7053 /* Toothbrush.swift */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
-				8545232924537AC700458A7D /* apresentacao.MOV */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
+				85961FD924589AE600305C06 /* Animacao trem.mp4 */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
 				854523272453782800458A7D /* TapBrushViewController.swift */,
@@ -191,10 +193,11 @@
 		85BE9DD4245771D40095A3BF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				85BE9DDF24577C220095A3BF /* 2.1 Tenta.m4a */,
-				85BE9DD5245772F20095A3BF /* 3. É isso mesmo.m4a */,
-				85BE9DD6245772F20095A3BF /* 4. Muito bom!.m4a */,
-				85BE9DD7245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a */,
+				85961FD124589AD400305C06 /* 1 pega escova.m4a */,
+				85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */,
+				85961FD324589AD400305C06 /* 2 trenzinho.m4a */,
+				85961FD224589AD400305C06 /* 3 conclusao tutorial .m4a */,
+				85961FCF24589AD300305C06 /* 4 conclusao atividade .m4a */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -303,18 +306,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BE9DDB245772F20095A3BF /* 4.1 Vou ficar quietinho.m4a in Resources */,
+				85961FD424589AD400305C06 /* 4 conclusao atividade .m4a in Resources */,
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
-				85BE9DD9245772F20095A3BF /* 3. É isso mesmo.m4a in Resources */,
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
-				85BE9DDA245772F20095A3BF /* 4. Muito bom!.m4a in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
-				8545232A24537AC700458A7D /* apresentacao.MOV in Resources */,
-				85BE9DE024577C220095A3BF /* 2.1 Tenta.m4a in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
+				85961FD724589AD400305C06 /* 3 conclusao tutorial .m4a in Resources */,
+				85961FD624589AD400305C06 /* 1 pega escova.m4a in Resources */,
+				85961FD824589AD400305C06 /* 2 trenzinho.m4a in Resources */,
+				85961FD524589AD400305C06 /* 1.1 Não pegou escova.m4a in Resources */,
+				85961FDA24589AE600305C06 /* Animacao trem.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

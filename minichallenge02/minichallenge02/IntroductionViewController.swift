@@ -11,17 +11,15 @@ import AVFoundation
 
 //apresenta vídeo de introdução da história do jogo
 class IntroductionViewController: UIViewController{
-    
-    @IBAction func skipTutorial(_ sender: Any) {
-        performSegue(withIdentifier: "tapBrushSegue", sender: self)
-        player.pause()
-    }
+    //nome da view no storyboard
     @IBOutlet weak var introVideoView: UIView!
     var player:AVPlayer!
+    //playerLayer ao invés de AVPlayerController (AVKit)
     var playerLayer:AVPlayerLayer!
     
     override func viewDidLoad() {
         setupPlayer()
+        //adiciona o playerLayer à view introVideoView do storyboard 
         introVideoView.layer.addSublayer(playerLayer)
         recognizeFinishedVideo()
     }
@@ -36,9 +34,16 @@ class IntroductionViewController: UIViewController{
         playerLayer.frame = introVideoView.bounds
     }
     
+    @IBAction func skipTutorial(_ sender: Any) {
+        performSegue(withIdentifier: "tapBrushSegue", sender: self)
+        player.pause()
+    }
+    
     func setupPlayer(){
-        guard let path = Bundle.main.path(forResource: "Animacao trem", ofType: "mp4")else{return}
+        //caminho de para pegar o vídeo
+        guard let path = Bundle.main.path(forResource: "DinoIntroduction", ofType: "mp4")else{return}
         let videoURL = URL(fileURLWithPath: path)
+        //configurações da camada que vai apresentar o vídeo
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resize
@@ -55,7 +60,5 @@ class IntroductionViewController: UIViewController{
     func recognizeFinishedVideo(){
          NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
-    
-    
-    
+
 }

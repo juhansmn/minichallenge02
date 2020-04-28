@@ -37,7 +37,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
     
     //configurações do background
     func addBackground(){
-        let background = SKSpriteNode(imageNamed: "dino")
+        let background = SKSpriteNode(imageNamed: "dino-activity")
         //posiciona o background ao fundo
         background.zPosition = 0
         //configurando o background para ocupar a tela inteira

@@ -11,14 +11,11 @@ import AVFoundation
 import UIKit
 
 class TrainAnimationViewController: UIViewController{
-    
-    @IBAction func skipTutorial(_ sender: Any) {
-        performSegue(withIdentifier: "tutorialSegue", sender: self)
-        player.pause() //nao sei se é o mais adequado, vamo ver depois
-    }
+    //ideal era colocar player numa classe?
+    //nome da view do storyboard
     @IBOutlet weak var trainVideoView: UIView!
-    
     var player:AVPlayer!
+    //playerLayer para substituir o AVPlayerController
     var playerLayer:AVPlayerLayer!
     
     override func viewDidLoad() {
@@ -37,8 +34,13 @@ class TrainAnimationViewController: UIViewController{
         playerLayer.frame = trainVideoView.bounds
     }
     
+    @IBAction func skipTutorial(_ sender: Any) {
+        performSegue(withIdentifier: "tutorialSegue", sender: self)
+        player.pause() //nao sei se é o mais adequado, vamo ver depois
+    }
+    
     func setupPlayer(){
-        guard let path = Bundle.main.path(forResource: "Animacao trem", ofType: "mp4")else{return}
+        guard let path = Bundle.main.path(forResource: "TrainAnimation", ofType: "mp4")else{return}
         let videoURL = URL(fileURLWithPath: path)
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)

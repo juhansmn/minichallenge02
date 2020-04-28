@@ -11,7 +11,7 @@ import SpriteKit
 class Toothbrush: SKSpriteNode {
     
     init(){
-        let texture = SKTexture(imageNamed: "escova-lado")
+        let texture = SKTexture(imageNamed: "toothbrush")
         
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         self.name = "Toothbrush"

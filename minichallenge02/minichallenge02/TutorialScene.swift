@@ -24,17 +24,17 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         //adicionando elementos à SKView
-        
         addDino()
         addBackground()
         addDinoTalking()
+        //audio de atividade guiada
         self.run(SKAction.playSoundFileNamed("2 trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
         addTartarus(count: 1)
     }
     
     //configurações do background
     func addBackground(){
-        let background = SKSpriteNode(imageNamed: "fundo-tutorial")
+        let background = SKSpriteNode(imageNamed: "tutorial-scene")
         //posiciona o background ao fundo
         background.zPosition = 0
         //configurando o background para ocupar a tela inteira
@@ -52,7 +52,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         dino.zPosition = 1
         dino.xScale = 0.5
         dino.yScale = 0.5
-        //dino estava flutuando com a posição "normal"
+        //posiciona o dino dependendo do tamanho da tela do dispositivo
         if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
             dino.position = CGPoint(x: -140, y: -55)
         } else{
@@ -81,17 +81,17 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addDinoTalking(){
-        let dinoTalking = SKSpriteNode(imageNamed: "dino-fala1")
+        let dinoTalking = SKSpriteNode(imageNamed: "talking-dino")
         dinoTalking.zPosition = 1
         dinoTalking.xScale = 0.15
         dinoTalking.yScale = 0.15
+        //posiciona o dino conforme tamanho da tela do aparelho utilizado
         if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
-            dinoTalking.position = CGPoint(x: 170, y: -55)
+            dinoTalking.position = CGPoint(x: 185, y: -55)
         } else{
             //posiciona o dino na direita
-            dinoTalking.position = CGPoint(x:155, y:-45)
+            dinoTalking.position = CGPoint(x:165, y:-45)
         }
-        
         //só falta falar
         addChild(dinoTalking)
     }
@@ -135,7 +135,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         
         if isActivityOver() {
             //toca 4 e 4.1 e passa para atividade
-            run(SKAction.playSoundFileNamed("3 conclusao tutorial .m4a", waitForCompletion: true), completion: goToActivityScreen)
+            run(SKAction.playSoundFileNamed("3 conclusao tutorial.m4a", waitForCompletion: true), completion: goToActivityScreen)
             print("hora de escovar de verdade")
         }
     }

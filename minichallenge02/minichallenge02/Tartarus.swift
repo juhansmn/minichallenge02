@@ -14,7 +14,7 @@ class Tartarus: SKSpriteNode {
     let id:Int //para verificar qual tártaro está sendo tocado dentro do array e modificar ele
     
     init(id: Int){
-        let texture = SKTexture(imageNamed: "tartarusImage")
+        let texture = SKTexture(imageNamed: "tartarus")
         self.id = id
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         self.name = "Tartarus"
@@ -37,6 +37,7 @@ class Tartarus: SKSpriteNode {
         sprite.physicsBody?.contactTestBitMask = ColliderType.Toothbrush
     }
     
+    //posição dos tártaros deve ser adicionada na scene, considerando os dois tipos de posição
     func addTartarusPosition(sprite: SKSpriteNode){
         //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
         let randomPositionX = GKRandomDistribution(lowestValue: -70, highestValue: 70)

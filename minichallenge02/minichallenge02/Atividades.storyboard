@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapBrush" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introduction-scene" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -185,6 +185,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tapBrush" width="1344" height="621"/>
+        <image name="introduction-scene" width="1344" height="621"/>
     </resources>
 </document>

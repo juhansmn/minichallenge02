@@ -15,10 +15,7 @@ class TapBrushViewController: UIViewController{
         performSegue(withIdentifier: "trainSegue", sender: self)
     }
     
-    override func viewDidLoad() {
-        
-    }
-    
+    //skipTutorial deveria funcionar se o jogador já tivesse jogado antes
     @IBAction func skipTutorial(_ sender: Any) {
         performSegue(withIdentifier: "trainSegue", sender: self)
     //home

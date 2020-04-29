@@ -37,6 +37,7 @@ class TrainAnimationViewController: UIViewController{
     @IBAction func skipTutorial(_ sender: Any) {
         performSegue(withIdentifier: "tutorialSegue", sender: self)
         player.pause() //nao sei se é o mais adequado, vamo ver depois
+        
     }
     
     func setupPlayer(){
@@ -44,7 +45,7 @@ class TrainAnimationViewController: UIViewController{
         let videoURL = URL(fileURLWithPath: path)
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = .resize
+        playerLayer.videoGravity = .resizeAspectFill
         //coloca vídeo de fundo para o botão aparecer
         playerLayer.zPosition = -1
     }

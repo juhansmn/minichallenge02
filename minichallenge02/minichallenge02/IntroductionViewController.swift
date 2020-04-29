@@ -46,7 +46,7 @@ class IntroductionViewController: UIViewController{
         //configurações da camada que vai apresentar o vídeo
         player = AVPlayer(url: videoURL) //videoURL
         playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = .resize
+        playerLayer.videoGravity = .resizeAspectFill
         //coloca vídeo de fundo para o botão aparecer
         playerLayer.zPosition = -1
     }

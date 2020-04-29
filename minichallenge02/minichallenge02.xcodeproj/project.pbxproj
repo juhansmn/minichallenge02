@@ -32,11 +32,11 @@
 		8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232B24538C0200458A7D /* TrainAnimationViewController.swift */; };
 		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
 		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
-		85961FD424589AD400305C06 /* 4 conclusao atividade.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FCF24589AD300305C06 /* 4 conclusao atividade.m4a */; };
-		85961FD524589AD400305C06 /* 1.1 Não pegou escova.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */; };
-		85961FD624589AD400305C06 /* 1 pega a escova.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD124589AD400305C06 /* 1 pega a escova.m4a */; };
-		85961FD724589AD400305C06 /* 3 conclusao tutorial.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD224589AD400305C06 /* 3 conclusao tutorial.m4a */; };
-		85961FD824589AD400305C06 /* 2 trenzinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD324589AD400305C06 /* 2 trenzinho.m4a */; };
+		85961FD424589AD400305C06 /* ActivityFinished.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FCF24589AD300305C06 /* ActivityFinished.m4a */; };
+		85961FD624589AD400305C06 /* TapBrush.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD124589AD400305C06 /* TapBrush.m4a */; };
+		85961FD724589AD400305C06 /* TutorialFinished.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD224589AD400305C06 /* TutorialFinished.m4a */; };
+		85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD324589AD400305C06 /* Trenzinho.m4a */; };
+		85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */; };
 		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,11 +89,11 @@
 		8545232B24538C0200458A7D /* TrainAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainAnimationViewController.swift; sourceTree = "<group>"; };
 		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
-		85961FCF24589AD300305C06 /* 4 conclusao atividade.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4 conclusao atividade.m4a"; sourceTree = "<group>"; };
-		85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1.1 Não pegou escova.m4a"; sourceTree = "<group>"; };
-		85961FD124589AD400305C06 /* 1 pega a escova.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1 pega a escova.m4a"; sourceTree = "<group>"; };
-		85961FD224589AD400305C06 /* 3 conclusao tutorial.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3 conclusao tutorial.m4a"; sourceTree = "<group>"; };
-		85961FD324589AD400305C06 /* 2 trenzinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2 trenzinho.m4a"; sourceTree = "<group>"; };
+		85961FCF24589AD300305C06 /* ActivityFinished.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ActivityFinished.m4a; sourceTree = "<group>"; };
+		85961FD124589AD400305C06 /* TapBrush.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TapBrush.m4a; sourceTree = "<group>"; };
+		85961FD224589AD400305C06 /* TutorialFinished.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialFinished.m4a; sourceTree = "<group>"; };
+		85961FD324589AD400305C06 /* Trenzinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trenzinho.m4a; sourceTree = "<group>"; };
+		85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TapBrushAgain.m4a; sourceTree = "<group>"; };
 		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,11 +196,11 @@
 		85BE9DD4245771D40095A3BF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				85961FD124589AD400305C06 /* 1 pega a escova.m4a */,
-				85961FD024589AD400305C06 /* 1.1 Não pegou escova.m4a */,
-				85961FD324589AD400305C06 /* 2 trenzinho.m4a */,
-				85961FD224589AD400305C06 /* 3 conclusao tutorial.m4a */,
-				85961FCF24589AD300305C06 /* 4 conclusao atividade.m4a */,
+				85961FD124589AD400305C06 /* TapBrush.m4a */,
+				85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */,
+				85961FD324589AD400305C06 /* Trenzinho.m4a */,
+				85961FD224589AD400305C06 /* TutorialFinished.m4a */,
+				85961FCF24589AD300305C06 /* ActivityFinished.m4a */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -309,20 +309,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85961FD424589AD400305C06 /* 4 conclusao atividade.m4a in Resources */,
+				85961FD424589AD400305C06 /* ActivityFinished.m4a in Resources */,
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
+				85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */,
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
-				85961FD724589AD400305C06 /* 3 conclusao tutorial.m4a in Resources */,
+				85961FD724589AD400305C06 /* TutorialFinished.m4a in Resources */,
 				853D7BA52458D20B0070809E /* TrainAnimation.mp4 in Resources */,
-				85961FD624589AD400305C06 /* 1 pega a escova.m4a in Resources */,
-				85961FD824589AD400305C06 /* 2 trenzinho.m4a in Resources */,
+				85961FD624589AD400305C06 /* TapBrush.m4a in Resources */,
+				85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */,
 				853D7BA32458D1670070809E /* DinoIntroduction.mp4 in Resources */,
-				85961FD524589AD400305C06 /* 1.1 Não pegou escova.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

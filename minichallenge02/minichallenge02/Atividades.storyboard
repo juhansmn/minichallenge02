@@ -74,9 +74,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introduction-scene" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introduction-scene" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-hW-mPS">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Azw-Ty-ZXQ" appends="YES" id="H6c-2F-wHX"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
                                 <rect key="frame" x="742" y="363" width="90" height="30"/>
@@ -119,6 +122,11 @@
                 <tapGestureRecognizer id="8T8-Gr-9kr">
                     <connections>
                         <action selector="brushTeeth:" destination="L2Y-rI-CrF" id="EVy-BG-h0E"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Azw-Ty-ZXQ">
+                    <connections>
+                        <action selector="tapbrush:" destination="L2Y-rI-CrF" id="oEY-mm-V7E"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

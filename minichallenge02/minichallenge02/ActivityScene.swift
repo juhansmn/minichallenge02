@@ -114,6 +114,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         killTartarus(node: node)
         if isActivityOver() {
             print("hora da recompensa")
+            run(SKAction.playSoundFileNamed("ActivityFinished.m4a", waitForCompletion: false))
             //passar para a tela de recompensa
         
         }

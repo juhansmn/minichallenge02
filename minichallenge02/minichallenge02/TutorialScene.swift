@@ -28,7 +28,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addBackground()
         addDinoTalking()
         //audio de atividade guiada
-        self.run(SKAction.playSoundFileNamed("2 trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
+        self.run(SKAction.playSoundFileNamed("Trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
         addTartarus(count: 1)
     }
     
@@ -135,7 +135,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         
         if isActivityOver() {
             //toca 4 e 4.1 e passa para atividade
-            run(SKAction.playSoundFileNamed("3 conclusao tutorial.m4a", waitForCompletion: true), completion: goToActivityScreen)
+            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true), completion: goToActivityScreen)
             print("hora de escovar de verdade")
         }
     }
@@ -152,10 +152,10 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.run(tartarusDeath)
           print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
-        if Tartarus.tartarusCount == 1 {
+        if activityOver {
             print("É isso mesmo")
             //adiciona audio 3 - Tutorial
-            run(SKAction.playSoundFileNamed("3. É isso mesmo.m4a", waitForCompletion: false))
+            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: false))
         }
       }
     }

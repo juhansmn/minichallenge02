@@ -9,15 +9,15 @@
 import UIKit
 
 //Array de imagens inseridas em assets
-let avatars = [#imageLiteral(resourceName: "cat"), #imageLiteral(resourceName: "grey-cat")] //#imageLiteral(resourceName: "name")
+let avatars = [#imageLiteral(resourceName: "avatar1"), #imageLiteral(resourceName: "avatar2"), #imageLiteral(resourceName: "avatar3"), #imageLiteral(resourceName: "avatar4"), #imageLiteral(resourceName: "avatar5")] //#imageLiteral(resourceName: "name")
 
 class CadastroAvatarView: UIViewController {
     // Cada botão referencia um avatar do array de imagens criado
-    @IBAction func catAvatarButton(_ sender: UIButton) {
+    @IBAction func oneAvatarButton(_ sender: UIButton) {
         usuario.avatar = 0
     }
     
-    @IBAction func greyCatAvatarButton(_ sender: UIButton) {
+    @IBAction func twoAvatarButton(_ sender: UIButton) {
         usuario.avatar = 1
     }
     
@@ -37,9 +37,9 @@ class CadastroAvatarView: UIViewController {
         // Cria um array vazio de objetos Usuario
         var usuarios : [Usuario] = []
 
-        /* ------------------------ */
-        // Testa se
+        // Testa se existe pelo menos 1 usuário salvo
         if UserProvider.shared.usuarios.count > 0{
+            // Caso tenha copia os usuarios existentes no array usuarios
             usuarios = UserProvider.shared.usuarios
         }
         // Adiciona o novo usuario ao array de usuarios

@@ -4,14 +4,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Cadastro Nome View-->
         <scene sceneID="GM3-IT-0gb">
             <objects>
-                <viewController id="ibx-Jf-2l6" customClass="CadastroNomeView" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-ibx-Jf-2l6" id="ibx-Jf-2l6" customClass="CadastroNomeView" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rz1-EE-521">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,57 +58,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-Wr-FgR">
-                                <rect key="frame" x="430" y="314" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-Wr-FgR">
+                                <rect key="frame" x="420" y="313" width="56" height="30"/>
                                 <state key="normal" title="Avançar"/>
                                 <connections>
                                     <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="aHH-Yd-Xc3"/>
-                                    <segue destination="Lex-UK-Jgc" kind="show" identifier="deCadastroPraSelecaoUsuario" id="6hM-Fa-pLM"/>
+                                    <segue destination="4ZD-F2-duZ" kind="show" identifier="deCadastroPraSelecaoUsuario" id="6hM-Fa-pLM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-GO-u57">
-                                <rect key="frame" x="109" y="133" width="100" height="99"/>
+                                <rect key="frame" x="103" y="130" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cat"/>
+                                <state key="normal" image="avatar1"/>
                                 <connections>
-                                    <action selector="catAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="e49-wc-zHN"/>
+                                    <action selector="oneAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="j5s-S3-T7t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCF-oc-Luj">
-                                <rect key="frame" x="258" y="133" width="102" height="99"/>
+                                <rect key="frame" x="251" y="131" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="grey-cat"/>
+                                <state key="normal" image="avatar2"/>
                                 <connections>
-                                    <action selector="greyCatAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="tzV-TF-ySR"/>
+                                    <action selector="twoAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="lIg-pn-tcB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-Tz-3bF">
-                                <rect key="frame" x="427" y="167" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-Tz-3bF">
+                                <rect key="frame" x="402" y="132" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Avatar 3"/>
+                                <state key="normal" title="Avatar 3" image="avatar3"/>
                                 <connections>
                                     <action selector="threeAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="swa-wU-lR7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-5V-0pI">
-                                <rect key="frame" x="580" y="167" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-5V-0pI">
+                                <rect key="frame" x="548" y="130" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Avatar 4"/>
+                                <state key="normal" title="Avatar 4" image="avatar4"/>
                                 <connections>
                                     <action selector="fourAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="GWM-aj-FZ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-5o-QLC">
-                                <rect key="frame" x="731" y="167" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-5o-QLC">
+                                <rect key="frame" x="693" y="130" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Avatar 5"/>
+                                <state key="normal" title="Avatar 5" image="avatar5"/>
                                 <connections>
                                     <action selector="fiveAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="htg-IM-9VV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nRh-Wr-FgR" firstAttribute="leading" secondItem="RLx-h4-n53" secondAttribute="leading" constant="376" id="LMv-9Z-PMI"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="nRh-Wr-FgR" secondAttribute="bottom" constant="50" id="h3b-nJ-vOp"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="trailing" secondItem="nRh-Wr-FgR" secondAttribute="trailing" constant="376" id="jkC-PQ-EGY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RLx-h4-n53"/>
                     </view>
                     <navigationItem key="navigationItem" id="XRS-hM-Xjs"/>
@@ -118,86 +121,22 @@
             </objects>
             <point key="canvasLocation" x="828.34821428571422" y="114.49275362318842"/>
         </scene>
-        <!--Mostra Usuario View-->
-        <scene sceneID="wWW-2P-m1M">
+        <!--SelecaoUsuarios-->
+        <scene sceneID="QjI-Fn-zsl">
             <objects>
-                <viewController id="Lex-UK-Jgc" customClass="MostraUsuarioView" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cVV-QN-cQq">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Novo Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsp-72-s6g">
-                                <rect key="frame" x="742" y="217" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3f-qv-cIN">
-                                <rect key="frame" x="778" y="124" width="31" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="ibx-Jf-2l6" kind="show" identifier="novoCadastro" id="iLV-qM-KNs"/>
-                                </connections>
-                            </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gfu-pT-cEc">
-                                <rect key="frame" x="79" y="101" width="655" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yww-hY-alb">
-                                    <size key="itemSize" width="119" height="160"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UsuarioCollectionViewCell" id="1hz-6b-71X" customClass="UsuarioCollectionViewCell" customModule="minichallenge02" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="119" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dGR-iE-5Pg">
-                                            <rect key="frame" x="0.0" y="0.0" width="119" height="160"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRd-yZ-tno">
-                                                    <rect key="frame" x="12" y="58" width="95" height="91"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-H2-MWY">
-                                                    <rect key="frame" x="12" y="8" width="95" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="customSize" width="119" height="160"/>
-                                        <connections>
-                                            <outlet property="avatar" destination="SRd-yZ-tno" id="DLT-Se-72b"/>
-                                            <outlet property="nome" destination="PxL-H2-MWY" id="d58-vh-tPu"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="7fb-7m-Dpv"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="f5Q-Ek-7Z2"/>
-                    <connections>
-                        <outlet property="collectionView" destination="Gfu-pT-cEc" id="PeV-1J-biD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KN5-JN-6hj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SelecaoUsuarios" id="4ZD-F2-duZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0bH-i7-cei"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-dW-cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="827.67857142857144" y="953.62318840579712"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cat" width="512" height="512"/>
-        <image name="grey-cat" width="225" height="225"/>
+        <image name="avatar1" width="2000" height="2000"/>
+        <image name="avatar2" width="2000" height="2000"/>
+        <image name="avatar3" width="2000" height="2000"/>
+        <image name="avatar4" width="2000" height="2000"/>
+        <image name="avatar5" width="2000" height="2000"/>
     </resources>
 </document>

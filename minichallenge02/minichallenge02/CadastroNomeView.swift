@@ -18,6 +18,10 @@ class CadastroNomeView: UIViewController {
         
         usuario.nome = nome
         
+
+//        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as NextViewController
+//        self.presentViewController(nextViewController, animated:true, completion:nil)
+        
         performSegue(withIdentifier: "deNomePraAvatar", sender: self)
     }
     

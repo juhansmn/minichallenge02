@@ -10,16 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func changeText(_ sender: Any) {
-        label.text = "Texto alterado!"
+        
+        //Verifica se já existe um cadastro salvo em UserDefalts, caso não exista começa o app na tela de cadastro
+//        if UserProvider.shared.usuarios.count > 0  {
+//            performSegue(withIdentifier: "selecaoUsuarios", sender: self)
+//        }else{
+//            performSegue(withIdentifier: "novoCadastro", sender: self)
+//        }
     }
 }
-

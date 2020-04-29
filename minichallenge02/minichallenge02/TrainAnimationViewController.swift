@@ -10,6 +10,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
+//apresenta o vídeo de animação do trem 
 class TrainAnimationViewController: UIViewController{
     //ideal era colocar player numa classe?
     //nome da view do storyboard

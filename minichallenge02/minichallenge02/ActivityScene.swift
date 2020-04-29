@@ -9,11 +9,13 @@
 import SpriteKit
 import GameplayKit
 
+//relacionado às mascaras de contato e colisão
 struct ColliderType{
     static let Toothbrush: UInt32 = 1
     static let Tartarus: UInt32 = 2
 }
 
+//tela de atividade
 class ActivityScene: SKScene, SKPhysicsContactDelegate {
     
     //criando uma instância da classe Toothbrush

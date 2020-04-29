@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+
+//tela do tutorial
 class TutorialScene: SKScene, SKPhysicsContactDelegate {
     
     //criando uma instância da classe Toothbrush
@@ -32,6 +34,8 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addTartarus(count: 1)
     }
     
+    
+    //CONFIGURAÇÃO DOS ELEMENTOS DO CENÁRIO
     //configurações do background
     func addBackground(){
         let background = SKSpriteNode(imageNamed: "tutorial-scene")
@@ -85,7 +89,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         dinoTalking.zPosition = 1
         dinoTalking.xScale = 0.15
         dinoTalking.yScale = 0.15
-        //posiciona o dino conforme tamanho da tela do aparelho utilizado
+        //posiciona o dino conforme tamanho da tela do aparelho utilizado (grande ou normal)
         if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
             dinoTalking.position = CGPoint(x: 185, y: -55)
         } else{
@@ -96,6 +100,8 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addChild(dinoTalking)
     }
     
+    
+    //CONFIGURAÇÃO DO CONTATO DA ESCOVA COM O TÁRTARO E SUAS CONSEQUENCIAS
     //permite mover a escova para onde o dedo arrastar
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         //faz a escova ir para onde o dedo for
@@ -122,22 +128,19 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    
-    func goToActivityScreen(){
-        //depois dá pra chamar a mudança de tela, quando os dois áudios estiverem juntos
-        print("tela de atividade")
-    }
-    
     //ação do contato
     func playerCollided(with node: SKSpriteNode){
         cleanTartarus(node: node)
         killTartarus(node: node)
-        
         if isActivityOver() {
-            //toca 4 e 4.1 e passa para atividade
-            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true), completion: goToActivityScreen)
+            //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
+            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true), completion: goToActivityScreen) //completion: aceita somente funções void
             print("hora de escovar de verdade")
         }
+    }
+    
+    func goToActivityScreen(){ //função chamada dentro do playerCollided, dentro da SKAction que toca o áudio
+        print("tela de atividade")
     }
     
     //não consegui colocar na Classe Tartarus e chamar aqui, preciso saber qual instancia está sendo tocada dentro do array e acessar as propriedades do elemento

@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 
+//configura a tela do tutorial
 class TutorialViewController: UIViewController {
 
     //criando uma SKView

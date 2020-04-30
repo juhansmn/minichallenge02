@@ -49,13 +49,12 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     }
     
     func playFirstAudio(){
-        guard let path = Bundle.main.path(forResource: "TapBrush.m4a", ofType: nil)else{return}
-        let url = URL(fileURLWithPath: path)
+        guard let soundUrl = Bundle.main.url(forResource: "TapBrush", withExtension: "m4a") else { return }
     
         do{
             //antes o rate não estava especificado, então aparecia alguns erros e o áudio ficava com qualidade baixa
             firstAudioPlayer?.rate = 1
-            firstAudioPlayer = try AVAudioPlayer(contentsOf: url)
+            firstAudioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
             firstAudioPlayer?.play()
             firstAudioPlayer?.delegate = self
         }catch{
@@ -64,12 +63,12 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     }
     
     func playSecondAudio(){
-        guard let path = Bundle.main.path(forResource: "TapBrushAgain.m4a", ofType: nil)else{return}
-        let url = URL(fileURLWithPath: path)
+        guard let soundUrl = Bundle.main.url(forResource: "TapBrushAgain", withExtension: "m4a") else { return }
+
         do{
             //antes o rate não estava especificado, então aparecia alguns erros e o áudio ficava com qualidade baixa
             secondAudioPlayer?.rate = 1
-            secondAudioPlayer = try AVAudioPlayer(contentsOf: url)
+            secondAudioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
             secondAudioPlayer?.play()
             secondAudioPlayer?.delegate = self
         }catch{

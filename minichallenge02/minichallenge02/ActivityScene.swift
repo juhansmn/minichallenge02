@@ -24,6 +24,8 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
     var tartarus:[Tartarus] = []
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
+    //audio de feedback da ativiade
+    var feedbackActivity = SKAction.playSoundFileNamed("ActivityFinished.m4a", waitForCompletion: true)
     
     override func didMove(to view: SKView) {
         
@@ -35,6 +37,7 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         addBackground()
         addToothbrush()
         addTartarus(count: 6)
+        
     }
     
     //configurações do background
@@ -116,9 +119,9 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         killTartarus(node: node)
         if isActivityOver() {
             print("hora da recompensa")
-            run(SKAction.playSoundFileNamed("ActivityFinished.m4a", waitForCompletion: false))
+            //toca áudio de feedback
+            run(feedbackActivity)
             //passar para a tela de recompensa
-        
         }
     }
     

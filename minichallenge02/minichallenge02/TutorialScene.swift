@@ -16,9 +16,13 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     var toothbrush = Toothbrush()
     //declarando array de tártaros do tipo igual a da Classe Tartarus
     var tartarus:[Tartarus] = []
+    //balãozinho para indicar fala
+    var speechBalloon = SKSpriteNode()
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
-    var speechBalloon = SKSpriteNode()
+    //audios
+    var trainSpeech = SKAction.playSoundFileNamed("Trenzinho.m4a", waitForCompletion: true)
+    var feedbackSpeech = SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true)
     
     override func didMove(to view: SKView) {
         //centralizando anchorpoint da view
@@ -31,7 +35,8 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addDinoTalking()
         //audio de atividade guiada
         addSpeechBalloon()
-        self.run(SKAction.playSoundFileNamed("Trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
+        //toca o áudio
+        self.run(trainSpeech, completion: addToothbrush)
         addTartarus(count: 1)
         
     }
@@ -118,12 +123,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(speechBalloon)
     }
     
-    
-    //remove balão após fala e adiciona a escova -> não funciona, nao consigo remover nunca esse balão
-//    func removeBalloon(){
-//        speechBalloon.removeFromParent()
-//    }
-    
     //CONFIGURAÇÃO DO CONTATO DA ESCOVA COM O TÁRTARO E SUAS CONSEQUENCIAS
     //permite mover a escova para onde o dedo arrastar
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -157,7 +156,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         killTartarus(node: node)
         if isActivityOver() {
             //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
-            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true), completion: goToActivityScreen) //completion: aceita somente funções void
+            run(feedbackSpeech, completion: goToActivityScreen) //completion: aceita somente funções void
             print("hora de escovar de verdade")
         }
     }

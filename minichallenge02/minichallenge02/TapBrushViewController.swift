@@ -10,8 +10,6 @@ import AVFoundation
 import UIKit
 
 class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
-    //como aqui só tem 2 arquivos, usa AVAudioPlayer
-    //documentação diz: multiplos arquivos, multiplos AVaudioplayers
     var firstAudioPlayer: AVAudioPlayer?
     var secondAudioPlayer: AVAudioPlayer?
     var audioFinished = false
@@ -29,9 +27,9 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
         secondAudioPlayer?.stop()
     }
     
-    //skipTutorial deveria funcionar se o jogador já tivesse jogado antes
     @IBAction func skipTutorial(_ sender: Any) { //se pular tutorial, vai para home
-        performSegue(withIdentifier: "trainSegue", sender: self) //substituir pela home
+        //substituir pela home
+        performSegue(withIdentifier: "trainSegue", sender: self)
         //se pular tutorial, para de tocar o áudio
         firstAudioPlayer?.stop()
         secondAudioPlayer?.stop()
@@ -52,8 +50,8 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
         guard let soundUrl = Bundle.main.url(forResource: "TapBrush", withExtension: "m4a") else { return }
     
         do{
-            //antes o rate não estava especificado, então aparecia alguns erros e o áudio ficava com qualidade baixa
-            firstAudioPlayer?.rate = 1
+            //antes o rate não estava especificado, então aparecia alguns erros e o áudio ficava com qualidade baixa, provavelmente era o simulador (no celular tava normal)
+            firstAudioPlayer?.rate = 1 //velocidade normal
             firstAudioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
             firstAudioPlayer?.play()
             firstAudioPlayer?.delegate = self
@@ -66,7 +64,6 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
         guard let soundUrl = Bundle.main.url(forResource: "TapBrushAgain", withExtension: "m4a") else { return }
 
         do{
-            //antes o rate não estava especificado, então aparecia alguns erros e o áudio ficava com qualidade baixa
             secondAudioPlayer?.rate = 1
             secondAudioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
             secondAudioPlayer?.play()
@@ -79,7 +76,7 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     //método do AVAudioPlayerDelegate para reconhecer quando o vídeo parou de tocar
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("audio finished")
-        audioFinished = true
+        audioFinished = true //quando acabar o áudio, vai poder tocar outro. Enquanto não acabar, não vai poder tocar outro
     }
     
 }

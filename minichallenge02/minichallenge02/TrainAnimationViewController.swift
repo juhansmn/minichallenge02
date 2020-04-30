@@ -12,11 +12,12 @@ import UIKit
 
 //apresenta o vídeo de animação do trem 
 class TrainAnimationViewController: UIViewController{
-    //ideal era colocar player numa classe?
+    
     //nome da view do storyboard
     @IBOutlet weak var trainVideoView: UIView!
+    
     var player:AVPlayer!
-    //playerLayer para substituir o AVPlayerController
+    //playerLayer para substituir o AVPlayerController (que tem controles de pausar vídeo)
     var playerLayer:AVPlayerLayer!
     
     override func viewDidLoad() {
@@ -37,8 +38,7 @@ class TrainAnimationViewController: UIViewController{
     
     @IBAction func skipTutorial(_ sender: Any) {
         performSegue(withIdentifier: "tutorialSegue", sender: self)
-        player.pause() //nao sei se é o mais adequado, vamo ver depois
-        
+        player.pause() //não existe .stop() para o player
     }
     
     func setupPlayer(){

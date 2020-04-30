@@ -33,14 +33,13 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addDino()
         addBackground()
         addDinoTalking()
-        //audio de atividade guiada
+        //balao que indica fala
         addSpeechBalloon()
         //toca o áudio
         self.run(trainSpeech, completion: addToothbrush)
         addTartarus(count: 1)
         
     }
-    
     
     //CONFIGURAÇÃO DOS ELEMENTOS DO CENÁRIO
     //configurações do background
@@ -156,8 +155,9 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         killTartarus(node: node)
         if isActivityOver() {
             //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
-            run(feedbackSpeech, completion: goToActivityScreen) //completion: aceita somente funções void
+             //completion: aceita somente funções void
             print("hora de escovar de verdade")
+            run(feedbackSpeech, completion: goToActivityScreen)
         }
     }
     
@@ -165,7 +165,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         print("tela de atividade")
     }
     
-    //não consegui colocar na Classe Tartarus e chamar aqui, preciso saber qual instancia está sendo tocada dentro do array e acessar as propriedades do elemento
     func cleanTartarus(node: SKSpriteNode){
         node.alpha -= 0.25
     }
@@ -177,11 +176,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.run(tartarusDeath)
           print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
-        if activityOver {
-            print("É isso mesmo")
-            //adiciona audio 3 - Tutorial
-            run(SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: false))
-        }
       }
     }
 

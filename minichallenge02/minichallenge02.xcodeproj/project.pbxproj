@@ -19,6 +19,8 @@
 		0A3523952450C12600CF7053 /* Tartarus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523912450C12500CF7053 /* Tartarus.swift */; };
 		0A3523962450C12600CF7053 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523922450C12500CF7053 /* GameViewController.swift */; };
 		0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523932450C12600CF7053 /* Toothbrush.swift */; };
+		0AA57BFF2459F486008EB0F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA57BFE2459F486008EB0F8 /* HomeViewController.swift */; };
+		0AA57C012459F583008EB0F8 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA57C002459F583008EB0F8 /* HomeScene.swift */; };
 		0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */; };
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
@@ -63,6 +65,8 @@
 		0A3523912450C12500CF7053 /* Tartarus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tartarus.swift; sourceTree = "<group>"; };
 		0A3523922450C12500CF7053 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0A3523932450C12600CF7053 /* Toothbrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toothbrush.swift; sourceTree = "<group>"; };
+		0AA57BFE2459F486008EB0F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0AA57C002459F583008EB0F8 /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
 				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
+				0AA57BFE2459F486008EB0F8 /* HomeViewController.swift */,
+				0AA57C002459F583008EB0F8 /* HomeScene.swift */,
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
@@ -298,6 +304,8 @@
 				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
 				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
+				0AA57C012459F583008EB0F8 /* HomeScene.swift in Sources */,
+				0AA57BFF2459F486008EB0F8 /* HomeViewController.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 				0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */,
 				0A3523952450C12600CF7053 /* Tartarus.swift in Sources */,

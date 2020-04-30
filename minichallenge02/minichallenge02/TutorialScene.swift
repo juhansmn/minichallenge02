@@ -18,9 +18,9 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     var tartarus:[Tartarus] = []
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
+    var speechBalloon = SKSpriteNode()
     
     override func didMove(to view: SKView) {
-        
         //centralizando anchorpoint da view
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.physicsWorld.contactDelegate = self
@@ -30,8 +30,10 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addBackground()
         addDinoTalking()
         //audio de atividade guiada
+        addSpeechBalloon()
         self.run(SKAction.playSoundFileNamed("Trenzinho.m4a", waitForCompletion: true), completion: addToothbrush)
         addTartarus(count: 1)
+        
     }
     
     
@@ -84,6 +86,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    //Dino em miniatura para indicar fala
     func addDinoTalking(){
         let dinoTalking = SKSpriteNode(imageNamed: "talking-dino")
         dinoTalking.zPosition = 1
@@ -100,6 +103,26 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addChild(dinoTalking)
     }
     
+    //Balão de fala do dino
+    func addSpeechBalloon(){
+        let speechBalloon = SKSpriteNode(imageNamed: "speech-balloon")
+        speechBalloon.zPosition = 1
+        speechBalloon.xScale = 0.03
+        speechBalloon.yScale = 0.03
+        if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
+            speechBalloon.position = CGPoint(x: 285, y: 65)
+        } else{
+            //posiciona o dino na direita
+            speechBalloon.position = CGPoint(x:245, y:55)
+        }
+        self.addChild(speechBalloon)
+    }
+    
+    
+    //remove balão após fala e adiciona a escova -> não funciona, nao consigo remover nunca esse balão
+//    func removeBalloon(){
+//        speechBalloon.removeFromParent()
+//    }
     
     //CONFIGURAÇÃO DO CONTATO DA ESCOVA COM O TÁRTARO E SUAS CONSEQUENCIAS
     //permite mover a escova para onde o dedo arrastar

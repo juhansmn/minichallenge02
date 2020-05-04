@@ -27,6 +27,7 @@
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
 		0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07DF243CFB6500D81772 /* RewardViewController.swift */; };
 		0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */; };
+		85476DF92460A9B90096A5A9 /* home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 85476DF82460A9B90096A5A9 /* home.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
 		0AFA07DF243CFB6500D81772 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		85476DF82460A9B90096A5A9 /* home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = home.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
 				0AA57BFE2459F486008EB0F8 /* HomeViewController.swift */,
 				0AA57C002459F583008EB0F8 /* HomeScene.swift */,
+				85476DF82460A9B90096A5A9 /* home.mp3 */,
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
@@ -275,6 +278,7 @@
 				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
+				85476DF92460A9B90096A5A9 /* home.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

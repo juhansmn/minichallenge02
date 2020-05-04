@@ -42,9 +42,9 @@ class TrainAnimationViewController: UIViewController{
     }
     
     func setupPlayer(){
-        guard let path = Bundle.main.path(forResource: "TrainAnimation", ofType: "mp4")else{return}
+        guard let path = Bundle.main.path(forResource: "TrainAnimation", ofType: "mp4") else { return }
         let videoURL = URL(fileURLWithPath: path)
-        player = AVPlayer(url: videoURL) //videoURL
+        player = AVPlayer(url: videoURL)
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resizeAspectFill
         //coloca vídeo de fundo para o botão aparecer

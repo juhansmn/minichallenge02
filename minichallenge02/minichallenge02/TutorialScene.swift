@@ -12,11 +12,8 @@ import SpriteKit
 //tela do tutorial
 class TutorialScene: SKScene, SKPhysicsContactDelegate {
     
-    //criando uma instância da classe Toothbrush
     var toothbrush = Toothbrush()
-    //declarando array de tártaros do tipo igual a da Classe Tartarus
     var tartarus:[Tartarus] = []
-    //balãozinho para indicar fala
     var speechBalloon = SKSpriteNode()
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
@@ -33,32 +30,28 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addDino()
         addBackground()
         addDinoTalking()
-        //balao que indica fala
         addSpeechBalloon()
+        addTartarus(count: 1)
         //toca o áudio
         self.run(trainSpeech, completion: addToothbrush)
-        addTartarus(count: 1)
+        
         
     }
     
-    //CONFIGURAÇÃO DOS ELEMENTOS DO CENÁRIO
     //configurações do background
     func addBackground(){
         let background = SKSpriteNode(imageNamed: "tutorial-scene")
         //posiciona o background ao fundo
         background.zPosition = 0
-        //configurando o background para ocupar a tela inteira
         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         //renderizar sem alpha blending para ocupar menos memória (não renderiza pixel por pixel)
         background.blendMode = .replace
-        //adiciona background na scene
         addChild(background)
     }
     
+    //adiciona dino à tela
     func addDino(){
-        //com o balãozinho?
         let dino = SKSpriteNode(imageNamed: "dino-tutorial")
-        //posiciona o dino ao fundo
         dino.zPosition = 1
         dino.xScale = 0.5
         dino.yScale = 0.5
@@ -72,13 +65,14 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(dino)
     }
     
+    //adiciona escova na tela
     func addToothbrush(){
-        //posição inicial que aparecerá na tela
         toothbrush.zPosition = 2
         toothbrush.position = CGPoint(x:220, y:80)
         self.addChild(toothbrush)
     }
 
+    //adiciona instâncias da Classe tártaro em um array e na tela
     func addTartarus(count: Int){
         for i in 0..<count{
             let tartaroTemp:Tartarus = Tartarus(id: i)
@@ -122,7 +116,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(speechBalloon)
     }
     
-    //CONFIGURAÇÃO DO CONTATO DA ESCOVA COM O TÁRTARO E SUAS CONSEQUENCIAS
     //permite mover a escova para onde o dedo arrastar
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         //faz a escova ir para onde o dedo for
@@ -133,19 +126,16 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //detectando contato
+    //detecção do contato
     func didBegin(_ contact: SKPhysicsContact) {
         guard let nodeA = contact.bodyA.node else {return}
         guard let nodeB = contact.bodyB.node else {return}
         
         if nodeA == toothbrush {
             playerCollided(with: nodeB as! SKSpriteNode)
-            //nodeB é uma instancia da Classe Tartarus dentro do array tartarus
-            //qual é o id do nodeB
 
         } else if nodeB == toothbrush {
             playerCollided(with: nodeA as! SKSpriteNode)
-            //nodeA é uma instancia da Classe Tartarus dentro do array tartarus
         }
     }
     
@@ -154,9 +144,9 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         cleanTartarus(node: node)
         killTartarus(node: node)
         if isActivityOver() {
-            //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
-             //completion: aceita somente funções void
             print("hora de escovar de verdade")
+            //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
+             //completion: aceita somente funções sem parametros e vazias
             run(feedbackSpeech, completion: goToActivityScreen)
         }
     }
@@ -172,6 +162,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     //se o tártaro estiver transparente, retirar ele da tela
     func killTartarus(node: SKSpriteNode){
       if node.alpha <= 0.0{
+        //SKAction garante que o node seja removido na hora certa
         let tartarusDeath = SKAction.run({node.removeFromParent()})
         self.run(tartarusDeath)
           print("Tartarus removed from scene")
@@ -179,7 +170,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
       }
     }
 
-    //checar se ainda existem tártaros na tela. Se não existir, hora da recompensa
+    //checa se ainda existem tártaros na tela. Se não existir, hora da recompensa
     func isActivityOver() -> Bool{
         if Tartarus.tartarusCount == 0 {
             activityOver = true

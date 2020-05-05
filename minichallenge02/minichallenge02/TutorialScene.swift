@@ -18,8 +18,12 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
     //audios
-    var trainSpeech = SKAction.playSoundFileNamed("Trenzinho.m4a", waitForCompletion: true)
-    var feedbackSpeech = SKAction.playSoundFileNamed("TutorialFinished.m4a", waitForCompletion: true)
+    var guideAudio = SKAudioNode()
+    var feedbackAudio = SKAudioNode()
+    //sequencia de tocar o áudio e adicionar a escova
+    let sequenceBrush = SKAction.sequence([SKAction.play(),SKAction.wait(forDuration: 4.0)])
+    let sequenceFeedback = SKAction.sequence([SKAction.play(),SKAction.wait(forDuration: 7.0)])
+
     
     override func didMove(to view: SKView) {
         //centralizando anchorpoint da view
@@ -32,9 +36,13 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addDinoTalking()
         addSpeechBalloon()
         addTartarus(count: 1)
-        //toca o áudio
-        self.run(trainSpeech, completion: addToothbrush)
-        
+        guideAudioSetup()
+        feedbackAudioSetup()
+        //toca o áudio e apresenta a escova após o áudio acabar
+        guideAudio.run(sequenceBrush, completion: {
+            self.addToothbrush()
+        })
+
     }
     
     //configurações do background
@@ -45,7 +53,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         //renderizar sem alpha blending para ocupar menos memória (não renderiza pixel por pixel)
         background.blendMode = .replace
-        addChild(background)
+        self.addChild(background)
     }
     
     //adiciona dino à tela
@@ -97,7 +105,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
             dinoTalking.position = CGPoint(x:165, y:-45)
         }
         //só falta falar
-        addChild(dinoTalking)
+        self.addChild(dinoTalking)
     }
     
     //Balão de fala do dino
@@ -114,6 +122,25 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         }
         self.addChild(speechBalloon)
     }
+    
+    //Configuração do Audio
+    func guideAudioSetup(){
+        if let guideAudioURL = Bundle.main.url(forResource: "Trenzinho", withExtension: "m4a"){
+            guideAudio = SKAudioNode(url: guideAudioURL)
+            guideAudio.autoplayLooped = false
+            self.addChild(guideAudio)
+        }
+    }
+    
+    //Configuração do Audio
+    func feedbackAudioSetup(){
+        if let feedbackAudioURL = Bundle.main.url(forResource: "TutorialFinished", withExtension: "m4a"){
+            feedbackAudio = SKAudioNode(url: feedbackAudioURL)
+            feedbackAudio.autoplayLooped = false
+            self.addChild(feedbackAudio)
+        }
+    }
+    
     
     //permite mover a escova para onde o dedo arrastar
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -144,9 +171,9 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         killTartarus(node: node)
         if isActivityOver() {
             print("hora de escovar de verdade")
-            //toca áudio de conclusão do tutorial e passa para a tela de atividade ao terminar o áudio
-             //completion: aceita somente funções sem parametros e vazias
-            run(feedbackSpeech, completion: goToActivityScreen)
+             feedbackAudio.run(sequenceFeedback, completion: {
+                self.goToActivityScreen()
+            })
         }
     }
     

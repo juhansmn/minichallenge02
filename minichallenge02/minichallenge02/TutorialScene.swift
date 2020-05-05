@@ -11,7 +11,7 @@ import SpriteKit
 
 //tela do tutorial
 class TutorialScene: SKScene, SKPhysicsContactDelegate {
-    
+    var viewController: TutorialViewController?
     var toothbrush = Toothbrush()
     var tartarus:[Tartarus] = []
     var speechBalloon = SKSpriteNode()
@@ -34,7 +34,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         addTartarus(count: 1)
         //toca o áudio
         self.run(trainSpeech, completion: addToothbrush)
-        
         
     }
     
@@ -152,7 +151,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func goToActivityScreen(){ //função chamada dentro do playerCollided, dentro da SKAction que toca o áudio
-        print("tela de atividade")
+        viewController?.transitionToActivity()
     }
     
     func cleanTartarus(node: SKSpriteNode){

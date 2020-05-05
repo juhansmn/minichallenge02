@@ -15,7 +15,7 @@ struct ColliderType{
 }
 
 class ActivityScene: SKScene, SKPhysicsContactDelegate {
-    
+    var viewController: GameViewController?
     var toothbrush = Toothbrush()
     var tartarus:[Tartarus] = []
     var activityOver = false
@@ -84,9 +84,9 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         cleanTartarus(node: node)
         killTartarus(node: node)
         if isActivityOver() {
-            print("hora da recompensa")
             run(feedbackActivity) //toca áudio de feedback
             //passar para a tela de recompensa
+            viewController?.transitionToReward()
         }
     }
     

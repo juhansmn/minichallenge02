@@ -32,9 +32,14 @@ class GameViewController: UIViewController {
         let scene = ActivityScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
         //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
         scene.scaleMode = .aspectFill
+        scene.viewController = self
         skView.presentScene(scene)
         skView.showsPhysics = true
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)
+    }
+    
+    func transitionToReward(){
+        performSegue(withIdentifier: "rewardSegue", sender: self)
     }
     
 }

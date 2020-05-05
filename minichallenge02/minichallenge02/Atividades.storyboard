@@ -17,10 +17,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="R46-Ep-by3"/>
                     </view>
+                    <connections>
+                        <segue destination="W98-xi-h0L" kind="presentation" identifier="rewardSegue" id="QRH-ID-AcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyx-gR-gUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1550" y="2404"/>
+        </scene>
+        <!--Recompensa-->
+        <scene sceneID="iFz-RZ-UzH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recompensa" id="W98-xi-h0L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEY-js-deh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="2946"/>
         </scene>
         <!--Introduction View Controller-->
         <scene sceneID="9QX-6H-DIB">

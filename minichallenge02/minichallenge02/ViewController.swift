@@ -9,15 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
+    public var usuario: Usuario?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
+  
     @IBAction func changeText(_ sender: Any) {
         label.text = "Texto alterado!"
     }
@@ -28,4 +25,3 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(firstVC, animated: true)
     }
 }
-

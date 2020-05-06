@@ -13,8 +13,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nome.text = usuario?.nome
     }
-
-    @IBOutlet weak var nome: UILabel!
+  
+    @IBAction func changeText(_ sender: Any) {
+        label.text = "Texto alterado!"
+    }
+    
+    //botao para entrar na gameViewController e cenário de escovar o dente
+    @IBAction func escovaDente(_ sender: Any) {
+        let firstVC = self.storyboard?.instantiateViewController(withIdentifier: "escovarDente") as! GameViewController
+        self.navigationController?.pushViewController(firstVC, animated: true)
+    }
 }

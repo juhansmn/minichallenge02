@@ -10,22 +10,36 @@
 		0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0473FC242D52D9000F2F7B /* AppDelegate.swift */; };
 		0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */; };
 		0A047401242D52D9000F2F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A047400242D52D9000F2F7B /* ViewController.swift */; };
+		0A047404242D52D9000F2F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A047402242D52D9000F2F7B /* Main.storyboard */; };
 		0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A047405242D52DE000F2F7B /* Assets.xcassets */; };
 		0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */; };
 		0A047414242D52DF000F2F7B /* minichallenge02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A047413242D52DF000F2F7B /* minichallenge02Tests.swift */; };
 		0A04741F242D52DF000F2F7B /* minichallenge02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04741E242D52DF000F2F7B /* minichallenge02UITests.swift */; };
+		0A258DB12463323E000D6F52 /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A258DB02463323E000D6F52 /* HomeScene.swift */; };
+		0A258DB32463324D000D6F52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A258DB22463324D000D6F52 /* HomeViewController.swift */; };
+		0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523902450C12500CF7053 /* ActivityScene.swift */; };
+		0A3523952450C12600CF7053 /* Tartarus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523912450C12500CF7053 /* Tartarus.swift */; };
+		0A3523962450C12600CF7053 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523922450C12500CF7053 /* GameViewController.swift */; };
+		0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3523932450C12600CF7053 /* Toothbrush.swift */; };
 		0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */; };
 		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
-		E14571752447B19100E06079 /* MostraUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14571742447B19100E06079 /* MostraUsuarioView.swift */; };
-		E14571772448DB5A00E06079 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14571762448DB5A00E06079 /* Usuario.swift */; };
-		E1D3645F2457957F001EEECD /* SelecaoUsuarios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D3645E2457957F001EEECD /* SelecaoUsuarios.storyboard */; };
-		E1DD1A72243BB3F500C15355 /* CadastroNomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */; };
-		E1DD1A74243BCC9500C15355 /* CadastroAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */; };
-		E1DDF53F245B534500E85220 /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DDF53E245B534500E85220 /* teste.storyboard */; };
-		E1E6B4CA2454F49800C0F069 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6B4C92454F49800C0F069 /* UserProvider.swift */; };
-		E1E6B4CC2455007500C0F069 /* UsuarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6B4CB2455007500C0F069 /* UsuarioCollectionViewCell.swift */; };
+		0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07DF243CFB6500D81772 /* RewardViewController.swift */; };
+		0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */; };
+		853D7BA32458D1670070809E /* DinoIntroduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 853D7BA22458D1670070809E /* DinoIntroduction.mp4 */; };
+		853D7BA52458D20B0070809E /* TrainAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 853D7BA42458D20B0070809E /* TrainAnimation.mp4 */; };
+		854523222453557200458A7D /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523212453557200458A7D /* IntroductionViewController.swift */; };
+		854523282453782800458A7D /* TapBrushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854523272453782800458A7D /* TapBrushViewController.swift */; };
+		8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232B24538C0200458A7D /* TrainAnimationViewController.swift */; };
+		8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232D24538E8F00458A7D /* TutorialViewController.swift */; };
+		8545233024538FCC00458A7D /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545232F24538FCC00458A7D /* TutorialScene.swift */; };
+		85961FD424589AD400305C06 /* ActivityFinished.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FCF24589AD300305C06 /* ActivityFinished.m4a */; };
+		85961FD624589AD400305C06 /* TapBrush.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD124589AD400305C06 /* TapBrush.m4a */; };
+		85961FD724589AD400305C06 /* TutorialFinished.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD224589AD400305C06 /* TutorialFinished.m4a */; };
+		85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD324589AD400305C06 /* Trenzinho.m4a */; };
+		85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */; };
+		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +64,7 @@
 		0A0473FC242D52D9000F2F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A047400242D52D9000F2F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A047403242D52D9000F2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A047405242D52DE000F2F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A047408242D52DE000F2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A04740A242D52DE000F2F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,18 +74,31 @@
 		0A04741A242D52DF000F2F7B /* minichallenge02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = minichallenge02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A04741E242D52DF000F2F7B /* minichallenge02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minichallenge02UITests.swift; sourceTree = "<group>"; };
 		0A047420242D52DF000F2F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A258DB02463323E000D6F52 /* HomeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
+		0A258DB22463324D000D6F52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0A3523902450C12500CF7053 /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
+		0A3523912450C12500CF7053 /* Tartarus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tartarus.swift; sourceTree = "<group>"; };
+		0A3523922450C12500CF7053 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0A3523932450C12600CF7053 /* Toothbrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toothbrush.swift; sourceTree = "<group>"; };
 		0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
-		E14571742447B19100E06079 /* MostraUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostraUsuarioView.swift; sourceTree = "<group>"; };
-		E14571762448DB5A00E06079 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
-		E1D3645E2457957F001EEECD /* SelecaoUsuarios.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelecaoUsuarios.storyboard; sourceTree = "<group>"; };
-		E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroNomeView.swift; sourceTree = "<group>"; };
-		E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroAvatarView.swift; sourceTree = "<group>"; };
-		E1DDF53E245B534500E85220 /* teste.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
-		E1E6B4C92454F49800C0F069 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
-		E1E6B4CB2455007500C0F069 /* UsuarioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AFA07DF243CFB6500D81772 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
+		0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		853D7BA22458D1670070809E /* DinoIntroduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DinoIntroduction.mp4; sourceTree = "<group>"; };
+		853D7BA42458D20B0070809E /* TrainAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrainAnimation.mp4; sourceTree = "<group>"; };
+		854523212453557200458A7D /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		854523272453782800458A7D /* TapBrushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBrushViewController.swift; sourceTree = "<group>"; };
+		8545232B24538C0200458A7D /* TrainAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainAnimationViewController.swift; sourceTree = "<group>"; };
+		8545232D24538E8F00458A7D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		8545232F24538FCC00458A7D /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
+		85961FCF24589AD300305C06 /* ActivityFinished.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ActivityFinished.m4a; sourceTree = "<group>"; };
+		85961FD124589AD400305C06 /* TapBrush.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TapBrush.m4a; sourceTree = "<group>"; };
+		85961FD224589AD400305C06 /* TutorialFinished.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialFinished.m4a; sourceTree = "<group>"; };
+		85961FD324589AD400305C06 /* Trenzinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trenzinho.m4a; sourceTree = "<group>"; };
+		85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TapBrushAgain.m4a; sourceTree = "<group>"; };
+		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,24 +149,34 @@
 		0A0473FB242D52D9000F2F7B /* minichallenge02 */ = {
 			isa = PBXGroup;
 			children = (
+				0A3523902450C12500CF7053 /* ActivityScene.swift */,
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
-				E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */,
-				E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */,
-				E14571742447B19100E06079 /* MostraUsuarioView.swift */,
-				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
-				0A047400242D52D9000F2F7B /* ViewController.swift */,
-				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
-				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
-				E1D3645E2457957F001EEECD /* SelecaoUsuarios.storyboard */,
-				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
-				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
-				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
-				E1DDF53E245B534500E85220 /* teste.storyboard */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
+				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
+				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
+				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
+				853D7BA22458D1670070809E /* DinoIntroduction.mp4 */,
+				0A3523922450C12500CF7053 /* GameViewController.swift */,
+				0A258DB02463323E000D6F52 /* HomeScene.swift */,
+				0A258DB22463324D000D6F52 /* HomeViewController.swift */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
-				E14571762448DB5A00E06079 /* Usuario.swift */,
-				E1E6B4C92454F49800C0F069 /* UserProvider.swift */,
-				E1E6B4CB2455007500C0F069 /* UsuarioCollectionViewCell.swift */,
+				854523212453557200458A7D /* IntroductionViewController.swift */,
+				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
+				0A047402242D52D9000F2F7B /* Main.storyboard */,
+				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
+				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
+				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
+				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
+				85BE9DD124575C910095A3BF /* ScreenSizes.swift */,
+				85BE9DD4245771D40095A3BF /* Sounds */,
+				854523272453782800458A7D /* TapBrushViewController.swift */,
+				0A3523912450C12500CF7053 /* Tartarus.swift */,
+				0A3523932450C12600CF7053 /* Toothbrush.swift */,
+				853D7BA42458D20B0070809E /* TrainAnimation.mp4 */,
+				8545232B24538C0200458A7D /* TrainAnimationViewController.swift */,
+				8545232F24538FCC00458A7D /* TutorialScene.swift */,
+				8545232D24538E8F00458A7D /* TutorialViewController.swift */,
+				0A047400242D52D9000F2F7B /* ViewController.swift */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -159,6 +197,18 @@
 				0A047420242D52DF000F2F7B /* Info.plist */,
 			);
 			path = minichallenge02UITests;
+			sourceTree = "<group>";
+		};
+		85BE9DD4245771D40095A3BF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				85961FD124589AD400305C06 /* TapBrush.m4a */,
+				85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */,
+				85961FD324589AD400305C06 /* Trenzinho.m4a */,
+				85961FD224589AD400305C06 /* TutorialFinished.m4a */,
+				85961FCF24589AD300305C06 /* ActivityFinished.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,14 +315,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D3645F2457957F001EEECD /* SelecaoUsuarios.storyboard in Resources */,
+				85961FD424589AD400305C06 /* ActivityFinished.m4a in Resources */,
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
-				E1DDF53F245B534500E85220 /* teste.storyboard in Resources */,
+				85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */,
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
+				0A047404242D52D9000F2F7B /* Main.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,
+				85961FD724589AD400305C06 /* TutorialFinished.m4a in Resources */,
+				853D7BA52458D20B0070809E /* TrainAnimation.mp4 in Resources */,
+				85961FD624589AD400305C06 /* TapBrush.m4a in Resources */,
+				85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */,
+				853D7BA32458D1670070809E /* DinoIntroduction.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,15 +353,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DD1A72243BB3F500C15355 /* CadastroNomeView.swift in Sources */,
-				E1E6B4CC2455007500C0F069 /* UsuarioCollectionViewCell.swift in Sources */,
 				0A047401242D52D9000F2F7B /* ViewController.swift in Sources */,
-				E14571772448DB5A00E06079 /* Usuario.swift in Sources */,
+				0A258DB12463323E000D6F52 /* HomeScene.swift in Sources */,
+				0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */,
+				0A258DB32463324D000D6F52 /* HomeViewController.swift in Sources */,
+				854523282453782800458A7D /* TapBrushViewController.swift in Sources */,
+				854523222453557200458A7D /* IntroductionViewController.swift in Sources */,
+				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */,
-				E1E6B4CA2454F49800C0F069 /* UserProvider.swift in Sources */,
-				E14571752447B19100E06079 /* MostraUsuarioView.swift in Sources */,
+				8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */,
+				85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */,
+				8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */,
+				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
 				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
-				E1DD1A74243BCC9500C15355 /* CadastroAvatarView.swift in Sources */,
+				8545233024538FCC00458A7D /* TutorialScene.swift in Sources */,
+				0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */,
+				0A3523952450C12600CF7053 /* Tartarus.swift in Sources */,
+				0AFA07E4243CFBA100D81772 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +405,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0A047402242D52D9000F2F7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A047403242D52D9000F2F7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -471,7 +543,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MAGNLW64BR;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +562,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MAGNLW64BR;
 				INFOPLIST_FILE = minichallenge02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

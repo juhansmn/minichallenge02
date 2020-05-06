@@ -14,10 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-  
-    @IBAction func changeText(_ sender: Any) {
-        label.text = "Texto alterado!"
-    }
     
     //botao para entrar na gameViewController e cenário de escovar o dente
     @IBAction func escovaDente(_ sender: Any) {

@@ -21,7 +21,7 @@ class MostraUsuarioView: UIViewController, UICollectionViewDataSource, UICollect
     // *** Trocar segue para levar pro TUTORIAL ao inves de teste ***
     // Ao clicar em alguma celula de usuario leva pra tela indicada
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       self.performSegue(withIdentifier: "teste", sender: self)
+       self.performSegue(withIdentifier: "activitySegue", sender: self)
     }
 
     

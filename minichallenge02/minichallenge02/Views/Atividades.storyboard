@@ -44,19 +44,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scE-nX-O9u">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gr-zO-7ZK">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-0n-qdU">
                                         <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
-                                        <state key="normal" title="Pular Tutorial" image="botaoPularTutorial"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="botaoPularTutorial"/>
                                         <connections>
-                                            <action selector="skipTutorial:" destination="reS-j4-B7y" eventType="touchUpInside" id="Zis-yn-K0h"/>
+                                            <action selector="skipTutorial:" destination="reS-j4-B7y" eventType="touchUpInside" id="xNF-m8-Uhg"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="6gr-zO-7ZK" firstAttribute="bottom" secondItem="scE-nX-O9u" secondAttribute="bottomMargin" id="740-1g-QrZ"/>
-                                    <constraint firstItem="6gr-zO-7ZK" firstAttribute="trailing" secondItem="scE-nX-O9u" secondAttribute="trailingMargin" id="tad-SA-xMf"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -104,11 +101,12 @@
                                     <outletCollection property="gestureRecognizers" destination="8T8-Gr-9kr" appends="YES" id="3Z4-fc-I0A"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-Ku-E8v">
                                 <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
-                                <state key="normal" image="botaoPularTutorial"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="botaoPularTutorial"/>
                                 <connections>
-                                    <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="b6e-uY-6V9"/>
+                                    <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="VsS-yX-Gu4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,9 +114,7 @@
                         <constraints>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" id="64M-D8-EPi"/>
                             <constraint firstAttribute="bottom" secondItem="m8t-hW-mPS" secondAttribute="bottom" id="O4S-p9-YtC"/>
-                            <constraint firstItem="bPs-St-aQ7" firstAttribute="bottom" secondItem="htA-13-VJB" secondAttribute="bottom" id="Psj-sy-9eT"/>
                             <constraint firstAttribute="trailing" secondItem="m8t-hW-mPS" secondAttribute="trailing" id="aIf-PO-Qcu"/>
-                            <constraint firstItem="bPs-St-aQ7" firstAttribute="trailing" secondItem="6uD-fU-bsQ" secondAttribute="trailingMargin" id="eic-rH-eg4"/>
                             <constraint firstItem="htA-13-VJB" firstAttribute="trailing" secondItem="iYL-F5-B7d" secondAttribute="trailing" constant="99" id="hOL-Sq-Va5"/>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="leading" secondItem="6uD-fU-bsQ" secondAttribute="leading" id="seI-Xp-R8e"/>
                             <constraint firstItem="iYL-F5-B7d" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" constant="127" id="x1Y-bq-uun"/>
@@ -154,19 +150,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-HI-Yei">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjj-Ss-d2r">
-                                        <rect key="frame" x="739" y="325" width="103.5" height="59.5"/>
-                                        <state key="normal" image="botaoPularTutorial"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-w3-J0b">
+                                        <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="botaoPularTutorial"/>
                                         <connections>
-                                            <action selector="skipTutorial:" destination="IdJ-ct-bFO" eventType="touchUpInside" id="4Jc-7R-BFq"/>
+                                            <action selector="skipTutorial:" destination="IdJ-ct-bFO" eventType="touchUpInside" id="3mP-Nx-zUb"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="Rjj-Ss-d2r" firstAttribute="bottom" secondItem="x8z-HI-Yei" secondAttribute="bottomMargin" id="8vy-G0-X1K"/>
-                                    <constraint firstItem="Rjj-Ss-d2r" firstAttribute="trailing" secondItem="x8z-HI-Yei" secondAttribute="trailingMargin" id="Bsj-9i-Ti7"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

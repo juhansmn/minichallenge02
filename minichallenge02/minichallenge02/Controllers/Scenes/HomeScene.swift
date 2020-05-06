@@ -10,26 +10,18 @@ import SpriteKit
 
 class HomeScene: SKScene {
     var viewController: HomeViewController?
+    //Escova
     let activityButton = SKSpriteNode(imageNamed: "activityButton")
+    //Profiles, pedir pro Jairo
     let profilesButton = SKSpriteNode(imageNamed: "profilesButton")
-    let dino = SKSpriteNode(imageNamed: "dino")
+    //Background Image
     var backgroundAudio = SKAudioNode()
     
     //Primeira função a ser executada na View Controller.
     override func didMove(to view: SKView) {
         setupButton(button: activityButton, name: "activityButton", height: 100, width: 100, x: 100, y: 100)
         setupButton(button: profilesButton, name: "profilesButton", height: 200, width: 200, x: 250, y: 120)
-        setupDino()
         setupAudio()
-    }
-    
-    //Configura o node Dino.
-    func setupDino(){
-        dino.name = "dino"
-        dino.size.height = 300
-        dino.size.width = 500
-        dino.position = CGPoint(x: 600, y: 200)
-        self.addChild(dino)
     }
     
     //Configura os nodes de "botões" customizados.

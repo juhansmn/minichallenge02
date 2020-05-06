@@ -165,42 +165,12 @@
 		0A0473FB242D52D9000F2F7B /* minichallenge02 */ = {
 			isa = PBXGroup;
 			children = (
-				0A3523902450C12500CF7053 /* ActivityScene.swift */,
-				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
-				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
-				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
-				0A51532E246336CF001BCC5D /* CadastroAvatarView.swift */,
-				0A515330246336D5001BCC5D /* CadastroNomeView.swift */,
-				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
-				853D7BA22458D1670070809E /* DinoIntroduction.mp4 */,
-				0A3523922450C12500CF7053 /* GameViewController.swift */,
-				0A258DB02463323E000D6F52 /* HomeScene.swift */,
-				0A258DB22463324D000D6F52 /* HomeViewController.swift */,
+				0A515347246356C0001BCC5D /* Controllers */,
+				0A51534C246357E2001BCC5D /* CoreData */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
-				854523212453557200458A7D /* IntroductionViewController.swift */,
-				0A515332246336ED001BCC5D /* MostraUsuarioView.swift */,
-				0A515334246336F5001BCC5D /* MostraUsuarioViewViewController.swift */,
-				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
-				0A047402242D52D9000F2F7B /* Main.storyboard */,
-				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
-				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
-				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
-				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
-				85BE9DD124575C910095A3BF /* ScreenSizes.swift */,
-				0A51533624633718001BCC5D /* SelecaoUsuarios.storyboard */,
-				85BE9DD4245771D40095A3BF /* Sounds */,
-				854523272453782800458A7D /* TapBrushViewController.swift */,
-				0A3523912450C12500CF7053 /* Tartarus.swift */,
-				0A3523932450C12600CF7053 /* Toothbrush.swift */,
-				853D7BA42458D20B0070809E /* TrainAnimation.mp4 */,
-				8545232B24538C0200458A7D /* TrainAnimationViewController.swift */,
-				8545232F24538FCC00458A7D /* TutorialScene.swift */,
-				8545232D24538E8F00458A7D /* TutorialViewController.swift */,
-				0A5153382463372C001BCC5D /* UserProvider.swift */,
-				0A51533B24633734001BCC5D /* Usuario.swift */,
-				0A51533A24633734001BCC5D /* UsuarioCollectionViewCell.swift */,
-				0A047400242D52D9000F2F7B /* ViewController.swift */,
+				0A51534E24635854001BCC5D /* Res */,
+				0A51534A2463578F001BCC5D /* Views */,
 			);
 			path = minichallenge02;
 			sourceTree = "<group>";
@@ -221,6 +191,92 @@
 				0A047420242D52DF000F2F7B /* Info.plist */,
 			);
 			path = minichallenge02UITests;
+			sourceTree = "<group>";
+		};
+		0A515347246356C0001BCC5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A515349246356DF001BCC5D /* Scenes */,
+				0A51532E246336CF001BCC5D /* CadastroAvatarView.swift */,
+				0A515330246336D5001BCC5D /* CadastroNomeView.swift */,
+				0A3523922450C12500CF7053 /* GameViewController.swift */,
+				0A258DB22463324D000D6F52 /* HomeViewController.swift */,
+				854523212453557200458A7D /* IntroductionViewController.swift */,
+				0A515332246336ED001BCC5D /* MostraUsuarioView.swift */,
+				0A515334246336F5001BCC5D /* MostraUsuarioViewViewController.swift */,
+				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
+				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
+				854523272453782800458A7D /* TapBrushViewController.swift */,
+				8545232B24538C0200458A7D /* TrainAnimationViewController.swift */,
+				8545232D24538E8F00458A7D /* TutorialViewController.swift */,
+				0A047400242D52D9000F2F7B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A515349246356DF001BCC5D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0A3523902450C12500CF7053 /* ActivityScene.swift */,
+				0A258DB02463323E000D6F52 /* HomeScene.swift */,
+				8545232F24538FCC00458A7D /* TutorialScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0A51534A2463578F001BCC5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A51534B246357C4001BCC5D /* Cells */,
+				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
+				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
+				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
+				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
+				0A047402242D52D9000F2F7B /* Main.storyboard */,
+				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
+				0A51533624633718001BCC5D /* SelecaoUsuarios.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A51534B246357C4001BCC5D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A51533A24633734001BCC5D /* UsuarioCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A51534C246357E2001BCC5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
+				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
+				85BE9DD124575C910095A3BF /* ScreenSizes.swift */,
+				0A3523912450C12500CF7053 /* Tartarus.swift */,
+				0A3523932450C12600CF7053 /* Toothbrush.swift */,
+				0A5153382463372C001BCC5D /* UserProvider.swift */,
+				0A51533B24633734001BCC5D /* Usuario.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0A51534D2463583E001BCC5D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				853D7BA22458D1670070809E /* DinoIntroduction.mp4 */,
+				853D7BA42458D20B0070809E /* TrainAnimation.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		0A51534E24635854001BCC5D /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				0A51534D2463583E001BCC5D /* Video */,
+				85BE9DD4245771D40095A3BF /* Sounds */,
+			);
+			path = Res;
 			sourceTree = "<group>";
 		};
 		85BE9DD4245771D40095A3BF /* Sounds */ = {

@@ -1,16 +1,16 @@
 //
-//  TutorialViewController.swift
+//  GameViewController.swift
 //  minichallenge02
 //
-//  Created by Beatriz Sato on 24/04/20.
+//  Created by Beatriz Sato on 13/04/20.
 //  Copyright © 2020 Juan Suman. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 
-//configura a tela do tutorial
-class TutorialViewController: UIViewController, SKViewDelegate{
+class GameViewController: UIViewController {
+    
     //criando uma SKView
     let skView: SKView = {
         let view = SKView()
@@ -29,15 +29,16 @@ class TutorialViewController: UIViewController, SKViewDelegate{
         skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
     
         //adicionando SKScene (ActivityScene) à view
-        let scene = TutorialScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
+        let scene = ActivityScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
+        //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
         scene.scaleMode = .aspectFill
         scene.viewController = self
         skView.presentScene(scene)
-        skView.showsPhysics = true
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)
     }
     
-    func transitionToActivity() {
-        performSegue(withIdentifier: "activitySegue", sender: self)
+    func transitionToReward(){
+        performSegue(withIdentifier: "rewardSegue", sender: self)
     }
+    
 }

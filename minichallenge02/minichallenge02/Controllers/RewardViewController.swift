@@ -54,11 +54,13 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    //Transição para Home
     func goToHome(){
         print("Vai para a Home")
         performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
+    //Abre a câmera
     func openCamera(){
         self.imagePickerController = UIImagePickerController()
         //Especifica o uso da câmera.

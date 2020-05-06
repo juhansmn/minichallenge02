@@ -15,27 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K54-2T-Frg">
-                                <rect key="frame" x="396" y="265" width="104" height="84"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-hw-g78">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K54-2T-Frg">
+                                <rect key="frame" x="396" y="312" width="104.33333333333331" height="59.666666666666686"/>
                                 <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Tirar foto"/>
+                                <state key="normal" title="Tirar foto" image="botaoTirarFoto"/>
                                 <connections>
                                     <action selector="onPhotoButton:" destination="cla-x8-gM3" eventType="touchUpInside" id="ryQ-CN-VRK"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Kg-WSK">
-                                <rect key="frame" x="261" y="20" width="374" height="104"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parabens" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Kg-WSK">
+                                <rect key="frame" x="261" y="52" width="374" height="104"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BEm-e2-ew5" firstAttribute="bottom" secondItem="K54-2T-Frg" secondAttribute="bottom" constant="44" id="1UM-14-Qri"/>
-                            <constraint firstItem="K54-2T-Frg" firstAttribute="height" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="0.202899" id="8ll-ic-pdf"/>
-                            <constraint firstItem="K54-2T-Frg" firstAttribute="width" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="52:207" id="O8t-HO-LyP"/>
+                            <constraint firstItem="BEm-e2-ew5" firstAttribute="bottom" secondItem="K54-2T-Frg" secondAttribute="bottom" constant="21.333333333333314" id="1UM-14-Qri"/>
+                            <constraint firstItem="K54-2T-Frg" firstAttribute="height" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="0.202899" constant="-24.333519333333335" id="8ll-ic-pdf"/>
+                            <constraint firstItem="K54-2T-Frg" firstAttribute="width" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="52:207" constant="0.3333333333333286" id="O8t-HO-LyP"/>
                             <constraint firstItem="Idj-Kg-WSK" firstAttribute="height" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="0.248792" constant="1" id="THw-1f-RaD"/>
                             <constraint firstItem="Idj-Kg-WSK" firstAttribute="width" secondItem="9kB-Qo-C17" secondAttribute="height" multiplier="187:207" id="X26-aU-1V8"/>
-                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="top" secondItem="BEm-e2-ew5" secondAttribute="top" constant="20" id="aAw-nD-930"/>
+                            <constraint firstItem="Idj-Kg-WSK" firstAttribute="top" secondItem="BEm-e2-ew5" secondAttribute="top" constant="52" id="aAw-nD-930"/>
                             <constraint firstItem="K54-2T-Frg" firstAttribute="centerX" secondItem="BEm-e2-ew5" secondAttribute="centerX" id="fPY-BZ-biZ"/>
                             <constraint firstItem="Idj-Kg-WSK" firstAttribute="centerX" secondItem="BEm-e2-ew5" secondAttribute="centerX" id="uXj-jU-Fkv"/>
                         </constraints>
@@ -59,6 +62,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="KqJ-TZ-4E1">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-Wg-hza">
                                 <rect key="frame" x="118.66666666666669" y="49" width="659" height="316"/>
                                 <constraints>
@@ -101,4 +108,9 @@
             <point key="canvasLocation" x="1096" y="848"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CenarioAppFundo" width="2688" height="1242"/>
+        <image name="botaoTirarFoto" width="1802" height="1028"/>
+        <image name="parabens" width="3066" height="967"/>
+    </resources>
 </document>

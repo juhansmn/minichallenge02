@@ -44,9 +44,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scE-nX-O9u">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gr-zO-7ZK">
-                                        <rect key="frame" x="754" y="355" width="90" height="30"/>
-                                        <state key="normal" title="Pular Tutorial"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gr-zO-7ZK">
+                                        <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
+                                        <state key="normal" title="Pular Tutorial" image="botaoPularTutorial"/>
                                         <connections>
                                             <action selector="skipTutorial:" destination="reS-j4-B7y" eventType="touchUpInside" id="Zis-yn-K0h"/>
                                         </connections>
@@ -92,13 +92,6 @@
                                     <outletCollection property="gestureRecognizers" destination="Azw-Ty-ZXQ" appends="YES" id="H6c-2F-wHX"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
-                                <rect key="frame" x="742" y="363" width="90" height="30"/>
-                                <state key="normal" title="Pular Tutorial"/>
-                                <connections>
-                                    <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="b6e-uY-6V9"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYL-F5-B7d">
                                 <rect key="frame" x="570" y="127" width="183" height="51"/>
                                 <gestureRecognizers/>
@@ -111,6 +104,13 @@
                                     <outletCollection property="gestureRecognizers" destination="8T8-Gr-9kr" appends="YES" id="3Z4-fc-I0A"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPs-St-aQ7">
+                                <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
+                                <state key="normal" image="botaoPularTutorial"/>
+                                <connections>
+                                    <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="b6e-uY-6V9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -154,9 +154,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-HI-Yei">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjj-Ss-d2r">
-                                        <rect key="frame" x="754" y="355" width="90" height="30"/>
-                                        <state key="normal" title="Pular Tutorial"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjj-Ss-d2r">
+                                        <rect key="frame" x="739" y="325" width="103.5" height="59.5"/>
+                                        <state key="normal" image="botaoPularTutorial"/>
                                         <connections>
                                             <action selector="skipTutorial:" destination="IdJ-ct-bFO" eventType="touchUpInside" id="4Jc-7R-BFq"/>
                                         </connections>
@@ -207,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="botaoPularTutorial" width="1802" height="1028"/>
         <image name="introduction-scene" width="1344" height="621"/>
     </resources>
 </document>

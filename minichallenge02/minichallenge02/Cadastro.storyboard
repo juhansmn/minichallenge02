@@ -25,15 +25,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-8E-VjC">
-                                <rect key="frame" x="406" y="254" width="85" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="BotaoAvancar"/>
-                                <connections>
-                                    <action selector="avancarAction:" destination="ibx-Jf-2l6" eventType="touchUpInside" id="7qE-rp-KyK"/>
-                                    <segue destination="gKy-ZN-C4U" kind="show" identifier="deNomePraAvatar" id="emY-wn-Fkw"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLP-nC-aei">
                                 <rect key="frame" x="396" y="52" width="105" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,6 +32,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-8E-VjC">
+                                <rect key="frame" x="396" y="303" width="104.5" height="59.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BotaoAvancar"/>
+                                <connections>
+                                    <action selector="avancarAction:" destination="ibx-Jf-2l6" eventType="touchUpInside" id="7qE-rp-KyK"/>
+                                    <segue destination="gKy-ZN-C4U" kind="show" identifier="deNomePraAvatar" id="emY-wn-Fkw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="K2R-gA-YwE"/>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-Wr-FgR">
-                                <rect key="frame" x="406" y="280" width="85" height="80"/>
+                                <rect key="frame" x="390" y="302" width="104.5" height="59.5"/>
                                 <state key="normal" image="BotaoAvancar"/>
                                 <connections>
                                     <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="aHH-Yd-Xc3"/>
@@ -148,7 +148,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BotaoAvancar" width="1802" height="1585"/>
+        <image name="BotaoAvancar" width="1802" height="1028"/>
         <image name="CenarioAppFundo" width="2688" height="1242"/>
         <image name="avatar1" width="2000" height="2000"/>
         <image name="avatar2" width="2000" height="2000"/>

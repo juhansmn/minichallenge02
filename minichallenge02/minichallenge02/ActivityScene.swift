@@ -15,52 +15,54 @@ struct ColliderType{
 }
 
 class ActivityScene: SKScene, SKPhysicsContactDelegate {
-    
-    //criando uma instância da classe Toothbrush
+    var viewController: GameViewController?
     var toothbrush = Toothbrush()
-    //declarando array de tártaros do tipo igual a da Classe Tartarus
     var tartarus:[Tartarus] = []
-    //para identificar que horas a atividade acaba para passar para a próxima tela
     var activityOver = false
+    var feedbackActivityAudio = SKAudioNode()
+    //espera o áudio acabar de tocar para passar de tela
+    var sequenceFeedback = SKAction.sequence([SKAction.play(),SKAction.wait(forDuration: 19.0)])
     
     override func didMove(to view: SKView) {
-        
-        //centralizando anchorpoint da view
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.physicsWorld.contactDelegate = self
-        
-        //adicionando elementos à SKView
         addBackground()
         addToothbrush()
         addTartarus(count: 6)
+        setupFeedbackAudio()
     }
     
-    //configurações do background
     func addBackground(){
-        let background = SKSpriteNode(imageNamed: "dino")
-        //posiciona o background ao fundo
+        let background = SKSpriteNode(imageNamed: "dino-activity")
         background.zPosition = 0
-        //configurando o background para ocupar a tela inteira
         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         //renderizar sem alpha blending para ocupar menos memória (não renderiza pixel por pixel)
         background.blendMode = .replace
-        //adiciona background na scene
         addChild(background)
     }
     
     func addToothbrush(){
-        //posição inicial que aparecerá na tela
+        toothbrush.zPosition = 1
         toothbrush.position = CGPoint(x:300, y:60)
-        addChild(toothbrush)
+        self.addChild(toothbrush)
     }
 
-    //adicionando as instâncias da Classe Tartarus em um array de SKSpriteNode e à tela
     func addTartarus(count: Int){
         for i in 0..<count{
             let tartaroTemp:Tartarus = Tartarus(id: i)
+            tartaroTemp.addTartarusPosition(sprite: tartaroTemp)
+            tartaroTemp.zPosition = 1
             tartarus.append(tartaroTemp)
             print("Id do tártaro: \(tartaroTemp.id)"  )
-            addChild(tartaroTemp)
+            self.addChild(tartaroTemp)
+        }
+    }
+    
+    func setupFeedbackAudio(){
+        if let feedbackActivityAudioURL = Bundle.main.url(forResource: "ActivityFinished", withExtension: "m4a"){
+            feedbackActivityAudio = SKAudioNode(url: feedbackActivityAudioURL)
+            feedbackActivityAudio.autoplayLooped = false
+            self.addChild(feedbackActivityAudio)
         }
     }
     
@@ -74,55 +76,56 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    
     //detectando contato
     func didBegin(_ contact: SKPhysicsContact) {
-        
+        //nodes que vao se tocar, tártaro e escova podem ser tanto A quanto B
         guard let nodeA = contact.bodyA.node else {return}
         guard let nodeB = contact.bodyB.node else {return}
         
         if nodeA == toothbrush {
             playerCollided(with: nodeB as! SKSpriteNode)
-            //nodeB é uma instancia da Classe Tartarus dentro do array tartarus
-            //qual é o id do nodeB
-            
+
         } else if nodeB == toothbrush {
             playerCollided(with: nodeA as! SKSpriteNode)
-            //nodeA é uma instancia da Classe Tartarus dentro do array tartarus
         }
     }
     
-    //ação do contato
-    func playerCollided(with node: SKSpriteNode){
+    //ações a partir do contato
+    func playerCollided(with node: SKSpriteNode){        
         cleanTartarus(node: node)
         killTartarus(node: node)
         if isActivityOver() {
-            print("hora da recompensa")
+            //run(feedbackActivity) //toca áudio de feedback
             //passar para a tela de recompensa
+             feedbackActivityAudio.run(sequenceFeedback, completion: {
+                self.viewController?.transitionToReward()
+            })
             
         }
     }
     
-    //não consegui colocar na Classe Tartarus e chamar aqui, preciso saber qual instancia está sendo tocada dentro do array e acessar as propriedades do elemento
     func cleanTartarus(node: SKSpriteNode){
         node.alpha -= 0.17
     }
     
-    //se o tártaro estiver transparente, retirar ele da tela
+    //se o tártaro estiver transparente, retirar ele da tela e do array
     func killTartarus(node: SKSpriteNode){
-      if node.alpha <= 0.0{
-          node.removeFromParent()
-          print("Tartarus removed")
+      if node.alpha <= 0.0 {
+        //SKAction garante que o node seja removido na hora certa
+        let tartarusDeath = SKAction.run({node.removeFromParent()})
+        self.run(tartarusDeath)
+          print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
-
       }
     }
 
-    //checar se ainda existem tártaros na tela. Se não existir, hora da recompensa
+    //checa se ainda existem tártaros na tela. Se não existir, hora da recompensa
     func isActivityOver() -> Bool{
-      if Tartarus.tartarusCount == 0 {
-          activityOver = true
-      }
+        if Tartarus.tartarusCount == 0 {
+            activityOver = true
+            tartarus.removeAll()
+            print("Quantidade de tártaro no array: \(tartarus.count)")
+        }
       return activityOver
     }
 

@@ -29,12 +29,17 @@ class GameViewController: UIViewController {
         skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
     
         //adicionando SKScene (ActivityScene) à view
-        
-        let scene = ActivityScene(size: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        let scene = ActivityScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
         //Seria bom colocar UISCreen.main.... em um arquivo separado, junto com as outras configurações de tamanho
         scene.scaleMode = .aspectFill
+        scene.viewController = self
         skView.presentScene(scene)
+        skView.showsPhysics = true
         skView.ignoresSiblingOrder = true //para o zPosition funcionar (default é false)
+    }
+    
+    func transitionToReward(){
+        performSegue(withIdentifier: "rewardSegue", sender: self)
     }
     
 }

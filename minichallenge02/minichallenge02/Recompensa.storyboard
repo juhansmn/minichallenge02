@@ -45,7 +45,6 @@
                     <connections>
                         <segue destination="c0V-qA-Kwh" kind="presentation" identifier="photoSegue" id="MCE-gG-4hw"/>
                         <segue destination="fUd-ry-YuT" kind="presentation" identifier="homeSegue" id="RGC-QJ-vVj"/>
-                        <segue destination="Hq8-Ob-OOp" kind="presentation" identifier="nomeStoryboardSegue" id="bKX-5S-nBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZp-Vd-gAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,6 +77,7 @@
                     <navigationItem key="navigationItem" id="UoR-Io-Gc1"/>
                     <connections>
                         <outlet property="imageView" destination="Lp4-Wg-hza" id="Oci-Xa-SoR"/>
+                        <segue destination="zT3-rX-vHn" kind="presentation" identifier="homeSegue" id="0Yy-fa-CyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJ6-7c-vgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,13 +92,13 @@
             </objects>
             <point key="canvasLocation" x="1096" y="7"/>
         </scene>
-        <!--Recompensa-->
-        <scene sceneID="XRB-sc-qoM">
+        <!--Main-->
+        <scene sceneID="qih-fv-veY">
             <objects>
-                <viewControllerPlaceholder storyboardName="Recompensa" id="Hq8-Ob-OOp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MzM-43-qJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="zT3-rX-vHn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ns-l9-gk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="116"/>
+            <point key="canvasLocation" x="1096" y="848"/>
         </scene>
     </scenes>
 </document>

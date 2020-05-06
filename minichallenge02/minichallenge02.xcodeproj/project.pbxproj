@@ -23,6 +23,7 @@
 		E1D3645F2457957F001EEECD /* SelecaoUsuarios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D3645E2457957F001EEECD /* SelecaoUsuarios.storyboard */; };
 		E1DD1A72243BB3F500C15355 /* CadastroNomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */; };
 		E1DD1A74243BCC9500C15355 /* CadastroAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */; };
+		E1DDF53F245B534500E85220 /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DDF53E245B534500E85220 /* teste.storyboard */; };
 		E1E6B4CA2454F49800C0F069 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6B4C92454F49800C0F069 /* UserProvider.swift */; };
 		E1E6B4CC2455007500C0F069 /* UsuarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6B4CB2455007500C0F069 /* UsuarioCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		E1D3645E2457957F001EEECD /* SelecaoUsuarios.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelecaoUsuarios.storyboard; sourceTree = "<group>"; };
 		E1DD1A71243BB3F500C15355 /* CadastroNomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroNomeView.swift; sourceTree = "<group>"; };
 		E1DD1A73243BCC9500C15355 /* CadastroAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroAvatarView.swift; sourceTree = "<group>"; };
+		E1DDF53E245B534500E85220 /* teste.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
 		E1E6B4C92454F49800C0F069 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		E1E6B4CB2455007500C0F069 /* UsuarioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
+				E1DDF53E245B534500E85220 /* teste.storyboard */,
 				0A047405242D52DE000F2F7B /* Assets.xcassets */,
 				0A04740A242D52DE000F2F7B /* Info.plist */,
 				E14571762448DB5A00E06079 /* Usuario.swift */,
@@ -266,6 +269,7 @@
 				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
+				E1DDF53F245B534500E85220 /* teste.storyboard in Resources */,
 				0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */,
 				0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */,
 				0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */,

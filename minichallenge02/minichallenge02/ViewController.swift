@@ -9,15 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    public var usuario: Usuario?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Verifica se já existe um cadastro salvo em UserDefalts, caso não exista começa o app na tela de cadastro
-//        if UserProvider.shared.usuarios.count > 0  {
-//            performSegue(withIdentifier: "selecaoUsuarios", sender: self)
-//        }else{
-//            performSegue(withIdentifier: "novoCadastro", sender: self)
-//        }
+        nome.text = usuario?.nome
     }
+
+    @IBOutlet weak var nome: UILabel!
 }

@@ -12,8 +12,17 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         let scene = HomeScene(size: view.frame.size)
+        scene.viewController = self
+        
         let skView = view as! SKView
         skView.presentScene(scene)
+    }
+    
+    func transitionToProfiles(){
+        performSegue(withIdentifier: "profilesSegue", sender: self)
+    }
+    func transitionToActivity(){
+        performSegue(withIdentifier: "activitySegue", sender: self)
     }
 
 }

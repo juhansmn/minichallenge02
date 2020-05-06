@@ -33,15 +33,5 @@
             </objects>
             <point key="canvasLocation" x="136.60714285714286" y="114.49275362318842"/>
         </scene>
-        <!--Cadastro-->
-        <scene sceneID="CZU-cv-iOD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Cadastro" id="Veb-kg-Ikb" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="fWj-xy-jky"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tM3-ej-9Ws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="554" y="77"/>
-        </scene>
     </scenes>
 </document>

@@ -9,6 +9,7 @@
 import SpriteKit
 
 class HomeScene: SKScene {
+    var viewController: HomeViewController?
     let activityButton = SKSpriteNode(imageNamed: "activityButton")
     let profilesButton = SKSpriteNode(imageNamed: "profilesButton")
     let dino = SKSpriteNode(imageNamed: "dino")
@@ -58,12 +59,14 @@ class HomeScene: SKScene {
             case "activityButton":
                 //Delegate. Troca para view de Atividades
                 print("Vai para atividade")
+                viewController?.transitionToActivity()
                 
                 //será que tem que parar o áudio?
                 backgroundAudio.removeFromParent() //se precisar pausar
             case "profilesButton":
                 //Delegate. Troca para seleção de perfis em Cadastro
                 print("Vai para seleção de perfis")
+                viewController?.transitionToProfiles()
             default:
                 break
             }

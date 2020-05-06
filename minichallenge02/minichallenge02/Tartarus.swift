@@ -14,13 +14,12 @@ class Tartarus: SKSpriteNode {
     let id:Int //para verificar qual tártaro está sendo tocado dentro do array e modificar ele
     
     init(id: Int){
-        let texture = SKTexture(imageNamed: "tartarusImage")
+        let texture = SKTexture(imageNamed: "tartarus")
         self.id = id
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         self.name = "Tartarus"
         
         addTartarusPhysics(sprite: self)
-        addTartarusPosition(sprite: self)
         Tartarus.tartarusCount += 1
         
     }
@@ -38,9 +37,8 @@ class Tartarus: SKSpriteNode {
         sprite.physicsBody?.contactTestBitMask = ColliderType.Toothbrush
     }
     
+    //posição dos tártaros deve ser adicionada na scene, considerando os dois tipos de posição
     func addTartarusPosition(sprite: SKSpriteNode){
-        sprite.zPosition = 1 //deixa acima do background
-        
         //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
         let randomPositionX = GKRandomDistribution(lowestValue: -70, highestValue: 70)
         let position = CGFloat(randomPositionX.nextInt())
@@ -49,6 +47,24 @@ class Tartarus: SKSpriteNode {
         sprite.yScale = 0.2
         sprite.size = CGSize(width: 45, height: 45)
         sprite.position = CGPoint(x: position, y: -65)
+    }
+    
+    func addTutorialPosition(sprite: SKSpriteNode){
+        sprite.zPosition = 2 //deixa acima do background e do dino
+        
+        //randomizar posição dos tártaros entre -200 e 200 na linha horizontal
+        let randomPositionX = GKRandomDistribution(lowestValue: -150, highestValue: -80)
+        let position = CGFloat(randomPositionX.nextInt())
+
+        sprite.xScale = 0.2
+        sprite.yScale = 0.2
+        sprite.size = CGSize(width: 45, height: 45)
+        if DeviceType.isiPhone8plus || DeviceType.isiPhone11orProMax{
+            sprite.position = CGPoint(x: position, y: -100)
+        }else{
+            sprite.position = CGPoint(x: position, y: -90)
+        }
+        
     }
 
 }

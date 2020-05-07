@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A0473FD242D52D9000F2F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0473FC242D52D9000F2F7B /* AppDelegate.swift */; };
-		0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */; };
 		0A047401242D52D9000F2F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A047400242D52D9000F2F7B /* ViewController.swift */; };
 		0A047404242D52D9000F2F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A047402242D52D9000F2F7B /* Main.storyboard */; };
 		0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A047405242D52DE000F2F7B /* Assets.xcassets */; };
@@ -24,13 +23,12 @@
 		0A51532F246336CF001BCC5D /* CadastroAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51532E246336CF001BCC5D /* CadastroAvatarView.swift */; };
 		0A515331246336D5001BCC5D /* CadastroNomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A515330246336D5001BCC5D /* CadastroNomeView.swift */; };
 		0A515333246336EE001BCC5D /* MostraUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A515332246336ED001BCC5D /* MostraUsuarioView.swift */; };
-		0A515335246336F5001BCC5D /* MostraUsuarioViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A515334246336F5001BCC5D /* MostraUsuarioViewViewController.swift */; };
 		0A51533724633718001BCC5D /* SelecaoUsuarios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A51533624633718001BCC5D /* SelecaoUsuarios.storyboard */; };
 		0A5153392463372C001BCC5D /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5153382463372C001BCC5D /* UserProvider.swift */; };
 		0A51533C24633734001BCC5D /* UsuarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51533A24633734001BCC5D /* UsuarioCollectionViewCell.swift */; };
 		0A51533D24633734001BCC5D /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51533B24633734001BCC5D /* Usuario.swift */; };
+		0A515350246485CE001BCC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51534F246485CE001BCC5D /* SceneDelegate.swift */; };
 		0AFA071E243BA1DB00D81772 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */; };
-		0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA071F243BA1EA00D81772 /* Config.storyboard */; };
 		0AFA0722243BA21B00D81772 /* Recompensa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0721243BA21B00D81772 /* Recompensa.storyboard */; };
 		0AFA0724243BA22800D81772 /* Atividades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA0723243BA22800D81772 /* Atividades.storyboard */; };
 		0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA07DF243CFB6500D81772 /* RewardViewController.swift */; };
@@ -70,7 +68,6 @@
 /* Begin PBXFileReference section */
 		0A0473F9242D52D9000F2F7B /* minichallenge02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minichallenge02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0473FC242D52D9000F2F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A047400242D52D9000F2F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A047403242D52D9000F2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A047405242D52DE000F2F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,13 +88,12 @@
 		0A51532E246336CF001BCC5D /* CadastroAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroAvatarView.swift; sourceTree = "<group>"; };
 		0A515330246336D5001BCC5D /* CadastroNomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroNomeView.swift; sourceTree = "<group>"; };
 		0A515332246336ED001BCC5D /* MostraUsuarioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostraUsuarioView.swift; sourceTree = "<group>"; };
-		0A515334246336F5001BCC5D /* MostraUsuarioViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostraUsuarioViewViewController.swift; sourceTree = "<group>"; };
 		0A51533624633718001BCC5D /* SelecaoUsuarios.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelecaoUsuarios.storyboard; sourceTree = "<group>"; };
 		0A5153382463372C001BCC5D /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		0A51533A24633734001BCC5D /* UsuarioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A51533B24633734001BCC5D /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		0A51534F246485CE001BCC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
-		0AFA071F243BA1EA00D81772 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		0AFA0721243BA21B00D81772 /* Recompensa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recompensa.storyboard; sourceTree = "<group>"; };
 		0AFA0723243BA22800D81772 /* Atividades.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Atividades.storyboard; sourceTree = "<group>"; };
 		0AFA07DF243CFB6500D81772 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +199,6 @@
 				0A258DB22463324D000D6F52 /* HomeViewController.swift */,
 				854523212453557200458A7D /* IntroductionViewController.swift */,
 				0A515332246336ED001BCC5D /* MostraUsuarioView.swift */,
-				0A515334246336F5001BCC5D /* MostraUsuarioViewViewController.swift */,
 				0AFA07E3243CFBA100D81772 /* PhotoViewController.swift */,
 				0AFA07DF243CFB6500D81772 /* RewardViewController.swift */,
 				854523272453782800458A7D /* TapBrushViewController.swift */,
@@ -230,7 +225,6 @@
 				0A51534B246357C4001BCC5D /* Cells */,
 				0AFA0723243BA22800D81772 /* Atividades.storyboard */,
 				0AFA071D243BA1DB00D81772 /* Cadastro.storyboard */,
-				0AFA071F243BA1EA00D81772 /* Config.storyboard */,
 				0A047407242D52DE000F2F7B /* LaunchScreen.storyboard */,
 				0A047402242D52D9000F2F7B /* Main.storyboard */,
 				0AFA0721243BA21B00D81772 /* Recompensa.storyboard */,
@@ -251,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				0A0473FC242D52D9000F2F7B /* AppDelegate.swift */,
-				0A0473FE242D52D9000F2F7B /* SceneDelegate.swift */,
+				0A51534F246485CE001BCC5D /* SceneDelegate.swift */,
 				85BE9DD124575C910095A3BF /* ScreenSizes.swift */,
 				0A3523912450C12500CF7053 /* Tartarus.swift */,
 				0A3523932450C12600CF7053 /* Toothbrush.swift */,
@@ -396,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				85961FD424589AD400305C06 /* ActivityFinished.m4a in Resources */,
-				0AFA0720243BA1EA00D81772 /* Config.storyboard in Resources */,
 				0A047409242D52DE000F2F7B /* LaunchScreen.storyboard in Resources */,
 				0A047406242D52DE000F2F7B /* Assets.xcassets in Resources */,
 				85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */,
@@ -440,6 +433,7 @@
 				0A3523942450C12600CF7053 /* ActivityScene.swift in Sources */,
 				0A258DB32463324D000D6F52 /* HomeViewController.swift in Sources */,
 				854523282453782800458A7D /* TapBrushViewController.swift in Sources */,
+				0A515350246485CE001BCC5D /* SceneDelegate.swift in Sources */,
 				854523222453557200458A7D /* IntroductionViewController.swift in Sources */,
 				0AFA07E0243CFB6500D81772 /* RewardViewController.swift in Sources */,
 				0A51533D24633734001BCC5D /* Usuario.swift in Sources */,
@@ -447,12 +441,10 @@
 				8545232E24538E8F00458A7D /* TutorialViewController.swift in Sources */,
 				85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */,
 				0A51532F246336CF001BCC5D /* CadastroAvatarView.swift in Sources */,
-				0A515335246336F5001BCC5D /* MostraUsuarioViewViewController.swift in Sources */,
 				8545232C24538C0200458A7D /* TrainAnimationViewController.swift in Sources */,
 				0A3523962450C12600CF7053 /* GameViewController.swift in Sources */,
 				0A51533C24633734001BCC5D /* UsuarioCollectionViewCell.swift in Sources */,
 				0A515331246336D5001BCC5D /* CadastroNomeView.swift in Sources */,
-				0A0473FF242D52D9000F2F7B /* SceneDelegate.swift in Sources */,
 				0A515333246336EE001BCC5D /* MostraUsuarioView.swift in Sources */,
 				8545233024538FCC00458A7D /* TutorialScene.swift in Sources */,
 				0A3523972450C12600CF7053 /* Toothbrush.swift in Sources */,

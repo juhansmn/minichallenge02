@@ -35,7 +35,7 @@ class IntroductionViewController: UIViewController{
     }
     
     @IBAction func skipTutorial(_ sender: Any) {
-        performSegue(withIdentifier: "tapBrushSegue", sender: self)
+        performSegue(withIdentifier: "homeSegue", sender: self)
         player.pause()
     }
     
@@ -53,7 +53,6 @@ class IntroductionViewController: UIViewController{
     
     //reconhece quando o vídeo acabou e passa para a próxima tela
     @objc func playerDidFinishPlaying(note: NSNotification) {
-        print("Video Finished")
         performSegue(withIdentifier: "tapBrushSegue", sender: self)
     }
     

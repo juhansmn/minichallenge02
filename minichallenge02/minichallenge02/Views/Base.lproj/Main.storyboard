@@ -15,6 +15,14 @@
             </objects>
             <point key="canvasLocation" x="557" y="114"/>
         </scene>
+        <!--SelecaoUsuarios-->
+        <scene sceneID="hhO-AB-opT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelecaoUsuarios" id="3LZ-T9-5XC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUC-2x-BdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="191"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,6 +35,7 @@
                     </view>
                     <connections>
                         <segue destination="KeM-oV-thj" kind="presentation" identifier="activitySegue" id="aP6-mb-eda"/>
+                        <segue destination="3LZ-T9-5XC" kind="presentation" identifier="profilesSegue" id="HBP-sE-zin"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

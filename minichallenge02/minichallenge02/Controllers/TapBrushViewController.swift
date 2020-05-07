@@ -29,7 +29,7 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     
     @IBAction func skipTutorial(_ sender: Any) { //se pular tutorial, vai para home
         //substituir pela home
-        performSegue(withIdentifier: "trainSegue", sender: self)
+        performSegue(withIdentifier: "homeSegue", sender: self)
         //se pular tutorial, para de tocar o áudio
         firstAudioPlayer?.stop()
         secondAudioPlayer?.stop()
@@ -37,7 +37,6 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     
     //caso a criança não clique na escova mas em qualquer lugar da tela (tap gesture)
     @IBAction func tapbrush(_ sender: Any) {
-        print("toca na escova")
         //só permite tocar o segundo áudio caso o primeiro áudio acabe
         if audioFinished == true{
             //só permite tocar o áudio de novo caso ele acabe
@@ -75,7 +74,6 @@ class TapBrushViewController: UIViewController, AVAudioPlayerDelegate{
     
     //método do AVAudioPlayerDelegate para reconhecer quando o vídeo parou de tocar
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        print("audio finished")
         audioFinished = true //quando acabar o áudio, vai poder tocar outro. Enquanto não acabar, não vai poder tocar outro
     }
     

@@ -113,24 +113,22 @@
                                     <action selector="oneAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="j5s-S3-T7t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-Wr-FgR">
-                                <rect key="frame" x="390" y="302" width="104.5" height="59.5"/>
-                                <state key="normal" image="BotaoAvancar"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-0e-txH">
+                                <rect key="frame" x="390" y="312" width="104.5" height="59.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="botaoPularTutorial"/>
                                 <connections>
-                                    <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="aHH-Yd-Xc3"/>
-                                    <segue destination="4ZD-F2-duZ" kind="show" identifier="deCadastroPraSelecaoUsuario" id="6hM-Fa-pLM"/>
+                                    <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="FnQ-vg-DTI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="nRh-Wr-FgR" firstAttribute="leading" secondItem="RLx-h4-n53" secondAttribute="leading" constant="376" id="LMv-9Z-PMI"/>
-                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="nRh-Wr-FgR" secondAttribute="bottom" constant="50" id="h3b-nJ-vOp"/>
-                            <constraint firstItem="RLx-h4-n53" firstAttribute="trailing" secondItem="nRh-Wr-FgR" secondAttribute="trailing" constant="376" id="jkC-PQ-EGY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RLx-h4-n53"/>
                     </view>
                     <navigationItem key="navigationItem" id="XRS-hM-Xjs"/>
+                    <connections>
+                        <segue destination="4ZD-F2-duZ" kind="presentation" identifier="deCadastroPraSelecaoUsuario" id="LI7-lP-VM3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLq-qq-uoS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +142,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-dW-cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.67857142857144" y="953.62318840579712"/>
+            <point key="canvasLocation" x="829" y="659"/>
         </scene>
     </scenes>
     <resources>
@@ -155,5 +153,6 @@
         <image name="avatar3" width="2000" height="2000"/>
         <image name="avatar4" width="2000" height="2000"/>
         <image name="avatar5" width="2000" height="2000"/>
+        <image name="botaoPularTutorial" width="1802" height="1028"/>
     </resources>
 </document>

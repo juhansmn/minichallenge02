@@ -63,7 +63,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3f-qv-cIN">
-                                <rect key="frame" x="683" y="158" width="97" height="98"/>
+                                <rect key="frame" x="686" y="141" width="97" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="BotaoMais"/>
                                 <connections>

@@ -68,6 +68,7 @@
                     <connections>
                         <outlet property="introVideoView" destination="scE-nX-O9u" id="PHj-3S-TIc"/>
                         <segue destination="L2Y-rI-CrF" kind="presentation" identifier="tapBrushSegue" id="6HD-vv-nRQ"/>
+                        <segue destination="q8N-6o-a5n" kind="presentation" identifier="homeSegue" id="tIl-Ai-9r0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybh-tn-tqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,6 +124,7 @@
                     </view>
                     <connections>
                         <segue destination="IdJ-ct-bFO" kind="presentation" identifier="trainSegue" id="IBt-D0-oVl"/>
+                        <segue destination="q8N-6o-a5n" kind="presentation" identifier="homeSegue" id="iln-N8-lik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-t8-KgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,6 +140,14 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="827.67857142857144" y="644.92753623188412"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Fra-cq-2r7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="q8N-6o-a5n" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsA-Zj-mFU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="1204"/>
         </scene>
         <!--Train Animation View Controller-->
         <scene sceneID="6b6-na-Moq">
@@ -174,6 +184,7 @@
                     <connections>
                         <outlet property="trainVideoView" destination="x8z-HI-Yei" id="TfU-Sb-I6w"/>
                         <segue destination="K4G-XD-GCn" kind="presentation" identifier="tutorialSegue" id="Tbz-Cc-bxY"/>
+                        <segue destination="q8N-6o-a5n" kind="presentation" identifier="homeSegue" id="E7r-jM-krA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cm6-gE-WVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,6 +210,9 @@
             <point key="canvasLocation" x="1550" y="1546"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tIl-Ai-9r0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="botaoPularTutorial" width="1802" height="1028"/>
         <image name="introduction-scene" width="1344" height="621"/>

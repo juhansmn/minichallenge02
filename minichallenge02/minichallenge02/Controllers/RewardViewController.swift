@@ -44,10 +44,8 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
                     }
                 }
             case .denied: // The user has previously denied access.
-                print("O usuário não deu permissão")
                 goToHome()
             case .restricted: // The user can't grant access due to restrictions.
-                print("O usuário tem restrições")
                 goToHome()
             @unknown default:
                 fatalError()
@@ -56,7 +54,6 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //Transição para Home
     func goToHome(){
-        print("Vai para a Home")
         performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
@@ -78,7 +75,6 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
         
         guard let photoTaken = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as? UIImage
         else {
-                print("Nenhuma foto encontrada.")
                 return
         }
         
@@ -92,8 +88,6 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //Aplica o filtro do Dino na foto tirada. Retorna a foto com filtro.
     func applyFilter(_ photo: UIImage) -> UIImage{
-        print("Filtro aplicado!")
-        
         //Se existir o filtro, aplica na foto.
         if let filter = UIImage(named: "filtro"){
             UIGraphicsBeginImageContextWithOptions(photo.size, false, 0.0)
@@ -110,7 +104,6 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //Salva a foto na Galeria.
     func savePhoto(_ photo: UIImage){
-        print("Foto salva!")
         UIImageWriteToSavedPhotosAlbum(photo, self, nil, nil)
     }
     

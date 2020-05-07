@@ -32,8 +32,8 @@ class CadastroAvatarView: UIViewController {
     @IBAction func fiveAvatarButton(_ sender: UIButton){
         usuario.avatar = 4
     }
-
-    @IBAction func avancarAction(_ sender: UIButton) {
+    
+    @IBAction func avancarAction(_ sender: Any) {
         // Cria um array vazio de objetos Usuario
         var usuarios : [Usuario] = []
 
@@ -54,7 +54,6 @@ class CadastroAvatarView: UIViewController {
         // Vai pra tela de seleção de usuário
         performSegue(withIdentifier: "deCadastroPraSelecaoUsuario", sender: self)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

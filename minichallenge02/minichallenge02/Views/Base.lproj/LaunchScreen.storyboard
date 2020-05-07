@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,37 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="IKM-R1-6py">
+                                <rect key="frame" x="320" y="79" width="256" height="256"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Royalty Free Music from Bensound" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-vy-Xgk">
+                                <rect key="frame" x="315" y="343.5" width="266" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.087939955289999996" green="0.55712109799999998" blue="0.54110169409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35811722280000002" green="0.70280009509999997" blue="0.6625475287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IKM-R1-6py" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.285714" id="LyU-Km-BiW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cWv-vy-Xgk" secondAttribute="bottom" constant="27" id="PVL-P6-ta5"/>
+                            <constraint firstItem="cWv-vy-Xgk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RVD-fU-EWY"/>
+                            <constraint firstItem="IKM-R1-6py" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.618357" id="cPy-Nk-OZY"/>
+                            <constraint firstItem="IKM-R1-6py" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="10.5" id="m7U-UB-cMu"/>
+                            <constraint firstItem="IKM-R1-6py" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oHs-xb-Afx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.901785714285715" y="373.91304347826087"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="1024" height="1024"/>
+    </resources>
 </document>

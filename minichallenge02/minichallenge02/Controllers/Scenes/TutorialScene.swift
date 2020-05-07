@@ -86,7 +86,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
             tartaroTemp.addTutorialPosition(sprite: tartaroTemp)
             tartaroTemp.zPosition = 2
             tartarus.append(tartaroTemp)
-            print("Id do tártaro: \(tartaroTemp.id)"  )
             self.addChild(tartaroTemp)
         }
     }
@@ -170,7 +169,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         cleanTartarus(node: node)
         killTartarus(node: node)
         if isActivityOver() {
-            print("hora de escovar de verdade")
              feedbackAudio.run(sequenceFeedback, completion: {
                 self.goToActivityScreen()
             })
@@ -191,7 +189,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate {
         //SKAction garante que o node seja removido na hora certa
         let tartarusDeath = SKAction.run({node.removeFromParent()})
         self.run(tartarusDeath)
-          print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
       }
     }

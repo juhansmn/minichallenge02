@@ -12,22 +12,20 @@ var usuario = Usuario()
 class CadastroNomeView: UIViewController {
     
     @IBOutlet weak var nomeDaCriancaTextField: UITextField!
-
-    @IBAction func avancarAction(_ sender: Any) {
-        guard let nome = nomeDaCriancaTextField.text , !nome.isEmpty else {return}
-        
-        usuario.nome = nome
-        
-
-//        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as NextViewController
-//        self.presentViewController(nextViewController, animated:true, completion:nil)
-        
-        performSegue(withIdentifier: "deNomePraAvatar", sender: self)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    @IBAction func avancarAction(_ sender: Any) {
+        if let nome = nomeDaCriancaTextField.text, !nome.isEmpty {
+            usuario.nome = nome
+        }
+        else{
+            usuario.nome = "Criança"
+        }
+    
+        performSegue(withIdentifier: "deNomePraAvatar", sender: self)
     }
 
 }

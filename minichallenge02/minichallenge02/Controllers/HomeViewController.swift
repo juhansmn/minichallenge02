@@ -11,10 +11,17 @@ import SpriteKit
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
-        let scene = HomeScene(size: view.frame.size)
+        let scene = HomeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
         scene.viewController = self
+        scene.scaleMode = .aspectFill
         
         let skView = view as! SKView
+        
+        skView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        skView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        skView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        
         skView.presentScene(scene)
     }
     
@@ -22,7 +29,9 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "profilesSegue", sender: self)
     }
     func transitionToActivity(){
-        performSegue(withIdentifier: "activitySegue", sender: self)
+        let storyboard = UIStoryboard(name: "Atividades", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "escovarDente") as GameViewController
+        self.show(viewController, sender: self)
     }
 
 }

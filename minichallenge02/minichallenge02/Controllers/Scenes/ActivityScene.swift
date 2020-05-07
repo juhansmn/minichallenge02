@@ -53,7 +53,6 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
             tartaroTemp.addTartarusPosition(sprite: tartaroTemp)
             tartaroTemp.zPosition = 1
             tartarus.append(tartaroTemp)
-            print("Id do tártaro: \(tartaroTemp.id)"  )
             self.addChild(tartaroTemp)
         }
     }
@@ -114,7 +113,6 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         //SKAction garante que o node seja removido na hora certa
         let tartarusDeath = SKAction.run({node.removeFromParent()})
         self.run(tartarusDeath)
-          print("Tartarus removed from scene")
           Tartarus.tartarusCount -= 1
       }
     }
@@ -124,7 +122,6 @@ class ActivityScene: SKScene, SKPhysicsContactDelegate {
         if Tartarus.tartarusCount == 0 {
             activityOver = true
             tartarus.removeAll()
-            print("Quantidade de tártaro no array: \(tartarus.count)")
         }
       return activityOver
     }

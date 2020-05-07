@@ -22,7 +22,7 @@ class HomeScene: SKScene {
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        setupButton(button: activityButton, name: "activityButton", height: 300, width: 270, x: 100, y: 0)
+        setupButton(button: activityButton, name: "activityButton", height: 300, width: 270, x: 80, y: 40)
         setupButton(button: profilesButton, name: "profilesButton", height: 59.67, width: 104.33, x: -320, y: -150)
         setupBackgroundImage(name: "background")
         setupAudio()

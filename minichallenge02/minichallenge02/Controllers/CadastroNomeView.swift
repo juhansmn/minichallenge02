@@ -15,6 +15,7 @@ class CadastroNomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hidesKeyboard()
     }
     
     @IBAction func avancarAction(_ sender: Any) {
@@ -27,5 +28,17 @@ class CadastroNomeView: UIViewController {
     
         performSegue(withIdentifier: "deNomePraAvatar", sender: self)
     }
+    
+}
 
+extension UIViewController{
+    func hidesKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 }

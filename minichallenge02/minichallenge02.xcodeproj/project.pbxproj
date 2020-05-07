@@ -46,6 +46,7 @@
 		85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85961FD324589AD400305C06 /* Trenzinho.m4a */; };
 		85B1E81D245A06C90053F563 /* TapBrushAgain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */; };
 		85BE9DD224575C910095A3BF /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE9DD124575C910095A3BF /* ScreenSizes.swift */; };
+		85D0136B2464AD040049FAA0 /* home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 85D0136A2464AD040049FAA0 /* home.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		85961FD324589AD400305C06 /* Trenzinho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trenzinho.m4a; sourceTree = "<group>"; };
 		85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TapBrushAgain.m4a; sourceTree = "<group>"; };
 		85BE9DD124575C910095A3BF /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
+		85D0136A2464AD040049FAA0 /* home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = home.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				85B1E81C245A06C90053F563 /* TapBrushAgain.m4a */,
 				85961FD324589AD400305C06 /* Trenzinho.m4a */,
 				85961FD224589AD400305C06 /* TutorialFinished.m4a */,
+				85D0136A2464AD040049FAA0 /* home.mp3 */,
 				85961FCF24589AD300305C06 /* ActivityFinished.m4a */,
 			);
 			path = Sounds;
@@ -400,6 +403,7 @@
 				85961FD724589AD400305C06 /* TutorialFinished.m4a in Resources */,
 				853D7BA52458D20B0070809E /* TrainAnimation.mp4 in Resources */,
 				85961FD624589AD400305C06 /* TapBrush.m4a in Resources */,
+				85D0136B2464AD040049FAA0 /* home.mp3 in Resources */,
 				85961FD824589AD400305C06 /* Trenzinho.m4a in Resources */,
 				853D7BA32458D1670070809E /* DinoIntroduction.mp4 in Resources */,
 				0A51533724633718001BCC5D /* SelecaoUsuarios.storyboard in Resources */,

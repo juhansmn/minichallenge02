@@ -26,7 +26,7 @@ class HomeScene: SKScene {
         setupButton(button: profilesButton, name: "profilesButton", height: 59.67, width: 104.33, x: -320, y: -150)
         setupBackgroundImage(name: "background")
         setupAudio()
-        backgroundAudio.run(SKAction.play())
+        //backgroundAudio.run(SKAction.play())
     }
     
     //Configura imagem de fundo

@@ -95,7 +95,7 @@ class RewardViewController: UIViewController, UINavigationControllerDelegate, UI
             //Desenha as imagens no Contexto atual
             photo.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: photo.size))
             
-            let filterSize = CGSize(width: filter.size.width/18, height: filter.size.height/18)
+            let filterSize = CGSize(width: filter.size.width/10, height: filter.size.height/10)
             filter.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: filterSize))
         }
         //Recebe as imagens desenhadas no Context atual, se não houver, retorna a foto sem filtro.

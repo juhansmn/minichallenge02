@@ -44,9 +44,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scE-nX-O9u">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-0n-qdU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-0n-qdU">
                                         <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="104.5" id="LnY-28-O0t"/>
+                                            <constraint firstAttribute="height" constant="59.5" id="cqN-SJ-3w8"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="botaoPularTutorial"/>
                                         <connections>
                                             <action selector="skipTutorial:" destination="reS-j4-B7y" eventType="touchUpInside" id="xNF-m8-Uhg"/>
@@ -54,6 +57,10 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Yg-0n-qdU" secondAttribute="trailing" constant="52.5" id="3iE-vC-hFw"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Yg-0n-qdU" secondAttribute="bottom" constant="29.5" id="n9Q-4h-cLO"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -102,9 +109,12 @@
                                     <outletCollection property="gestureRecognizers" destination="8T8-Gr-9kr" appends="YES" id="3Z4-fc-I0A"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-Ku-E8v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-Ku-E8v">
                                 <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104.5" id="Uip-Ql-auo"/>
+                                    <constraint firstAttribute="height" constant="59.5" id="cI7-NT-dC7"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="botaoPularTutorial"/>
                                 <connections>
                                     <action selector="skipTutorial:" destination="L2Y-rI-CrF" eventType="touchUpInside" id="VsS-yX-Gu4"/>
@@ -113,8 +123,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="htA-13-VJB" firstAttribute="trailing" secondItem="qjb-Ku-E8v" secondAttribute="trailing" constant="8.5" id="3sS-7S-4pc"/>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="top" secondItem="htA-13-VJB" secondAttribute="top" id="64M-D8-EPi"/>
                             <constraint firstAttribute="bottom" secondItem="m8t-hW-mPS" secondAttribute="bottom" id="O4S-p9-YtC"/>
+                            <constraint firstItem="htA-13-VJB" firstAttribute="bottom" secondItem="qjb-Ku-E8v" secondAttribute="bottom" constant="8.5" id="XwL-yu-AuZ"/>
                             <constraint firstAttribute="trailing" secondItem="m8t-hW-mPS" secondAttribute="trailing" id="aIf-PO-Qcu"/>
                             <constraint firstItem="htA-13-VJB" firstAttribute="trailing" secondItem="iYL-F5-B7d" secondAttribute="trailing" constant="99" id="hOL-Sq-Va5"/>
                             <constraint firstItem="m8t-hW-mPS" firstAttribute="leading" secondItem="6uD-fU-bsQ" secondAttribute="leading" id="seI-Xp-R8e"/>
@@ -160,9 +172,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-HI-Yei">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-w3-J0b">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-w3-J0b">
                                         <rect key="frame" x="739" y="325" width="104.5" height="59.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="104.5" id="ASV-f8-pHl"/>
+                                            <constraint firstAttribute="height" constant="59.5" id="s0b-Wp-7u9"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="botaoPularTutorial"/>
                                         <connections>
                                             <action selector="skipTutorial:" destination="IdJ-ct-bFO" eventType="touchUpInside" id="3mP-Nx-zUb"/>
@@ -170,6 +185,10 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4pf-w3-J0b" secondAttribute="trailing" constant="52.5" id="7bM-Mw-J1O"/>
+                                    <constraint firstAttribute="bottom" secondItem="4pf-w3-J0b" secondAttribute="bottom" constant="29.5" id="EZf-eR-q7p"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -211,7 +230,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tIl-Ai-9r0"/>
+        <segue reference="E7r-jM-krA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="botaoPularTutorial" width="1802" height="1028"/>

@@ -46,7 +46,7 @@ class HomeScene: SKScene {
         if DeviceType.isiPhone11orProMax || DeviceType.isiPhone8plus {
             button.position = CGPoint(x: x, y: y)
         } else{
-            button.position = CGPoint(x:x + 50, y: y)
+            button.position = CGPoint(x:x + 40, y: y)
         }
         
         button.zPosition = 1

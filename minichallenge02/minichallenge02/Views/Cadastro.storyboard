@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ibx-Jf-2l6">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cadastro Nome View-->
+        <scene sceneID="GM3-IT-0gb">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-ibx-Jf-2l6" id="ibx-Jf-2l6" customClass="CadastroNomeView" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rz1-EE-521">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-AH-AB9">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8UG-OR-uAc">
+                                <rect key="frame" x="313" y="139" width="271" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLP-nC-aei">
+                                <rect key="frame" x="396" y="52" width="105" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-8E-VjC">
+                                <rect key="frame" x="396" y="303" width="104.5" height="59.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BotaoAvancar"/>
+                                <connections>
+                                    <action selector="avancarAction:" destination="ibx-Jf-2l6" eventType="touchUpInside" id="7qE-rp-KyK"/>
+                                    <segue destination="gKy-ZN-C4U" kind="show" identifier="deNomePraAvatar" id="emY-wn-Fkw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="K2R-gA-YwE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nof-yN-fMS"/>
+                    <connections>
+                        <outlet property="nomeDaCriancaTextField" destination="8UG-OR-uAc" id="L4s-cm-jhx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFT-5M-btJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.60714285714286" y="114.49275362318842"/>
+        </scene>
+        <!--Cadastro Avatar View-->
+        <scene sceneID="DST-yb-MeG">
+            <objects>
+                <viewController id="gKy-ZN-C4U" customClass="CadastroAvatarView" customModule="minichallenge02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5F-tD-8k6">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="X5P-Ah-5bo">
+                                <rect key="frame" x="-11" y="-15" width="907" height="445"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecione um avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-w6-ORr">
+                                <rect key="frame" x="96" y="52" width="718" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-5o-QLC">
+                                <rect key="frame" x="684" y="115" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Avatar 5" image="avatar5"/>
+                                <connections>
+                                    <action selector="fiveAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="htg-IM-9VV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-5V-0pI">
+                                <rect key="frame" x="538" y="115" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Avatar 4" image="avatar4"/>
+                                <connections>
+                                    <action selector="fourAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="GWM-aj-FZ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-Tz-3bF">
+                                <rect key="frame" x="392" y="115" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Avatar 3" image="avatar3"/>
+                                <connections>
+                                    <action selector="threeAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="swa-wU-lR7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCF-oc-Luj">
+                                <rect key="frame" x="244" y="115" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="avatar2"/>
+                                <connections>
+                                    <action selector="twoAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="lIg-pn-tcB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-GO-u57">
+                                <rect key="frame" x="96" y="115" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="avatar1"/>
+                                <connections>
+                                    <action selector="oneAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="j5s-S3-T7t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-0e-txH">
+                                <rect key="frame" x="396" y="310" width="104.5" height="59.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="botaoPularTutorial"/>
+                                <connections>
+                                    <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="FnQ-vg-DTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RLx-h4-n53"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XRS-hM-Xjs"/>
+                    <connections>
+                        <segue destination="4ZD-F2-duZ" kind="presentation" identifier="deCadastroPraSelecaoUsuario" id="LI7-lP-VM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLq-qq-uoS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.34821428571422" y="114.49275362318842"/>
+        </scene>
+        <!--SelecaoUsuarios-->
+        <scene sceneID="QjI-Fn-zsl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelecaoUsuarios" id="4ZD-F2-duZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0bH-i7-cei"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-dW-cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="659"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BotaoAvancar" width="1802" height="1028"/>
+        <image name="CenarioAppFundo" width="2688" height="1242"/>
+        <image name="avatar1" width="2000" height="2000"/>
+        <image name="avatar2" width="2000" height="2000"/>
+        <image name="avatar3" width="2000" height="2000"/>
+        <image name="avatar4" width="2000" height="2000"/>
+        <image name="avatar5" width="2000" height="2000"/>
+        <image name="botaoPularTutorial" width="1802" height="1028"/>
+    </resources>
+</document>

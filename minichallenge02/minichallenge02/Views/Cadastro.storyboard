@@ -116,7 +116,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-0e-txH">
                                 <rect key="frame" x="396" y="310" width="104.5" height="59.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="botaoPularTutorial"/>
+                                <state key="normal" title="Button" image="BotaoAvancar"/>
                                 <connections>
                                     <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="FnQ-vg-DTI"/>
                                 </connections>
@@ -153,6 +153,5 @@
         <image name="avatar3" width="2000" height="2000"/>
         <image name="avatar4" width="2000" height="2000"/>
         <image name="avatar5" width="2000" height="2000"/>
-        <image name="botaoPularTutorial" width="1802" height="1028"/>
     </resources>
 </document>

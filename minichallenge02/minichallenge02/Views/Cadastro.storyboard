@@ -15,26 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-AH-AB9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-AH-AB9">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8UG-OR-uAc">
-                                <rect key="frame" x="313" y="139" width="271" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8UG-OR-uAc">
+                                <rect key="frame" x="312.5" y="139" width="271" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="YVg-Ou-09o"/>
+                                    <constraint firstAttribute="height" constant="34" id="iYS-WY-zG2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLP-nC-aei">
-                                <rect key="frame" x="396" y="52" width="105" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLP-nC-aei">
+                                <rect key="frame" x="395.5" y="52" width="105" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="CwP-oG-bLK"/>
+                                    <constraint firstAttribute="width" constant="105" id="ZX6-Yq-Grx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-8E-VjC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-8E-VjC">
                                 <rect key="frame" x="396" y="303" width="104.5" height="59.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59.5" id="6GI-qQ-9rk"/>
+                                    <constraint firstAttribute="width" constant="104.5" id="VwO-d2-z7E"/>
+                                </constraints>
                                 <state key="normal" image="BotaoAvancar"/>
                                 <connections>
                                     <action selector="avancarAction:" destination="ibx-Jf-2l6" eventType="touchUpInside" id="7qE-rp-KyK"/>
@@ -43,6 +51,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uVv-AH-AB9" secondAttribute="bottom" id="4Ye-Iw-DZ5"/>
+                            <constraint firstItem="HLP-nC-aei" firstAttribute="centerX" secondItem="uVv-AH-AB9" secondAttribute="centerX" id="5Tw-KZ-oGm"/>
+                            <constraint firstItem="HLP-nC-aei" firstAttribute="centerX" secondItem="rz1-EE-521" secondAttribute="centerX" id="FLY-e4-zQd"/>
+                            <constraint firstItem="K2R-gA-YwE" firstAttribute="bottom" secondItem="vcu-8E-VjC" secondAttribute="bottom" constant="30.5" id="I2B-k0-CFQ"/>
+                            <constraint firstItem="vcu-8E-VjC" firstAttribute="centerX" secondItem="rz1-EE-521" secondAttribute="centerX" id="R43-tA-czQ"/>
+                            <constraint firstItem="uVv-AH-AB9" firstAttribute="leading" secondItem="rz1-EE-521" secondAttribute="leading" id="TUI-yE-DTO"/>
+                            <constraint firstItem="uVv-AH-AB9" firstAttribute="top" secondItem="K2R-gA-YwE" secondAttribute="top" id="UJL-mT-NIN"/>
+                            <constraint firstItem="HLP-nC-aei" firstAttribute="top" secondItem="K2R-gA-YwE" secondAttribute="top" constant="52" id="aNi-cd-XSI"/>
+                            <constraint firstItem="8UG-OR-uAc" firstAttribute="top" secondItem="HLP-nC-aei" secondAttribute="bottom" constant="54" id="d1D-Ze-l7A"/>
+                            <constraint firstAttribute="trailing" secondItem="uVv-AH-AB9" secondAttribute="trailing" id="g1g-2P-x5z"/>
+                            <constraint firstItem="8UG-OR-uAc" firstAttribute="centerX" secondItem="rz1-EE-521" secondAttribute="centerX" id="hRh-fs-Gji"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K2R-gA-YwE"/>
                     </view>
                     <navigationItem key="navigationItem" id="nof-yN-fMS"/>
@@ -62,67 +83,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="X5P-Ah-5bo">
-                                <rect key="frame" x="-11" y="-15" width="907" height="445"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CenarioAppFundo" translatesAutoresizingMaskIntoConstraints="NO" id="X5P-Ah-5bo">
+                                <rect key="frame" x="-11" y="-15" width="907" height="444"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecione um avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-w6-ORr">
-                                <rect key="frame" x="96" y="52" width="718" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione um avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-w6-ORr">
+                                <rect key="frame" x="89" y="53" width="718" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="718" id="bwQ-Lh-nWB"/>
+                                    <constraint firstAttribute="height" constant="33" id="e8Y-Pi-Qjh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-5o-QLC">
-                                <rect key="frame" x="684" y="115" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Avatar 5" image="avatar5"/>
-                                <connections>
-                                    <action selector="fiveAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="htg-IM-9VV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-5V-0pI">
-                                <rect key="frame" x="538" y="115" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-5V-0pI">
+                                <rect key="frame" x="528" y="133" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rFY-5V-0pI" secondAttribute="height" multiplier="1:1" id="vUb-7x-HL3"/>
+                                </constraints>
                                 <state key="normal" title="Avatar 4" image="avatar4"/>
                                 <connections>
                                     <action selector="fourAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="GWM-aj-FZ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-Tz-3bF">
-                                <rect key="frame" x="392" y="115" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-Tz-3bF">
+                                <rect key="frame" x="383" y="133" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UlM-Tz-3bF" secondAttribute="height" multiplier="1:1" id="QnM-gq-kwN"/>
+                                    <constraint firstAttribute="width" secondItem="UlM-Tz-3bF" secondAttribute="height" multiplier="1:1" id="l3f-r9-tdu"/>
+                                </constraints>
                                 <state key="normal" title="Avatar 3" image="avatar3"/>
                                 <connections>
                                     <action selector="threeAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="swa-wU-lR7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCF-oc-Luj">
-                                <rect key="frame" x="244" y="115" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCF-oc-Luj">
+                                <rect key="frame" x="238" y="133" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tCF-oc-Luj" secondAttribute="height" multiplier="1:1" id="XaZ-sN-mXD"/>
+                                </constraints>
                                 <state key="normal" image="avatar2"/>
                                 <connections>
                                     <action selector="twoAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="lIg-pn-tcB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-GO-u57">
-                                <rect key="frame" x="96" y="115" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-GO-u57">
+                                <rect key="frame" x="93" y="133" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y3O-GO-u57" secondAttribute="height" multiplier="1:1" id="ROh-9r-gSa"/>
+                                </constraints>
                                 <state key="normal" image="avatar1"/>
                                 <connections>
                                     <action selector="oneAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="j5s-S3-T7t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-0e-txH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swe-0e-txH">
                                 <rect key="frame" x="396" y="310" width="104.5" height="59.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59.5" id="HID-98-QCe"/>
+                                    <constraint firstAttribute="width" constant="104.5" id="MKY-s4-PiR"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="BotaoAvancar"/>
                                 <connections>
                                     <action selector="avancarAction:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="FnQ-vg-DTI"/>
                                 </connections>
                             </button>
+                            <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-5o-QLC">
+                                <rect key="frame" x="673" y="133" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tt9-5o-QLC" secondAttribute="height" multiplier="1:1" id="Cj2-9P-CSL"/>
+                                </constraints>
+                                <state key="normal" title="Avatar 5" image="avatar5"/>
+                                <connections>
+                                    <action selector="fiveAvatarButton:" destination="gKy-ZN-C4U" eventType="touchUpInside" id="htg-IM-9VV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rFY-5V-0pI" firstAttribute="leading" secondItem="UlM-Tz-3bF" secondAttribute="trailing" constant="15" id="3JY-u1-1f4"/>
+                            <constraint firstItem="tCF-oc-Luj" firstAttribute="leading" secondItem="y3O-GO-u57" secondAttribute="trailing" constant="15" id="3On-Ig-X1c"/>
+                            <constraint firstItem="tCF-oc-Luj" firstAttribute="leading" secondItem="y3O-GO-u57" secondAttribute="trailing" constant="15" id="46z-48-WmU"/>
+                            <constraint firstItem="Swe-0e-txH" firstAttribute="centerX" secondItem="g5F-tD-8k6" secondAttribute="centerX" id="4sb-G7-u7Q"/>
+                            <constraint firstItem="UlM-Tz-3bF" firstAttribute="top" secondItem="6eB-w6-ORr" secondAttribute="bottom" constant="47" id="5k4-7u-PXx"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="y3O-GO-u57" secondAttribute="bottom" constant="130" id="6kg-R7-eeX"/>
+                            <constraint firstItem="tCF-oc-Luj" firstAttribute="top" secondItem="6eB-w6-ORr" secondAttribute="bottom" constant="47" id="7hT-Q6-c3n"/>
+                            <constraint firstItem="rFY-5V-0pI" firstAttribute="top" secondItem="6eB-w6-ORr" secondAttribute="bottom" constant="47" id="8WJ-XP-Tc1"/>
+                            <constraint firstItem="Tt9-5o-QLC" firstAttribute="leading" secondItem="rFY-5V-0pI" secondAttribute="trailing" constant="15" id="8kJ-0v-rVr"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="rFY-5V-0pI" secondAttribute="bottom" constant="130" id="EeV-Hp-Vpf"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="tCF-oc-Luj" secondAttribute="bottom" constant="130" id="UtT-xr-6KC"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="Tt9-5o-QLC" secondAttribute="bottom" constant="130" id="ZkD-FD-f7Y"/>
+                            <constraint firstItem="Tt9-5o-QLC" firstAttribute="top" secondItem="6eB-w6-ORr" secondAttribute="bottom" constant="47" id="ajh-HK-6kv"/>
+                            <constraint firstItem="UlM-Tz-3bF" firstAttribute="centerX" secondItem="g5F-tD-8k6" secondAttribute="centerX" id="cpW-dJ-Qgl"/>
+                            <constraint firstItem="6eB-w6-ORr" firstAttribute="leading" secondItem="RLx-h4-n53" secondAttribute="leading" constant="45" id="e6L-xg-vFd"/>
+                            <constraint firstItem="Swe-0e-txH" firstAttribute="top" secondItem="UlM-Tz-3bF" secondAttribute="bottom" constant="47" id="g1a-zi-CU1"/>
+                            <constraint firstItem="6eB-w6-ORr" firstAttribute="centerX" secondItem="g5F-tD-8k6" secondAttribute="centerX" id="jGo-Ur-MNI"/>
+                            <constraint firstItem="Tt9-5o-QLC" firstAttribute="leading" secondItem="rFY-5V-0pI" secondAttribute="trailing" constant="15" id="jcF-zL-fLF"/>
+                            <constraint firstItem="UlM-Tz-3bF" firstAttribute="leading" secondItem="tCF-oc-Luj" secondAttribute="trailing" constant="15" id="lJ8-AL-YJH"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="bottom" secondItem="Swe-0e-txH" secondAttribute="bottom" constant="23.5" id="lmw-Y2-pTF"/>
+                            <constraint firstItem="y3O-GO-u57" firstAttribute="top" secondItem="6eB-w6-ORr" secondAttribute="bottom" constant="47" id="qwx-2K-orV"/>
+                            <constraint firstItem="RLx-h4-n53" firstAttribute="trailing" secondItem="6eB-w6-ORr" secondAttribute="trailing" constant="45" id="y1Z-nC-bBU"/>
+                            <constraint firstItem="6eB-w6-ORr" firstAttribute="top" secondItem="RLx-h4-n53" secondAttribute="top" constant="53" id="zp2-du-iyV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RLx-h4-n53"/>
                     </view>
                     <navigationItem key="navigationItem" id="XRS-hM-Xjs"/>
